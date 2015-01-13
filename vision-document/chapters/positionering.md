@@ -14,6 +14,7 @@
 - Reclame is niet specifiek
 - Aanbiedingen zijn niet altijd duidelijk
 - Klanten hebben geen zicht op voorraad
+- Klanten vergeten weleens boodschappen(lijstje)
 
 ## 2.3 Alternatieve oplossingen
 

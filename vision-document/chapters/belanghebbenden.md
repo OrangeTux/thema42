@@ -62,3 +62,76 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 
 
 ## 3.3 Behoeften van belanghebbenden
+
+Deze paragraaf beschrijft de behoeften c.q. problemen zoals die worden ervaren door de belanghebbenden.
+
+### 3.3.1. Saaie supermarkt
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.2. Saaie supermarkt
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.3. Teruglopend aantal klanten
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.4. Het winkelen duurt te lang
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.5. Afrekenen duurt te lang (te lange wachtrijen)
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.6. Boodschappen te duur door het mislopen van kortingen
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.7. Reclame is niet specifiek genoeg
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.8. Aanbiedingen zijn niet altijd duidelijk
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.9. Klanten hebben geen zicht op voorraad
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
+### 3.3.10. Klanten vergeten weleens boodschappen(lijstje)
+
+| __Belanghebbende__   |  |
+| __Beschrijving__     |  |
+| __Huidige situatie__ |  |
+| __Oplossing__        |  |
+
