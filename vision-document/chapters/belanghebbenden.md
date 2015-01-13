@@ -17,20 +17,47 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 
 ## 3.2 Profiel belanghebbenden
 
-### 3.2.1 Opdrachtgever
+### 3.2.1 Product Owner
 
-Beschrijving | Domein kennis van de applicatie
-Verantwoordelijkheden | 
-Succescritera | Dat het proof of concept de gevraagde functionaliteit bevat
-Opmerkingen / Issues |
+| Beschrijving | Hij prioriteert de functionaliteit gedurende het hele project. Beslist over data voor opleveringen naar productie, bewaakt de samenhang van deze opleveringen en accepteert de incrementeel tot stand komende oplossing |
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues |
 
-### 3.2.2 Klanten
+### 3.2.2 Domeindeskundige
 
-### 3.2.3 Ontwikkelaars
+| Beschrijving | 
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues | 
 
-### 3.2.4 Beheer
+### 3.2.3 Beheerder
 
-### 3.2.5 ICT architect
+| Beschrijving | 
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues | 
+
+### 3.2.4 ICT architect
+
+| Beschrijving | 
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues | 
+
+### 3.2.5 Implementatiespecialist
+
+| Beschrijving | 
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues | 
+
+### 3.2.6 Acceptatietester
+
+| Beschrijving | 
+| Verantwoordelijkheden | 
+| Succescritera | 
+| Opmerkingen / Issues | 
 
 
 
