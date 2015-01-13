@@ -22,42 +22,42 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 | Beschrijving | Hij prioriteert de functionaliteit gedurende het hele project. Beslist over data voor opleveringen naar productie, bewaakt de samenhang van deze opleveringen en accepteert de incrementeel tot stand komende oplossing. |
 | Verantwoordelijkheden | Zorgt er voor dat risico's in kaart worden gebracht. Prioriteiten scherp kunnen stellen op basis van functionaliteit. |
 | Succescritera | Hoog geprioriteerde functionaliteit is ingebouwd in het proof of concept. Risico's worden wegnomen. |
-| Opmerkingen / Issues |
+| Opmerkingen / Issues | Geprioriteerde functionaliteit niet aanwezig in het proof of concept. Risico's niet weggenomen. |
 
 ### 3.2.2 Domeindeskundige
 
 | Beschrijving | Hij vervult een spilfunctie in het bepalen van de benodigde functionaliteit. Daarnaast wordt deze rol intensief betrokken bij gebruikersacceptatietests. |
 | Verantwoordelijkheden | Heeft expertise in de businessprocessen die de te bouwen applicatie ondersteund. |
 | Succescritera | Acceptatietest worden succesvol uitgevoerd. |
-| Opmerkingen / Issues | 
+| Opmerkingen / Issues | Acceptatietest niet succesvol uitgevoerd. |
 
 ### 3.2.3 Beheerder
 
 | Beschrijving | Beheer van het systeem. (OS, Hardware en Netwerk) en functioneel en technisch applicatiebeheer. |
 | Verantwoordelijkheden | Kennis van de gebruikte systemen waar de applicatie op zal draaien en kennis van de businessprocessen die de te beheren applicatie ondersteund. Deployen van de applicatie. |
 | Succescritera | Applicatie succesvol uitrollen, gebruikers begeleiden bij het gebruiken van de applicatie. |
-| Opmerkingen / Issues | 
+| Opmerkingen / Issues | Applicatie niet kunnen uitrollen in de omgeving. |
 
 ### 3.2.4 ICT architect
 
 | Beschrijving | Het ontwikkelen van een architectuur waar de te ontwikkelen software op moet aansluiten. |
 | Verantwoordelijkheden | Kennis op het gebied van infratstuctuur, applicatielandschap bij de business. Beoordelen van software archtecturen. |
 | Succescritera | Software sluit aan op architectuur. |
-| Opmerkingen / Issues | 
+| Opmerkingen / Issues | Geschreven software sluit niet aan op de bedachte architectuur. |
 
 ### 3.2.5 Implementatiespecialist
 
 | Beschrijving | Zorgt er voor dat de gebruikers betrokken zijn bij de implementatie van het systeem en dat de gebruikers klaar zijn om met het nieuwe systeem te werken. |
 | Verantwoordelijkheden | Evaring met het implementeren van systemen, doelgericht en proactief uitrollen van een product binnen een organisatie. |
 | Succescritera | Gebruikers klaar zijn om de overstap te maken naar het nieuwe systeem. |
-| Opmerkingen / Issues | 
+| Opmerkingen / Issues | Gebruikers zijn niet klaar om de overstap te maken naar een nieuwe systeem. Gebruikers niet overtuigd van het nieuwe systeem. |
 
 ### 3.2.6 Acceptatietester
 
-| Beschrijving | 
-| Verantwoordelijkheden | 
-| Succescritera | 
-| Opmerkingen / Issues | 
+| Beschrijving | Het uitvoeren van de acceptatie en productieacceptatie tests. |
+| Verantwoordelijkheden | Uitvoeren van acceptatietests en het ondersteunen van Domeindeskundigen bij de gebruikersacceptatietests. |
+| Succescritera | Het slagen van acceptatie en productieacceptatie tests. |
+| Opmerkingen / Issues | Het niet slagen van de acceptatie en productieacceptatie tests. |
 
 
 
