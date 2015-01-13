@@ -19,23 +19,23 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 
 ### 3.2.1 Product Owner
 
-| Beschrijving | Hij prioriteert de functionaliteit gedurende het hele project. Beslist over data voor opleveringen naar productie, bewaakt de samenhang van deze opleveringen en accepteert de incrementeel tot stand komende oplossing |
-| Verantwoordelijkheden | 
-| Succescritera | 
-| Opmerkingen / Issues |
+| Beschrijving | Hij prioriteert de functionaliteit gedurende het hele project. Beslist over data voor opleveringen naar productie, bewaakt de samenhang van deze opleveringen en accepteert de incrementeel tot stand komende oplossing. |
+| Verantwoordelijkheden | Zorgt er voor dat risico's in kaart worden gebracht. Prioriteiten scherp kunnen stellen op basis van functionaliteit. |
+| Succescritera | Hoog geprioriteerde functionaliteit is ingebouwd in het proof of concept. Risico's worden wegnomen. |
+| Opmerkingen / Issues |  |
 
 ### 3.2.2 Domeindeskundige
 
-| Beschrijving | 
-| Verantwoordelijkheden | 
-| Succescritera | 
+| Beschrijving | Hij vervult een spilfunctie in het bepalen van de benodigde functionaliteit. Daarnaast wordt deze rol intensief betrokken bij gebruikersacceptatietests. |
+| Verantwoordelijkheden | Heeft expertise in de businessprocessen die de te bouwen applicatie ondersteund. |
+| Succescritera | Acceptatietest worden succesvol uitgevoerd. |
 | Opmerkingen / Issues | 
 
 ### 3.2.3 Beheerder
 
-| Beschrijving | 
-| Verantwoordelijkheden | 
-| Succescritera | 
+| Beschrijving | Beheer van het systeem. (OS, Hardware en Netwerk) en functioneel en technisch applicatiebeheer. |
+| Verantwoordelijkheden | Kennis van de gebruikte systemen waar de applicatie op zal draaien en kennis van de businessprocessen die de te beheren applicatie ondersteund. Deployen van de applicatie. |
+| Succescritera | Applicatie succesvol uitrollen, gebruikers begeleiden bij het gebruiken van de applicatie. |
 | Opmerkingen / Issues | 
 
 ### 3.2.4 ICT architect
