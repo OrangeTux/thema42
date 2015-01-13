@@ -2,6 +2,9 @@
 De website en mobiele applicatie maken gebruik van bestaande systemen. Dit hoofdstuk beschrijft
 met welke bestaande systemen en afdelingen een koppeling gemaakt dient te worden.
 
+De afbeelding aan het eind van het hoofdstuk geeft overzichtelijk weer hoe de diverse 
+componenten zich tot elkaar verhouden.
+
 ## 4.1 NFC
 Moderne telefoontoestellen beschikken over Near Field communication (NFC) technologie. NFC
 technologie biedt allerlei mogelijkheden. Een van die mogelijkheden is contactloos betalen met een
@@ -27,4 +30,6 @@ Klanten kunnen de website benaderen vanaf hun computer, tablet of telefoon. De m
 draait op een smartphone. Klanten dienen een Apple iPhone of een telefoon met Android te hebben om
 deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die geschikt is voor Android.
 
-TODO Moet diagram bij.
+![Overzicht hoe de website en mobiele applicatie zich tot andere system verhouden][1]
+
+[1]: assets/product_perspective.png "Overzicht hoe de website en de mobiele applicatie zich tot andere systemen verhouden" 
