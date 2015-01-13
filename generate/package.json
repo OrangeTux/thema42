@@ -1,0 +1,14 @@
+{
+  "name": "wkhtmltopdf-test",
+  "private": true,
+  "author": "Maurits van Mastrigt <maurits@nerdieworks.nl>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
+    "jade": "^1.8.2",
+    "marked": "^0.3.2",
+    "xml2js": "^0.4.4"
+  }
+}

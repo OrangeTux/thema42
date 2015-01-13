@@ -1,0 +1,9 @@
+- var startingPage = 3;
+
+chapter.index
+	h1 Index
+	ul
+		- each page in index
+			if page.page >= startingPage
+				li= page.title
+					span.page-number= page.page
