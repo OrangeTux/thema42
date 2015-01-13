@@ -8,7 +8,7 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 
 | Belanghebbenderol       | Vertegenwoordiger | Betrokkenheid                                                                                                                                            |
 |-------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Owner           | Supermarkt        | Stelt eisen op en is betrokken bij de inceptiefase. Levert initi&euml;le projectbeschrijving op.                                                         |
+| Product Owner           | Supermarkt        | Stelt eisen op en is betrokken bij de inceptiefase. Levert initiële projectbeschrijving op.                                                         |
 | Domeindeskundige        | Supermarkt        | Levert kennis en inzichten rondom bezoekersgedrag en het winkelproces.                                                                                   |
 | Beheerder               | Supermarkt        | Meedraaien met het uitrollen van de ontwikkelde systeem, om het beheer over te kunnen nemen.                                                             |
 | ICT Architect           | Projectgroep 5    | Opzetten van de infrastructuur op het prototype te ondersteunen. Levert het Software Development Plan (SDP) en het Software Architecture Document (SAD). |
