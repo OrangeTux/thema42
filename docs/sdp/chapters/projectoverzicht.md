@@ -5,44 +5,47 @@ evolutie van dit softwareontwikkelingsplan.
 
 ## 2.1. Projectdoelstellingen
 
-Supermarktketen Wobbe wil naast het verkopen van levensmiddelen zijn klanten een betere en snellere winkel ervaring bezorgen,
-doormiddel van het gebruik van de smartphones van de klanten. Hiervoor moet een proof of concept worden ontwikkeld.
-Het proof of concept bestaat uit een website waar men een boodschappenlijstje kan samenstellen en deze vervolgens op de smartphone kan uitlezen.
-Op deze manier moet het winkelen een snellere en prettigere ervaring worden. Naast het boodschappenlijstje is draadloos betalen via NFC en gepersonaliseerde reclame via beacons ook een van de onderdelen van het proof of concept. Via draadloos betalen hoeft de klant geen pinpas te gebruiken maar kan deze gewoon via de app op de telefoon van de klant een betaling voldoen. Op het moment dat een klant in een bepaalde laan van de winkel staat en er in de laan een aanbieding is kan er op deze plaats een beacon worden geplaatst. Op dat moment krijgt de klant een melding van de aanbieding op zijn smartphone.
+Supermarktketen Wobbe wil naast het verkopen van levensmiddelen zijn klanten een betere en snellere winkelervaring bezorgen,
+doormiddel van het gebruik van de smartphones van de klanten. Hiervoor moet een _proof of concept_ worden ontwikkeld.
+Het _proof of concept_ bestaat uit een website waar men een boodschappenlijstje kan samenstellen en deze vervolgens op de smartphone kan uitlezen.
+
+Op deze manier moet het winkelen een snellere en prettigere ervaring worden. Naast het boodschappenlijstje zijn draadloos betalen via NFC en gepersonaliseerde reclame via beacons ook een van de onderdelen van het _proof of concept_. Via draadloos betalen hoeft de klant geen pinpas te gebruiken maar kan deze gewoon via de app op de telefoon een betaling doen.
+
+Op het moment dat een klant in een bepaalde laan van de winkel staat en er in de laan een aanbieding is kan er op deze plaats een beacon worden geplaatst. Op dat moment krijgt de klant een melding van de aanbieding op zijn smartphone.
 
 ## 2.2. Uitgangspunten en randvoorwaarden
 
-Onderstaande paragrafen beschrijven de onderdelen die binnen en buiten de projectscope vallen. Hierop volgend
+De onderstaande paragrafen beschrijven welke onderdelen binnen en welke onderdelen buiten de projectscope vallen. Hierop volgend
 worden de randvoorwaarden toegelicht.
 
-## __BINNEN SCOPE__
+__Binnen scope:__
 De volgende onderdelen vallen binnen de projectscope:
 
-- Ontwerp van API;
-- Implementatie van webiste;
-- Het aanmaken van een boodschappenlijst;
-- Het verwijderen van een boodschappenlijst;
-- Het aanpassen van een boodschappenlijst;
-- Implementatie van mobiele applicatie;
-- Het bekijken van een boodschappenlijst;
+- ontwerp van API;
+- implementatie van de webiste;
+- het aanmaken van een boodschappenlijst;
+- het verwijderen van een boodschappenlijst;
+- het aanpassen van een boodschappenlijst;
+- implementatie van de mobiele applicatie;
+- het bekijken van een boodschappenlijst.
 
-## __BUITEN SCOPE__
+__Buiten scope:__
 De volgende onderdelen vallen buiten de projectscope:
 
-- Onderhoud van website;
-- Onderhoud van mobiele applicatie;
-- Draadloos kunnen betalen via NFC;
-- Aanbiedingen krijgen op basis van locatie;
-- Smartphones
+- onderhoud van de website;
+- onderhoud van de mobiele applicatie;
+- draadloos kunnen betalen via NFC;
+- aanbiedingen krijgen op basis van locatie;
+- smartphones.
 
-## __RANDVOORWAARDEN__
-Voor dit project gelden de volgende randvoorwaarden: 
+__Randvoorwaarden:__
+Voor dit project geldt de volgende randvoorwaarde:
 
-- Voorraadsystem moet aangeleverd worden;
+- voorraadsystem moet aangeleverd worden.
 
-Voor het opgeleverde product gelden de volgende randvoorwaarden:
+Voor het opgeleverde product geldt de volgende randvoorwaarde:
 
-- Betaal terminals ondersteunen NFC betalingen;
+- betaalterminals ondersteunen NFC betalingen.
 
 ## 2.3. Project werkproducten
 
@@ -58,5 +61,4 @@ In deze sectie staan de op te leveren werkproducten beschreven.
 ## 2.4. Evolutie van het softwareontwikkelingsplan
 
 Vanwege de korte duur van het project, wordt dit document als de definitieve versie beschouwd. Het functioneren
-van de mobiele applicatie en de website heeft de hoogste prioriteit. Het is hierdoor belangrijk om de overhead te
-beperken. 
+van de mobiele applicatie en de website hebben de hoogste prioriteit. Het is daarom belangrijk dat iedere vorm van overhead zoveel mogelijk wordt beperkt.
