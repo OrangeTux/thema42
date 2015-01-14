@@ -32,5 +32,6 @@ De oplevermomenten staan, per fase, beschreven in de volgende tabel:
 | Implementatiefase | Mobiele applicatie | 28-01-2015 |
 | Implementatiefase | Website           | 28-01-2015 |
 | Implementatiefase | Deployment manual | 29-01-2015 |
+| Implementatiefase | Adviesrapport | 30-01-2015 |
 | Testfase          | Mobiele applicatie | 30-01-2015 |
 | Testfase          | Website           | 30-01-2015 |
