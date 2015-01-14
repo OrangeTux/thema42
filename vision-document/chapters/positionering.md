@@ -1,23 +1,94 @@
 # 2. Positionering
 
 ## 2.1 Het huidige bedrijfproces
-- Saaie supermarkt
-- Teruglopend aantal klanten
-- Wobbe
-- Franstalig deel van Belgie
+Momenteel is de supermarkt nog gewoon een normale, tamelijk saaie, supermarkt. De klanten doen hun boodschappen op de traditionele manier: ze lopen met een papieren boodschappenlijstje door de supermarkt, kiepen de artikelen in het boodschappenkarretje. Hierna plaatsen ze alle artikelen weer op de kassaband en rekenen af bij een cassiere, waarna alles weer ingepakt moet worden. Daarnaast zien we dat de reclames vaak hun doel missen. Reclames zijn momenteel te onpersoonlijk.
+
+Uit gesprekken in de wandelgangen is gebleken dat klanten de supermarkt als een saaie en ouderwetse supermarkt zijn gaan ervaren. Dat blijkt ook uit het feit dat het aantal klanten in de afgelopen maanden met 1/3 is teruggelopen.
+
+De oplossing die bedacht is moet hier verandering in bieden. Met de nieuwe aanpak, kunnen klanten thuis hun boodschappenlijstje al samenstellen. Wanneer ze vervolgens in de winkel zijn, kunnen ze kunnen ze het boodschappenlijstje via een app op hun mobiel bekijken. En omdat ze zelf de producten kunnen scannen, met de telefoon, kunnen ze ook de producten direct inpakken in de boodschappentassen. Er zijn dus geen lange wachtrijen meer. En omdat via het via deze app mogelijk is om gerichte aanbiedingen samen te stellen, zullen ook de advertenties minder onpersoonlijk zijn.
 
 ## 2.2 Probleemstelling
-- Afrekeningn duurt te lang 
+In deze situatie zijn een aantal verschillende problemen te onderscheiden. Hieronder wordt beknopt weergegeven wat deze verschillende problemen zijn:
+
+| __Het probleem:__              | Afrekenen duurt te lang  |
+|:-------------------------------|:-------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant |
+| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten worden geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing:__ | - Versnelt het afrekenproces.<br />- Verhoogt het gevoel van 'even snel' iets te kunnen halen in de supermarkt. |
+
+<br />
+
+| __Het probleem:__              | Lange wachtrijen         |
+|:-------------------------------|:-------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant |
+| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar wachtrijen sneller verwerkt worden.<br />- Geïrriteerde klanten.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing:__ | - Versnelt het verwerken van wachtrijen. |
+
+<br />
+
+| __Het probleem:__              | Winkelen duurt te lang   |
+|:-------------------------------|:-------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant |
+| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten worden geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing:__ | - Versnelt het gehele winkelproces. |
+
+<br />
+
+| __Het probleem:__              | Reclame is niet specifiek    |
+|:-------------------------------|:-----------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant |
+| __De impact hiervan is:__      | - Klanten maken minder gebruik van de aanbiedingen.<br />- Klanten voelen zich minder betrokken bij de supermarkt. |
+| __Een succesvolle oplossing:__ | - Verhoogt het gevoel van betrokkenheid bij de supermarkt.<br />- Toont gerichtere advertenties. |
+
+<br />
+
+| __Het probleem:__              | Onduidelijke aanbiedingen                            |
+|:-------------------------------|:-----------------------------------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                            |
+| __De impact hiervan is:__      | - Klanten maken minder gebruik van de aanbiedingen.  |
+| __Een succesvolle oplossing:__ | - Toont duidelijkere reclames.                       |
+
+<br />
+
+| __Het probleem:__              | Klanten hebben geen zicht op voorraad    |
+|:-------------------------------|:-----------------------------------------|
+| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant |
+| __De impact hiervan is:__      | - Klanten vragen regelmatig aan medewerkers of iets nog op voorraad is.<br />- Klanten kopen iets niet, omdat ze niet durven te vragen of het nog op voorraad is. |
+| __Een succesvolle oplossing:__ | - Toont klanten de voorraad van artikelen. |
+
+
 - Afrekening is te duur
-- Wachtrijen
-- Het winkelen duurt te lang
-- Reclame is niet specifiek
-- Aanbiedingen zijn niet altijd duidelijk
-- Klanten hebben geen zicht op voorraad
 - Klanten vergeten weleens boodschappen(lijstje)
 
-## 2.3 Alternatieve oplossingen
+| __Het probleem:__              | [Noem beknopt het probleem] |
+|:----|:--|
+| __Dit beïnvloedt:__            | [noem de belanghebbenden die direct of indirect door dit probleem worden geraakt] |
+| __De impact hiervan is:__      | [wat is de impact van het probleem?] |
+| __Een succesvolle oplossing:__ | [noem de belangrijkste eigenschappen van een succesvolle oplossing. Begin elke eigenschapbeschrijving met een werkwoord, bijv. ‘levert...’, ‘ondersteunt...’.] |
 
-### 2.3.1 Zelf scan a la jumbo 
+## 2.3 Alternatieve oplossingen
+De bovengenoemde oplossing is niet de enige mogelijke oplossing. Hieronder zullen daarom in het kort twee alternatieve oplossingen genoemd worden.
+
+### 2.3.1 Zelf scan a la jumbo
+Bij de supermarkten van de Jumbo kunnen klanten zelf hun boodschappen scannen met een zogenaamde zelfscanner. Ook in deze supermarktketen zou dit een mogelijke oplossing zijn. De voor- en nadelen staan hieronder op een rijtje:
+
+__Voordelen:__
+- Klanten kunnen sneller winkelen.
+- Het afrekenen gaat sneller.
+- Minder cassieres nodig.
+
+__Nadelen:__
+- Geen persoonlijke advertenties.
+- Boodschappenlijstje nog steeds op papier.
 
 ### 2.3.2- Boodschappen bezorgen
+Een andere mogelijkheid is om de boodschappen te laten bezorgen, zoals sommige andere supermarkten mogelijk maken. De voor- en nadelen van deze oplossing worden hieronder opgesomt:
+
+__Voordelen:__
+- Klanten hoeven niet meer hun huis uit.
+- Minder medewerkers in de supermarkt.
+- Omdat klanten een account aanmaken, kunnen gepersonaliseerde advertenties worden getoond.
+
+__Nadelen:__
+- Klanten kunnen geen impulsaankopen doen in de supermarkt.
+- Minder betrokkenheid bij de supermarkt.
