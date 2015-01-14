@@ -66,13 +66,11 @@ In deze situatie zijn een aantal verschillende problemen te onderscheiden. Hiero
 
 <br />
 
-- Klanten vergeten weleens boodschappen(lijstje)
-
-| __Het probleem:__              | [Noem beknopt het probleem] |
-|:----|:--|
-| __Dit beïnvloedt:__            | [noem de belanghebbenden die direct of indirect door dit probleem worden geraakt] |
-| __De impact hiervan is:__      | [wat is de impact van het probleem?] |
-| __Een succesvolle oplossing:__ | [noem de belangrijkste eigenschappen van een succesvolle oplossing. Begin elke eigenschapbeschrijving met een werkwoord, bijv. ‘levert...’, ‘ondersteunt...’.] |
+| __Het probleem:__              | Klanten vergeten het boodschappenlijstje                                     |
+|:-------------------------------|:-----------------------------------------------------------------------------|
+| __Dit beïnvloedt:__            | De klant.                                                                    |
+| __De impact hiervan is:__      | Klanten weten niet meer wat ze moesten hebben en dat wekt irritates op.      |
+| __Een succesvolle oplossing:__ | - Aanbieden van een boodschappenlijst die overal en altijd beschikbaar is.   |
 
 ## 2.3 Alternatieve oplossingen
 De bovengenoemde oplossing is niet de enige mogelijke oplossing. Hieronder zullen daarom in het kort twee alternatieve oplossingen genoemd worden.
