@@ -56,8 +56,16 @@ In deze situatie zijn een aantal verschillende problemen te onderscheiden. Hiero
 | __De impact hiervan is:__      | - Klanten vragen regelmatig aan medewerkers of iets nog op voorraad is.<br />- Klanten kopen iets niet, omdat ze niet durven te vragen of het nog op voorraad is. |
 | __Een succesvolle oplossing:__ | - Toont klanten de voorraad van artikelen. |
 
+<br />
 
-- Afrekening is te duur
+| __Het probleem:__              | Bedrijfskosten zijn te hoog              |
+|:-------------------------------|:-----------------------------------------|
+| __Dit beïnvloedt:__            | De supermarkt.                           |
+| __De impact hiervan is:__      | De uitgaven zijn hoger dan de inkomsten. |
+| __Een succesvolle oplossing:__ | - Dringt de uitgaven terug.              |
+
+<br />
+
 - Klanten vergeten weleens boodschappen(lijstje)
 
 | __Het probleem:__              | [Noem beknopt het probleem] |
