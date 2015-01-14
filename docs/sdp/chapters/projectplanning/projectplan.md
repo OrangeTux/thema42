@@ -19,7 +19,18 @@ De oplevering bestaat uit de desbetreffende werkproducten (zie paragraaf 2.3) aa
 ### 4.2.3. Projectagenda
 De oplevermomenten staan, per fase, beschreven in de volgende tabel:
 
-| Fase                          | Onderdeel         | Opleverdatum          |
-|:------------------------------|:------------------|:----------------------|
-|                               |                   |                       |
-|                               |                   |                       |
+| Fase              | Onderdeel         | Opleverdatum          |
+|:------------------|:------------------|:----------------------|
+| Ontwerpfase       | Vision document   | 19-01-2015 |
+| Ontwerpfase       | Software Development Plan | 19-01-2015 |
+| Ontwerpfase       | Software Architecture Document| 19-01-2015 |
+| Ontwerpfase       | Acceptatieplan    | 20-01-2015 |
+| Ontwerpfase       | API               | 20-01-2015 |
+| Implementatiefase | Docker opzetten   | 21-01-2015 |
+| Implementatiefase | API-calls werken  | 23-01-2015 |
+| Implementatiefase | API-calls implementatie | 28-01-2015 |
+| Implementatiefase | Mobiele applicatie | 28-01-2015 |
+| Implementatiefase | Website           | 28-01-2015 |
+| Implementatiefase | Deployment manual | 29-01-2015 |
+| Testfase          | Mobiele applicatie | 30-01-2015 |
+| Testfase          | Website           | 30-01-2015 |
