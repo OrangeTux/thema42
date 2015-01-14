@@ -30,3 +30,6 @@ Voor de acceptatieprocedure wordt een plan opgesteld. De acceptatietest wordt vo
 De volledige source code en documenten omtrent het systeem staan in het versiebeheersysteem git van GitHub. De verschillende stakeholders krijgen toegang tot de Git repository.
 
 ## 5.7. Projectafsluiting
+
+Ter afsluiting van het project zal er bier worden gedronken in Vera terwijl er gedanst wordt op de
+muziek van The Afterpartees. #yolo
