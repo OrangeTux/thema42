@@ -1,13 +1,12 @@
-# 5. Projectbewaking en Sturing
+# 5. Projectbewaking en sturing
 
-Deze sectie behandeld de onderwerpen omtrent projectbewaking en sturing. 
+Deze sectie behandeld de onderwerpen omtrent projectbewaking en sturing.
 
 ## 5.1. Scopebewaking
 
-Vanwege de korte doorlooptijd van het project is de scope beperkt. De functionaliteit van de proof of concept is duidelijk.
-Daardoor is de kans minimaal dat er buiten de scope wordt gewerkt. Ondanks deze kleine kans is de projectleider verantwoordelijk voor het bewaken van de scope.
+Vanwege de korte doorlooptijd van het project is de scope beperkt. De functionaliteit die opgenomen dienen te worden in de _proof of concept_ zijn duidelijk. Daardoor is de kans minimaal dat er buiten de scope wordt gewerkt. Ondanks deze kleine kans is de projectleider verantwoordelijk voor het bewaken van de scope.
 
-Wijzigingen van technische en/of functionele wijzigingen zijn hoogst onwaarschijnlijk.
+Wijzigingen van technische en/of functionele eisen zijn hoogst onwaarschijnlijk.
 
 ## 5.2. Bewaking van de planning
 
@@ -15,7 +14,7 @@ Door de korte doorlooptijd van het project is het noodzakelijk geen achterstand 
 
 ## 5.3. Kwaliteitsbewaking
 
-Vanwege de beperkte projectduur wordt er geen kwaliteitsbewaking toegepast. 
+Vanwege de beperkte projectduur wordt er geen kwaliteitsbewaking toegepast.
 
 ## 5.4. Risicobewaking
 
@@ -27,7 +26,7 @@ Voor de acceptatieprocedure wordt een plan opgesteld. De acceptatietest wordt vo
 
 ## 5.6. Configuratiemanagement
 
-De volledige source code en documenten omtrent het systeem staan in het versiebeheersysteem git van GitHub. De verschillende stakeholders krijgen toegang tot de Git repository.
+De volledige source code en documenten omtrent het systeem staan in het versiebeheersysteem Git van GitHub. De verschillende stakeholders krijgen toegang tot de Git repository.
 
 ## 5.7. Projectafsluiting
 
