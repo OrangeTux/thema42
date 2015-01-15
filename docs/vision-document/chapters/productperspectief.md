@@ -6,12 +6,12 @@ De afbeelding aan het eind van het hoofdstuk geeft overzichtelijk weer hoe de di
 componenten zich tot elkaar verhouden.
 
 ## 4.1 NFC
-Moderne telefoontoestellen beschikken over Near Field communication (NFC) technologie. NFC
-technologie biedt allerlei mogelijkheden. Een van die mogelijkheden is contactloos betalen met een
-een telefoon. Een klant kan betalen door zijn telefoon in de buurt te houden van een NFC-vlak op een
-betaalterminal.  Alle betaalterminals van Wobbe zijn inmiddels voorzien van NFC zodat deze de
-mogelijkheid bieden om contactloos te betalen. De PoC zal NFC nog niet volledig geïmplementeerd
-hebben.
+Moderne telefoontoestellen beschikken over Near Field communication (NFC) technologie.
+NFC-technologie biedt allerlei mogelijkheden. Een van die mogelijkheden is contactloos betalen met
+een een telefoon. Een klant kan betalen door zijn telefoon in de buurt te houden van een NFC-vlak
+op een betaalterminal. Alle betaalterminals van Wobbe zijn inmiddels voorzien van NFC zodat deze de
+mogelijkheid bieden om contactloos te betalen. De Proof of Conecpt (PoC) zal NFC nog niet volledig
+geïmplementeerd hebben.
 
 ## 4.2 Voorraadsysteem
 Wanneer klanten een boodschappenlijst samenstellen op het internet dan kan men zien of een product
@@ -19,16 +19,17 @@ voorradig is. De website zal hiervoor gekoppeld moeten worden met het voorraadsy
 gebruikt. Door deze koppeling hebben klanten de mogelijkheid om te zoeken door alle producten.
 
 ## 4.3 Marketingafdeling
-De marketingafdeling van Wobbe wil de telefoon als medium gebruiken om advertenties aan te bieden.
-Omdat de gebruiker een of meerdere boodschappenlijsten heeft gemaakt kunnen er gerichte
+De marketingafdeling van Wobbe wil de telefoon als medium gebruiken om advertenties op aan te
+bieden. Omdat de gebruiker een of meerdere boodschappenlijsten heeft gemaakt kunnen er gerichte
 reclameboodschappen worden getoond op basis van deze boodschappenlijsten. De aanwezigheid van een
-klant in een supermarkt van Wobbe kan worden bepaald door dat de telefoon van de klant verbinding 
+klant in een supermarkt van Wobbe kan worden bepaald door dat de telefoon van de klant verbinding
 maakt met het Wi-Fi-netwerk van de supermarkt.
 
 ## 4.4 KlantApparaten
 Klanten kunnen de website benaderen vanaf hun computer, tablet of telefoon. De mobiele applicatie
 draait op een smartphone. Klanten dienen een Apple iPhone of een telefoon met Android te hebben om
-deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die geschikt is voor Android.
+deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die geschikt is voor
+Android.
 
 ![Overzicht hoe de website en mobiele applicatie zich tot andere system verhouden][1]
 
