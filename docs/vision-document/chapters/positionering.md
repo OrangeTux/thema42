@@ -88,7 +88,7 @@ __Nadelen:__
 - Geen persoonlijke advertenties.
 - Boodschappenlijstje nog steeds op papier.
 
-### 2.3.2- Boodschappen bezorgen
+### 2.3.2 Boodschappen bezorgen
 Een andere mogelijkheid is om de boodschappen te laten bezorgen, zoals sommige andere supermarkten mogelijk maken. De voor- en nadelen van deze oplossing worden hieronder opgesomt:
 
 __Voordelen:__
