@@ -15,10 +15,3 @@
 | Vision Document | Add scanned product      |                              | &sect; 5.3      |
 | Vision Document | Pay with NFC             |                              | &sect; 5.3      |
 | Vision Document | Show ads                 |                              | &sect; 5.3      |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-| [De bron is een UC of scenar io.] | [Geef hier de naam van een Use Case of Use Case scenario] | [Beschrijf hier wat de genoemde Use Case of het genoemde scenario relevant maakt bij het opstellen van de software architectuur.] | [Geef hier een paragraaf- nummer waar de UC of scenario wordt behandeld. ] |
