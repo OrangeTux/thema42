@@ -75,6 +75,10 @@ fs.readFile(file, 'utf-8', function (err, data) {
         fs.mkdirSync(compiledDir);
     } catch (e) {}
 
+    // Default options
+    options.encoding = 'UTF-8';
+    options.pageSize = 'A4';
+
     // Styling
     options.userStyleSheet = path.resolve(path.join(generateDir, 'assets', 'style.css'));
     options.marginTop      = '30mm';
