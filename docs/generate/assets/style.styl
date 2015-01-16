@@ -1,0 +1,99 @@
+@import 'reset.css'
+
+header-color = #000
+text-color = #333
+link-color = #1486b3
+
+// GLOBAL
+body
+    font-family: Arial, sans-serif
+    font-size: 14px
+    color: text-color
+    line-height: 120%
+
+h1
+    font-size: 25px
+    margin: 40px 0 20px
+    color: header-color 
+h2
+    font-size: 20px
+    margin: 30px 0 20px
+    color: header-color
+h3
+    font-size: 17px
+    margin: 20px 0
+    color: header-color
+
+p
+    margin: 20px 0
+
+.clearfix:after
+    content: ""
+    display: table
+    clear: both
+
+// HEADER/FOOTER
+header, footer
+    display: block
+    height: 60px
+    // background-color: red
+    & > table
+        position: absolute
+        bottom: 0
+    
+// COVER
+cover
+    display: block
+    h1
+        margin: 0
+        font-size: 30px
+        padding: 100px 0 0
+    h2
+        margin-top: 20px
+        font-size: 18px
+        color: text-color
+    
+// INDEX
+index
+    display: block
+    li
+        border-bottom: 1px dotted #ccc
+        span.page-number
+            float: right
+        
+// CHAPTER
+chapter
+    display: block
+    page-break-before: always
+
+// TABLE
+chapter table
+    display: table
+    width: 100%
+    max-width: 100%
+    margin: 20px 0
+    border-spacing: 0
+    border: 1px solid #ddd !important
+    th
+        text-align: left
+        font-weight: bold
+    thead th
+        vertical-align: bottom
+        border-bottom: 1px solid #ddd !important
+    th, td
+        padding: 8px !important
+        vertical-align: top
+    td
+        border-top: 1px solid #ddd !important
+    tbody tr:nth-child(odd)
+        background-color: #f9f9f9
+    
+// LINK
+chapter a
+    &, &:link, &:active
+        text-decoration: none
+        color: link-color
+    &:hover, &:visited
+        text-decoration: none
+        color: darken(link-color, 15%)
+

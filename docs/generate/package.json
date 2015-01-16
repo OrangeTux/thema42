@@ -5,12 +5,14 @@
   "license": "MIT",
   "dependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-stylus": "^0.20.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "jade": "^1.8.2",
     "marked": "^0.3.2",
     "merge": "^1.2.0",
     "slug": "^0.8.0",
+    "stylus": "^0.49.3",
     "tiny-frontmatter": "^1.0.0",
     "wkhtmltopdf": "^0.1.5",
     "xml2js": "^0.4.4"
