@@ -25,4 +25,6 @@ Het systeem bestaat uit drie deelsystemen, namelijk:
 
 ## 3.3. Realisatie van functionele eisen
 
+![alt text](../assets/seq_list_view.png)
 
+![alt text](../assets/seq_list_edit.png)
