@@ -1,0 +1,12 @@
+- var startingPage = 3;
+
+// TODO(mauvm): Add second level index
+
+index
+    h1 Inhoud
+    ul
+        - each page in index
+            if page.page >= startingPage
+                li
+                    span.title= page.title
+                    span.page-number= page.page

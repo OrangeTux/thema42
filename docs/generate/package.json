@@ -1,14 +1,17 @@
 {
-  "name": "wkhtmltopdf-test",
+  "name": "pdf-generator",
   "private": true,
   "author": "Maurits van Mastrigt <maurits@nerdieworks.nl>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "jade": "^1.8.2",
     "marked": "^0.3.2",
+    "slug": "^0.8.0",
+    "tiny-frontmatter": "^1.0.0",
+    "wkhtmltopdf": "^0.1.5",
     "xml2js": "^0.4.4"
   }
 }
