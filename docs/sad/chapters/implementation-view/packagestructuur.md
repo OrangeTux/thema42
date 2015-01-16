@@ -1,8 +1,7 @@
-# 4.1. Packagestructuur
+## 4.1. Packagestructuur
 
-```
-[Geef hier een overzicht van de packagestructuur in de ontwikkelomgeving. Probeer bij de package structuur de logische lagen scheiding terug te laten komen in de naamgeving van de packages, zoals in het voorbeeld hieronder:
-• nl.bedrijf.afdeling.project.subsysteem.ui
-• nl.bedrijf.afdeling.project.subsysteem.service • nl.bedrijf.afdeling.project.subsysteem.domain • nl.bedrijf.afdeling.project.subsysteem.data
-Illustreer de samenhang van de package structuur dmv een package-diagram.]
-```
+Het onderstaande diagram geeft weer hoe de verschillende deelsystemen verband houden met elkaar:
+
+!["Package Diagram"](../../assets/Packagestructuur.png)
+
+Dit diagram geeft weer hoe de mobiele applicatie interacteert met de API en hoe een gebruiker via een webbrowser gebruik kan maken van de wbsite. De onderliggende laag, met name de applicatielaag, biedt alle functionaliteiten en presenteert de (MySQL) database gegevens, aan de API en de website, in het vereiste formaat.
