@@ -62,10 +62,17 @@ cover
 index
     display: block
     li
-        border-bottom: 1px dotted #ccc
+        span.page-title
+            display: inline-block
+            padding-bottom: 6px
         span.page-number
             float: right
-        
+        &.first
+            padding-bottom: 18px
+            > span.page-title,
+            > span.page-number
+                font-weight: bold
+
 // CHAPTER
 chapter
     display: block

@@ -3,8 +3,8 @@
 - [x] Links
 - [x] Lists
 - [x] Table margin
-- [ ] 2nd level index
-- [ ] Index styling
+- [x] 2nd level index
+- [x] Index styling
 - [ ] Preface chapters
 - [ ] Images
 - [ ] Intro to chapters
