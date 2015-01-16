@@ -1,7 +1,7 @@
 # To Do
 
 - [x] Links
-- [ ] Lists
+- [x] Lists
 - [ ] Table margin
 - [ ] 2nd level index
 - [ ] Index styling
