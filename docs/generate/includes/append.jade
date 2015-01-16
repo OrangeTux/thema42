@@ -45,3 +45,14 @@ script.
         });
     })();
 
+    (function () {
+        // Remove empty headers
+        // NOTE: Markdown does not support tables without headers.
+        $('thead').each(function () {
+            var $this = $(this);
+            if ($this.html().replace(/[\n\s]+/g, '') === '<tr><th></th><th></th></tr>') {
+                $this.remove();
+            }
+        });
+    })();
+
