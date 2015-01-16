@@ -25,6 +25,10 @@ Het systeem bestaat uit drie deelsystemen, namelijk:
 
 ## 3.3. Realisatie van functionele eisen
 
+De hoofdfunctionaliteit van het systeem bestaat uit het bekijken en aanpassen van een boodschappenlijstje. Onderstaande sequence diagrammen beschrijven zowel het bekijken van een boodschappenlijst via de mobiele app als het aanpassen van een boodschappenlijst via de website.
+
 ![alt text](../assets/seq_list_view.png)
+Deze afbeelding beschrijft het bekijken van een boodschappenlijst via de mobiele app.
 
 ![alt text](../assets/seq_list_edit.png)
+Deze afbeelding beschrijft het aanpassen van een boodschappenlijst via de website.
