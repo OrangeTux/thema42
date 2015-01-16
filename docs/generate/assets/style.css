@@ -6,7 +6,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     color: #333;
     line-height: 120%;
 }
@@ -37,6 +37,7 @@ p {
 header, footer {
     display: block;
     height: 60px;
+    /* background-color: red; */
 }
     footer > table {
         position: absolute;
@@ -76,11 +77,11 @@ chapter {
 }
 
 /* TABLE */
-table {
+chapter table {
     width: 100%;
-    margin: 15px 0;
+    margin: 20px 0;
 }
-    table th {
+    chapter table th {
         text-align: left;
         font-weight: bold;
     }

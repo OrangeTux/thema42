@@ -7,6 +7,7 @@ var jade        = require('jade');
 var slug        = require('slug');
 var wkhtmltopdf = require('wkhtmltopdf');
 var xml2js      = require('xml2js');
+var merge       = require('merge');
 var parser      = new xml2js.Parser();
 var file        = path.resolve(process.argv[2]);
 
@@ -111,21 +112,10 @@ fs.readFile(file, 'utf-8', function (err, data) {
 
     options.cover = coverFile;
  
-    // Compile index
-    var tocFile = path.join(compiledDir, name + '.toc.xml');
- 
-    // TODO(mauvm): Concatinate multiple HTML files here. Not supported yet.
-    documentHTML += jade.renderFile(
-        path.join(includesDir, 'index.jade'),
-        { index: toc2Index(tocFile), config: config }
-    );
-
-    options.dumpOutline = tocFile;
- 
-    // Compile document
+    // Compile index, document, etc.
     var documentFile = path.join(compiledDir, 'document.html');
-
-    documentHTML += jade.render(
+    var tocFile      = path.join(compiledDir, name + '.toc.xml');
+    var html         = jade.render(
         parsed.body,
         {
             filename: file,
@@ -133,6 +123,33 @@ fs.readFile(file, 'utf-8', function (err, data) {
             config: config 
         }
     );
+
+    options.dumpOutline = tocFile;
+
+    // TODO(mauvm): Concatinate multiple HTML files here with wkhtmltopdf. Not supported yet.
+    var files = {
+        index   : { file: path.join(includesDir, 'index.jade'), config: { index: toc2Index(tocFile) } },
+        prepend : { file: path.join(includesDir, 'prepend.jade') },
+        document: html,
+        append  : { file: path.join(includesDir, 'append.jade') }
+    };
+
+    Object.keys(files).forEach(function (key) {
+        var item = files[key];
+
+        documentHTML += '\n<!-- FILE: ' + key + ' -->\n';
+
+        if (typeof item !== 'object') {
+            documentHTML += item;
+            return;
+        }
+
+        documentHTML += jade.renderFile(item.file, merge({
+            filename: item.file,
+            basedir: path.dirname(item.file),
+            config: config
+        }, (item.config || {})));
+    });
 
     fs.writeFileSync(documentFile, documentHTML);
 
