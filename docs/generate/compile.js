@@ -128,6 +128,8 @@ fs.readFile(file, 'utf-8', function (err, data) {
         }
     );
 
+    config.basepath = path.dirname(file);
+
     options.dumpOutline = tocFile;
 
     // TODO(mauvm): Concatinate multiple HTML files here with wkhtmltopdf. Not supported yet.

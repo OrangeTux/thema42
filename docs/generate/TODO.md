@@ -5,8 +5,9 @@
 - [x] Table margin
 - [x] 2nd level index
 - [x] Index styling
-- [ ] Images
-- [ ] Intro to chapters
+- [x] Images
+- [ ] Style cover (add details)
 - [ ] Preface chapters
+- [ ] Intro to chapters
 - [ ] Properly divide chapters onto pages
 

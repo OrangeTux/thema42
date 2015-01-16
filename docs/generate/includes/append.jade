@@ -1,5 +1,17 @@
 script.
     (function () {
+        $('img').each(function () {
+            var $this = $(this);
+            if ( ! $this.attr('src').match(/^(https?|file):\/\//i)) {
+                var src = 'file://' + $('option[key="basepath"]').attr('val') + '/' + $this.attr('src');
+                // $('<p/>').text(src).insertAfter($this);
+                $this.attr('src', src);
+            }
+        });
+    })();
+
+    (function () {
+        // Automatic page numbering
         var h1 = 0, h2 = 0, h3 = 0;
 
         function formatIndex() {
