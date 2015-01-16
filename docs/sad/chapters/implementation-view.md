@@ -4,4 +4,4 @@
 
 ## 4.2. Invulling van lagenstructuur
 
-## 4.3. (HER)gebruik van componenten en frameworks
+## 4.3. (Her)gebruik van componenten en frameworks
