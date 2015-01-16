@@ -16,7 +16,7 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 | Implementatiespecialist | Projectgroep 5    | Ontwerp en ontwikkeling van het prototype.                                                                                                               |
 | Acceptatietester        | Projectgroep 5    | Test of het prototype werkt conform het opgestelde acceptatietestplan.                                                                                   |
 
-
+---
 
 ## Profiel belanghebbenden
 
@@ -70,7 +70,7 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 | __Succescritera__         | Gebruikers klaar zijn om de overstap te maken naar het nieuwe systeem.                                                                                   |
 | __Opmerkingen/Issues__  | Gebruikers zijn niet klaar om de overstap te maken naar een nieuwe systeem. Gebruikers zijn niet overtuigd van het nieuwe systeem.                       |
 ### Acceptatietester
- 
+
 | Eigenschap                | Uitwerking                                                                                                |
 |---------------------------|-----------------------------------------------------------------------------------------------------------|
 | __Beschrijving__          | Het uitvoeren van de acceptatie- en productieacceptatietests.                                             |
@@ -78,7 +78,7 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 | __Succescritera__         | Het slagen van acceptatie- en productieacceptatietests.                                                   |
 | __Opmerkingen/Issues__    | Het niet slagen van de acceptatie- en productieacceptatietests.                                           |
 
-
+---
 
 ## Behoeften van belanghebbenden
 

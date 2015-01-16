@@ -18,6 +18,8 @@ Er zijn een aantal voorwaarden waar het project aan moet voldoen om met succes a
 - De klant van de supermarkt heeft de beschikking over smartphone met internet (of Wi-Fi ondersteuning) en een camera.
 - Supermarkt biedt een gratis Wi-Fi-hotspot aan.
 
+---
+
 ## 6.3 Documentatierequirements
 Om de bruikbaarheid en onderhoudbaarheid van het gehele systeem te vergroten, zullen een aantal documenten/hulpmiddelen opgeleverd worden, te weten:
 

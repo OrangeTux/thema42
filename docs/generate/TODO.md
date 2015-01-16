@@ -9,5 +9,5 @@
 - [ ] Style cover (add details)
 - [ ] Preface chapters
 - [ ] Intro to chapters
-- [ ] Properly divide chapters onto pages
+- [x] Properly divide chapters onto pages
 

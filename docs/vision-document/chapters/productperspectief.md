@@ -10,7 +10,7 @@ Moderne telefoontoestellen beschikken over Near Field communication (NFC) techno
 NFC-technologie biedt allerlei mogelijkheden. Een van die mogelijkheden is contactloos betalen met
 een een telefoon. Een klant kan betalen door zijn telefoon in de buurt te houden van een NFC-vlak
 op een betaalterminal. Alle betaalterminals van Wobbe zijn inmiddels voorzien van NFC zodat deze de
-mogelijkheid bieden om contactloos te betalen. De Proof of Conecpt (PoC) zal NFC nog niet volledig
+mogelijkheid bieden om contactloos te betalen. De Proof of Concept (PoC) zal NFC nog niet volledig
 geïmplementeerd hebben.
 
 ## 4.2 Voorraadsysteem
@@ -25,12 +25,18 @@ reclameboodschappen worden getoond op basis van deze boodschappenlijsten. De aan
 klant in een supermarkt van Wobbe kan worden bepaald door dat de telefoon van de klant verbinding
 maakt met het Wi-Fi-netwerk van de supermarkt.
 
-## 4.4 KlantApparaten
+---
+
+## 4.4 Klant Apparaten
 Klanten kunnen de website benaderen vanaf hun computer, tablet of telefoon. De mobiele applicatie
 draait op een smartphone. Klanten dienen een Apple iPhone of een telefoon met Android te hebben om
 deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die geschikt is voor
 Android.
 
+<center><div style="width: 400px">
+
 ![Overzicht hoe de website en mobiele applicatie zich tot andere system verhouden][1]
+
+</div></center>
 
 [1]: assets/product_perspective.png "Overzicht hoe de website en de mobiele applicatie zich tot andere systemen verhouden" 

@@ -1,5 +1,6 @@
 script.
     (function () {
+        // Fix images with relative paths
         $('img').each(function () {
             var $this = $(this);
             if ( ! $this.attr('src').match(/^(https?|file):\/\//i)) {
@@ -7,6 +8,15 @@ script.
                 // $('<p/>').text(src).insertAfter($this);
                 $this.attr('src', src);
             }
+        });
+    })();
+
+    (function () {
+        // Replace HRs with page breaks
+        $('hr').not('.keep').each(function () {
+            var $this = $(this);
+            $('<div class="page-break"/>').insertAfter($this);
+            $this.remove();
         });
     })();
 
