@@ -1,6 +1,9 @@
-# 2. Positionering
+# Positionering
 
-## 2.1 Het huidige bedrijfproces
+Deze sectie beschrijft het huidige bedrijfsproces, de probleemstelling en mogelijk alternatieve oplossingen.
+
+## Het huidige bedrijfsproces
+
 Momenteel is de supermarktketen Wobbe nog gewoon een normale, tamelijk saaie, supermarkt. De klanten doen hun boodschappen op de traditionele manier: ze lopen met een papieren boodschappenlijstje door de supermarkt en vullen hun boodschappenmandje met artikelen. Hierna plaatsen ze alle artikelen weer op de kassaband en rekenen af bij een cassière, waarna alles weer ingepakt moet worden. Daarnaast zien we dat de reclames vaak hun doel missen. Reclames zijn momenteel te onpersoonlijk.
 
 Uit gesprekken in de wandelgangen is gebleken dat klanten de supermarkt als een saaie en ouderwetse supermarkt ervaren. Dat blijkt ook uit het feit dat het aantal klanten in de afgelopen maanden met ⅓ is teruggelopen.
@@ -8,7 +11,8 @@ Uit gesprekken in de wandelgangen is gebleken dat klanten de supermarkt als een 
 De oplossing die bedacht is moet hier verandering in bieden. Met de nieuwe aanpak kunnen klanten thuis hun boodschappenlijstje al samenstellen. Wanneer ze vervolgens in de winkel zijn, kunnen ze kunnen ze het boodschappenlijstje via een app op hun mobiel bekijken. Tijdens de ronde door de winkel kunnen klanten de gewenste producten scannen met hun telefoon. Deze producten worden vervolgens van het boodschappenlijstje gestreept. Bij de kassa kan met de telefoon betaald worden. Hierdoor
 zijn er geen lange wachtrijen meer. Op basis van de boodschappenlijstjes kan gerichte reclame aan de klant worden getoond. 
 
-## 2.2 Probleemstelling
+## Probleemstelling
+
 In de huidige situatie zijn een aantal verschillende problemen te onderscheiden. Hieronder wordt beknopt weergegeven wat deze verschillende problemen zijn:
 
 | __Het probleem:__              | Afrekenen duurt te lang                                                                                                                                                                                                        |
@@ -61,10 +65,12 @@ In de huidige situatie zijn een aantal verschillende problemen te onderscheiden.
 
 ---
 
-## 2.3 Alternatieve oplossingen
+## Alternatieve oplossingen
+
 De bovengenoemde oplossing van een website een een mobiele applicatie is niet de enige mogelijke oplossing. Hieronder zullen daarom in het kort twee alternatieve oplossingen genoemd worden.
 
-### 2.3.1 Zelfscanner 
+### Zelfscanner 
+
 Bij de supermarkten van Jumbo kunnen klanten zelf hun boodschappen scannen met een zogenaamde zelfscanner. Ook in deze supermarktketen zou dit een mogelijke oplossing zijn. De voor- en nadelen staan hieronder op een rijtje:
 
 __Voordelen:__
@@ -76,7 +82,8 @@ __Nadelen:__
 - Geen persoonlijke advertenties.
 - Boodschappenlijstje nog steeds op papier.
 
-### 2.3.2 Boodschappen bezorgen
+### Boodschappen bezorgen
+
 Een andere mogelijkheid is om de boodschappen te laten bezorgen, zoals sommige andere supermarkten mogelijk maken. De voor- en nadelen van deze oplossing worden hieronder opgesomt:
 
 __Voordelen:__

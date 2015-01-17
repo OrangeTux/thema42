@@ -1,14 +1,15 @@
-# 5. Producteigenschappen
+# Producteigenschappen
+
 Dit hoofdstuk bevat een opsomming van de functionaleit van de website en de mobiele applicatie. 
 
-## 5.1 Website
-De functionaliteit van de website is beperkt, maar de functies die de website bevat zijn
-noodzakelijk.
+## Website
 
-Op de website moet een nieuwe gebruiker zich kunnen registeren. Na registratie kan een klant
+De functionaliteit van de website is beperkt, maar de functies die de website bevat zijn
+noodzakelijk. Op de website moet een nieuwe gebruiker zich kunnen registeren. Na registratie kan een klant
 inloggen op de website. Op de website kan hij een boodschappenlijst aanmaken en kunnen aanpassen.
 
-## 5.2 Mobiele applicatie
+## Mobiele applicatie
+
 Een gebruiker moet kunnen inloggen met het account dat hij op de website heeft aangemaakt.
 Wanneer hij inlogt moet hij de boodschappenlijst zien die hij op de website heeft gemaakt. Tijdens
 het winkelbezoek kan de klant producten scannen die hij wil aanschaffen. De producten die hij
@@ -18,13 +19,12 @@ gemarkeerd. Een gebruiker kan de markering van een product ongedaan maken wannee
 toch niet wil kopen. Het scannen van de producten gaat door middel van de camera op de telefoon. 
 
 Wanneer de klant wil afrekenen kan hij op een de knop drukken die daar voor bestemd is. Aan de
-klant wordt een bon getoond. Vervolgens kan de klant contactloos betalen bij een betaalterminal.
-Contactloos betalen is geen onderdeel van de PoC.
-
-Aan de klant kunnen advertenties worden getoonḋ wanneer hij zich in een supermarkt bevindt.
+klant wordt een bon getoond. Vervolgens kan de klant contactloos betalen bij een betaalterminal. Contactloos betalen is geen onderdeel van de PoC. Aan de klant kunnen advertenties worden getoonḋ wanneer hij zich in een supermarkt bevindt.
 Advertenties zijn geen onderdeel van de PoC.
 
-## 5.3 Prioriteit
+---
+
+## Prioriteit
 De prioriteit van bovenstaande functionaliteit is in deze paragraaf aangegeven volgenѕ de
 MoSCoW-methode.
 

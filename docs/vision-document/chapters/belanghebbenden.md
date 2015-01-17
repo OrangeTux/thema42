@@ -20,6 +20,8 @@ Deze paragraaf beschrijft de belanghebbenden die betrokken zijn bij het project.
 
 ## Profiel belanghebbenden
 
+Deze paragraaf beschrijft iedere groep die belang heeft in het systeem.
+
 ### Stuurgroep
 
 | Eigenschap                | Uitwerking                                                                                                                                                                                                                         |

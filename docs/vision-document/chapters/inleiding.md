@@ -1,5 +1,7 @@
 # 1. Inleiding
 
+Deze sectie beschrijft het doel van het document en geeft verwijzingen naar de documenten die zijn gebruikt voor de tot stand koming van dit visie document.
+
 ## 1.1 Doel van het document  
 
 Dit document geeft de gemeenschappelijke visie van Hanzehogeschool en Wobbe op het project Shop of the Future.
