@@ -15,53 +15,53 @@ zijn er geen lange wachtrijen meer. Op basis van de boodschappenlijstjes kan ger
 
 In de huidige situatie zijn een aantal verschillende problemen te onderscheiden. Hieronder wordt beknopt weergegeven wat deze verschillende problemen zijn:
 
-| __Het probleem:__              | Afrekenen duurt te lang                                                                                                                                                                                                        |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                                                                                                                                                                                                      |
-| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten raken geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
-| __Een succesvolle oplossing:__ | - Versnelt het afrekenproces.<br />- Verhoogt het gevoel van 'even snel' iets te kunnen halen in de supermarkt.                                                                                                                |
+| __Het probleem__              | Afrekenen duurt te lang                                                                                                                                                                                                        |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                                                                                                                                                                                                      |
+| __De impact hiervan is__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten raken geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing__ | - Versnelt het afrekenproces.<br />- Verhoogt het gevoel van 'even snel' iets te kunnen halen in de supermarkt.                                                                                                                |
 
-| __Het probleem:__              | Lange wachtrijen                                                                                                                                                         |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                                                                                                                                                |
-| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar wachtrijen sneller verwerkt worden.<br />- Geïrriteerde klanten.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
-| __Een succesvolle oplossing:__ | - Versnelt het verwerken van wachtrijen.                                                                                                                                 |
+| __Het probleem__              | Lange wachtrijen                                                                                                                                                         |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                                                                                                                                                |
+| __De impact hiervan is__      | - Klanten gaan naar supermarkten waar wachtrijen sneller verwerkt worden.<br />- Geïrriteerde klanten.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing__ | - Versnelt het verwerken van wachtrijen.                                                                                                                                 |
 
-| __Het probleem:__              | Winkelen duurt te lang                                                                                                                                                                                                         |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                                                                                                                                                                                                      |
-| __De impact hiervan is:__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten worden geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
-| __Een succesvolle oplossing:__ | - Versnelt het gehele winkelproces.                                                                                                                                                                                            |
+| __Het probleem__              | Winkelen duurt te lang                                                                                                                                                                                                         |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                                                                                                                                                                                                      |
+| __De impact hiervan is__      | - Klanten gaan naar supermarkten waar ze sneller kunnen afrekenen. <br />- Klanten worden geïrriteerd, wat het positieve gevoel van winkelen niet bevorderd.<br />- Teruglopend aantal klanten.<br />- Teruglopende inkomsten. |
+| __Een succesvolle oplossing__ | - Versnelt het gehele winkelproces.                                                                                                                                                                                            |
 
-| __Het probleem:__              | Reclame is niet specifiek                                                                                          |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                                                                                          |
-| __De impact hiervan is:__      | - Klanten maken minder gebruik van de aanbiedingen.<br />- Klanten voelen zich minder betrokken bij de supermarkt. |
-| __Een succesvolle oplossing:__ | - Verhoogt het gevoel van betrokkenheid bij de supermarkt.<br />- Toont gerichtere advertenties.                   |
+| __Het probleem__              | Reclame is niet specifiek                                                                                          |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                                                                                          |
+| __De impact hiervan is__      | - Klanten maken minder gebruik van de aanbiedingen.<br />- Klanten voelen zich minder betrokken bij de supermarkt. |
+| __Een succesvolle oplossing__ | - Verhoogt het gevoel van betrokkenheid bij de supermarkt.<br />- Toont gerichtere advertenties.                   |
 
-| __Het probleem:__              | Onduidelijke aanbiedingen                           |
-|--------------------------------|-----------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                           |
-| __De impact hiervan is:__      | - Klanten maken minder gebruik van de aanbiedingen. |
-| __Een succesvolle oplossing:__ | - Toont duidelijkere reclames.                      |
+| __Het probleem__              | Onduidelijke aanbiedingen                           |
+|-------------------------------|-----------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                           |
+| __De impact hiervan is__      | - Klanten maken minder gebruik van de aanbiedingen. |
+| __Een succesvolle oplossing__ | - Toont duidelijkere reclames.                      |
 
-| __Het probleem:__              | Klanten hebben geen zicht op voorraad                                                                                                                             |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | - Supermarkt<br />- Klant                                                                                                                                         |
-| __De impact hiervan is:__      | - Klanten vragen regelmatig aan medewerkers of iets nog op voorraad is.<br />- Klanten kopen iets niet, omdat ze niet durven te vragen of het nog op voorraad is. |
-| __Een succesvolle oplossing:__ | - Toont klanten de voorraad van artikelen.                                                                                                                        |
+| __Het probleem__              | Klanten hebben geen zicht op voorraad                                                                                                                             |
+|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | - Supermarkt<br />- Klant                                                                                                                                         |
+| __De impact hiervan is__      | - Klanten vragen regelmatig aan medewerkers of iets nog op voorraad is.<br />- Klanten kopen iets niet, omdat ze niet durven te vragen of het nog op voorraad is. |
+| __Een succesvolle oplossing__ | - Toont klanten de voorraad van artikelen.                                                                                                                        |
 
-| __Het probleem:__              | Bedrijfskosten zijn te hoog              |
-|--------------------------------|------------------------------------------|
-| __Dit beïnvloedt:__            | De supermarkt                            |
-| __De impact hiervan is:__      | De uitgaven zijn hoger dan de inkomsten. |
-| __Een succesvolle oplossing:__ | - Dringt de uitgaven terug.              |
+| __Het probleem__              | Bedrijfskosten zijn te hoog              |
+|-------------------------------|------------------------------------------|
+| __Dit beïnvloedt__            | De supermarkt                            |
+| __De impact hiervan is__      | De uitgaven zijn hoger dan de inkomsten. |
+| __Een succesvolle oplossing__ | - Dringt de uitgaven terug.              |
 
-| __Het probleem:__              | Klanten vergeten het boodschappenlijstje                                   |
-|--------------------------------|----------------------------------------------------------------------------|
-| __Dit beïnvloedt:__            | De klant.                                                                  |
-| __De impact hiervan is:__      | Klanten weten niet meer wat ze moesten hebben en dat wekt irritates op.    |
-| __Een succesvolle oplossing:__ | - Aanbieden van een boodschappenlijst die overal en altijd beschikbaar is. |
+| __Het probleem__              | Klanten vergeten het boodschappenlijstje                                   |
+|-------------------------------|----------------------------------------------------------------------------|
+| __Dit beïnvloedt__            | De klant.                                                                  |
+| __De impact hiervan is__      | Klanten weten niet meer wat ze moesten hebben en dat wekt irritates op.    |
+| __Een succesvolle oplossing__ | - Aanbieden van een boodschappenlijst die overal en altijd beschikbaar is. |
 
 ---
 
