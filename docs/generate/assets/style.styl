@@ -59,7 +59,7 @@ u, .underline
     display: table
     clear: both
 
-// HEADER/FOOTER
+// HEADER / FOOTER
 header, footer
     display: block
     height: 60px
@@ -71,15 +71,29 @@ header, footer
 // COVER
 cover
     display: block
+    height: 100%
     h1
         margin: 0
-        font-size: 30px
-        padding: 100px 0 0
+        font-size: 50px
+        padding: 100px 0
     h2
-        margin-top: 20px
-        font-size: 18px
+        margin: 40px 0
+        font-size: 30px
         color: text-color
-    
+    h3
+        font-size: 14px
+    h1, h2, h3
+        text-align: right
+    .footer
+        position: absolute
+        bottom: 0
+        p
+            span
+                display: inline-block
+                width: 100px
+            &:last-child
+                margin-bottom: 0
+
 // INDEX
 index
     display: block
@@ -150,3 +164,4 @@ chapter ul
 chapter
     > h1
         padding: 80px 0 20px
+

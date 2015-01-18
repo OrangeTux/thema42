@@ -1,4 +1,21 @@
 cover
-    h1= config.title 
-    h2= config.description 
+    h1= config.employer
+
+    h2= config.project
+    h2= config.title
+
+    if config.version
+        h3= 'Versie ' + config.version
+
+    div.footer
+        if config.authors
+            p.authors
+                span Auteurs:
+                = config.authors
+        p
+            span Instituut:
+            | Hanzehogeschool Groningen
+        p
+            span Datum:
+            = moment().format('D MMMM YYYY')
 

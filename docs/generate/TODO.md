@@ -6,8 +6,8 @@
 - [x] 2nd level index
 - [x] Index styling
 - [x] Images
-- [ ] Style cover (add details)
+- [x] Style cover (add details)
 - [ ] Preface chapters
-- [ ] Intro to chapters
+- [x] Intro to chapters
 - [x] Properly divide chapters onto pages
 

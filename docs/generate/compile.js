@@ -8,6 +8,7 @@ var slug        = require('slug');
 var wkhtmltopdf = require('wkhtmltopdf');
 var xml2js      = require('xml2js');
 var merge       = require('merge');
+var moment      = require('moment');
 var parser      = new xml2js.Parser();
 var file        = path.resolve(process.argv[2]);
 
@@ -70,6 +71,8 @@ fs.readFile(file, 'utf-8', function (err, data) {
     var includesDir  = path.join(generateDir, 'includes');
     var compiledDir  = path.join(generateDir, '.compiled');
 
+    moment.locale('nl_NL');
+
     // Create .compiled/ directory
     try {
         fs.mkdirSync(compiledDir);
@@ -111,7 +114,7 @@ fs.readFile(file, 'utf-8', function (err, data) {
 
     fs.writeFileSync(coverFile, jade.renderFile(
         path.join(includesDir, 'cover.jade'),
-        { config: config }
+        { config: config, moment: moment }
     ));
 
     options.cover = coverFile;
@@ -153,7 +156,8 @@ fs.readFile(file, 'utf-8', function (err, data) {
         documentHTML += jade.renderFile(item.file, merge({
             filename: item.file,
             basedir: path.dirname(item.file),
-            config: config
+            config: config,
+            moment: moment
         }, (item.config || {})));
     });
 
@@ -162,6 +166,7 @@ fs.readFile(file, 'utf-8', function (err, data) {
     // Generate PDF
     var filename = 'Document.pdf'; // title + '.pdf'
     options.output = path.join(path.dirname(file), filename); 
+    // console.log(config, options);
 
     wkhtmltopdf('file://' + documentFile, options, function (code, signal) {
         if (code || signal) {
