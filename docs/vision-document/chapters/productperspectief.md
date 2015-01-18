@@ -36,10 +36,9 @@ draait op een smartphone. Klanten dienen een Apple iPhone of een telefoon met An
 deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die geschikt is voor
 Android.
 
-<center><div style="width: 400px">
+<br/>
 
 ![Overzicht hoe de website en mobiele applicatie zich tot andere system verhouden][1]
 
-</div></center>
+[1]: assets/product_perspective.png "Overzicht hoe de website en de mobiele applicatie zich tot andere systemen verhouden"
 
-[1]: assets/product_perspective.png "Overzicht hoe de website en de mobiele applicatie zich tot andere systemen verhouden" 
