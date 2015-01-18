@@ -1,12 +1,8 @@
-- var startingPage = 3;
-
-// TODO(mauvm): Add second level index
-
 index
     h1.no-index Inhoud
     ul
         - each page in index
-            if page.page >= startingPage
+            if page.title.match(/^\d/)
                 li.first
                     span.page-title= page.title
                     span.page-number= page.page
