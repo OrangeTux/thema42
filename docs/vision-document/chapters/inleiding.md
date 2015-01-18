@@ -1,6 +1,6 @@
 # 1. Inleiding
 
-Deze sectie beschrijft het doel van het document en geeft verwijzingen naar de documenten die zijn gebruikt voor de tot stand koming van dit visie document.
+Deze sectie beschrijft het doel van het document en geeft verwijzingen naar de documenten die zijn gebruikt voor de totstandkoming van dit visie document.
 
 ## 1.1 Doel van het document  
 

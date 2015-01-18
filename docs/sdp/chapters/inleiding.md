@@ -1,17 +1,22 @@
-# 1. Inleiding
+# Inleiding
 
-## 1.1. Doel van het document
-Dit document beschrijft de aanpak van het project Wobbe 2000. Het doel van dit document is meervoudig, namelijk:
+Deze sectie beschrijft het doel van het document en geeft verwijzingen naar de documenten die zijn gebruikt voor de totstandkoming van dit software development plan.
+
+## Doel van het document
+
+Dit document beschrijft de aanpak van het project Wobbe 2000. Het doel van dit document is meervoudig, namelijk het:
 
 - vastleggen van de werkproducten;
 - vastleggen van een planning;
-- afbakening van activiteiten en werkzaamheden;
+- afbakenen van activiteiten en werkzaamheden;
 - vastleggen van verantwoordelijkheden;
 - vastleggen van werkwijze en procedures.
 
-## 1.2. Referenties
+## Referenties
+
 Onderstaande tabel bevat referenties naar documenten die de basis vormen voor dit document.
 
-| Titel  | Versie | Auteurs | Vindplaats           |
-|--------|--------|---------|----------------------|
-| Vision | 1.0    | MMJA    | [http://goo.gl/YY1jUK](http://goo.gl/YY1jUK) |
+| Titel           | Versie | Auteurs      | Vindplaats                     |
+| ----------------|--------|--------------|--------------------------------|
+| Vision document | 0.1    | Projectgroep | [goo.gl/olmxoM](goo.gl/olmxoM) |
+

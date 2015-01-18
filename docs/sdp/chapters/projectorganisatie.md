@@ -1,25 +1,30 @@
-# 3. Projectorganisatie
+# Projectorganisatie
+
 Dit hoofdstuk beschrijft de structuur van het projectteam, de wijze waarop er gecommuniceerd dient
 te worden en de rol die elk lid van het team vervuld.
 
-## 3.1. Organisatiestructuur
+## Organisatiestructuur
+
 De volgende partijen zijn betrokken bij het project Wobbe 2000:
 
 - Supermarktketen Wobbe als opdrachtgever
 - Wobbe 2000 als projectgroep
 
-## 3.2. Communicatierichtlijnen
+## Communicatierichtlijnen
+
 Contact tussen de supermarktketen en projectgroep dient te verlopen tussen de opdrachtgever en
 de projectleider. Tijdens de oplevering worden alle werkproducten overgedragen aan de
 opdrachtgever.
 
-## 3.3. Rollen
+## Rollen
+
 In onderstaande tabel zijn de rollen en verantwoordelijkheden van diverse personen opgenomen.
 
-| Rol              | Teamleden                                                                | Verantwoordelijkheden    |
-|:-----------------|:-------------------------------------------------------------------------|:-------------------------|
-| Opdrachtgever    | Jan-Willem de Boer                                                       | Opdrachtgever            |
-| Projectleider    | Malcolm Kindermans                                                       | Aansturing projectgroep  |
-| Teamlid          | Malcolm Kindermans, Maurits van Mastricht, Jeroen Kruis, Auke Oosterhoff | Oplevering werkproducten |
-| ICT-architect    | Jeroen Kruis, Maurits van Mastricht                                      | Ontwerpen architectuur   |
-| Acceptatietester | Auke Willem Oosterhoff                                                   | Acceptatieplan uitvoeren |
+| Rol              | Teamleden                                                               | Verantwoordelijkheden    |
+|------------------|-------------------------------------------------------------------------|--------------------------|
+| Opdrachtgever    | Jan-Willem de Boer                                                      | Opdrachtgever            |
+| Projectleider    | Malcolm Kindermans                                                      | Aansturing projectgroep  |
+| Teamlid          | Malcolm Kindermans, Maurits van Mastrigt, Jeroen Kruis, Auke Oosterhoff | Oplevering werkproducten |
+| ICT-architect    | Jeroen Kruis, Maurits van Mastrigt                                      | Ontwerpen architectuur   |
+| Acceptatietester | Auke Willem Oosterhoff                                                  | Acceptatieplan uitvoeren |
+
