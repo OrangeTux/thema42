@@ -94,9 +94,24 @@ cover
             &:last-child
                 margin-bottom: 0
 
+// PREPEND
+chapter.prepend
+    h2
+        margin-top: 60px
+    table.signature
+        height: 150px
+        td
+            position: relative
+        span.comment
+            position: absolute
+            bottom: 10px
+            right: 10px
+            font-size: 12px
+
 // INDEX
 index
     display: block
+    page-break-before: always
     h1
         padding: 20px 0 40px
     li
@@ -115,8 +130,6 @@ index
 chapter
     display: block
     page-break-before: always
-    p.has-image
-        text-align: center
 
 // TABLE
 chapter table

@@ -37,8 +37,11 @@ deze applicatie te kunnen gebruiken. De PoC bevat enkel een applicatie die gesch
 Android.
 
 <br/>
+<center>
 
 ![Overzicht hoe de website en mobiele applicatie zich tot andere system verhouden][1]
+
+</center>
 
 [1]: assets/product_perspective.png "Overzicht hoe de website en de mobiele applicatie zich tot andere systemen verhouden"
 

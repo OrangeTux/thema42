@@ -70,6 +70,7 @@ fs.readFile(file, 'utf-8', function (err, data) {
     var generateDir  = path.dirname(process.argv[1]);
     var includesDir  = path.join(generateDir, 'includes');
     var compiledDir  = path.join(generateDir, '.compiled');
+    var documentDir  = path.resolve(path.dirname(file));
 
     moment.locale('nl_NL');
 
@@ -136,20 +137,29 @@ fs.readFile(file, 'utf-8', function (err, data) {
     options.dumpOutline = tocFile;
 
     // TODO(mauvm): Concatinate multiple HTML files here with wkhtmltopdf. Not supported yet.
-    var files = {
-        index   : { file: path.join(includesDir, 'index.jade'), config: { index: toc2Index(tocFile) } },
-        prepend : { file: path.join(includesDir, 'prepend.jade') },
-        document: html,
-        append  : { file: path.join(includesDir, 'append.jade') }
-    };
+    var files = [
+        { key: 'prepend', file: path.join(includesDir, 'prepend.jade') },
+        { key: 'index', file: path.join(includesDir, 'index.jade'), config: { index: toc2Index(tocFile) } },
+        { key: 'document', html: html },
+        { key: 'append', file: path.join(includesDir, 'append.jade') }
+    ];
 
-    Object.keys(files).forEach(function (key) {
-        var item = files[key];
+    // Check for chapters to prepend
+    if (Array.isArray(parsed.attributes.prepend)) {
+        parsed.attributes.prepend.forEach(function (prependFile, index) {
+            files.splice(1 + index, 0, {
+                key: prependFile,
+                file: path.resolve(path.join(documentDir, prependFile))
+            });
+        });
+    }
 
-        documentHTML += '\n<!-- FILE: ' + key + ' -->\n';
+    // Render files
+    files.forEach(function (item, index) {
+        documentHTML += '\n<!-- FILE: ' + item.key + ' -->\n';
 
-        if (typeof item !== 'object') {
-            documentHTML += item;
+        if (typeof item.html === 'string') {
+            documentHTML += item.html;
             return;
         }
 
@@ -165,7 +175,7 @@ fs.readFile(file, 'utf-8', function (err, data) {
 
     // Generate PDF
     var filename = 'Document.pdf'; // title + '.pdf'
-    options.output = path.join(path.dirname(file), filename); 
+    options.output = path.join(documentDir, filename); 
     // console.log(config, options);
 
     wkhtmltopdf('file://' + documentFile, options, function (code, signal) {
