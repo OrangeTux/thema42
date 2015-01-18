@@ -18,7 +18,7 @@ module.exports = function (grunt) {
             },
             assets: {
                 files: ['assets/**/*', 'includes/**/*'],
-                tasks: ['assets', 'compile']
+                tasks: ['compile']
             }
         },
         exec: {
@@ -40,6 +40,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('assets' , ['stylus']);
-    grunt.registerTask('compile', ['exec:compile']);
+    grunt.registerTask('compile', ['stylus', 'exec:compile']);
 };
