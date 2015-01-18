@@ -32,7 +32,7 @@ Om de bruikbaarheid en onderhoudbaarheid van het gehele systeem te vergroten, zu
 - Trainingsmateriaal voor klanten, zodat zij om kunnen gaan met de website en de app.  
     Dit zal via een online hulpfunctie worden verschaft.
 - Testdocumentatie (documenten over wat er getest moet worden en wat de testresultaten zijn).
-- Deploymentdocumentatie (documentatie over hoe het systeem gedeployd kan worden).
+- Deploymentdocumentatie (documentatie over hoe het systeem uitgerolt kan worden).
 - Adviesrapport over mogelijke verbeteringen aan het product.
 - Trainingsmateriaal voor de marketingafdeling, zodat zij persoonlijke advertenties kunnen samenstellen en kunnen distribueren. Dit zal via een online helpfunctie worden verschaft.
 
