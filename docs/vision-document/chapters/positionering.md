@@ -6,7 +6,7 @@ Deze sectie beschrijft het huidige bedrijfsproces, de probleemstelling en mogeli
 
 Momenteel is de supermarktketen Wobbe nog gewoon een normale, tamelijk saaie, supermarkt. De klanten doen hun boodschappen op de traditionele manier: ze lopen met een papieren boodschappenlijstje door de supermarkt en vullen hun boodschappenmandje met artikelen. Hierna plaatsen ze alle artikelen weer op de kassaband en rekenen af bij een cassière, waarna alles weer ingepakt moet worden. Daarnaast zien we dat de reclames vaak hun doel missen. Reclames zijn momenteel te onpersoonlijk.
 
-Uit gesprekken in de wandelgangen is gebleken dat klanten de supermarkt als een saaie en ouderwetse supermarkt ervaren. Dat blijkt ook uit het feit dat het aantal klanten in de afgelopen maanden met ⅓ is teruggelopen.
+Uit gesprekken in de wandelgangen is gebleken dat klanten de supermarkt als een saaie en ouderwetse supermarkt ervaren. Dat blijkt ook uit het feit dat het aantal klanten in de afgelopen maanden met een derde is teruggelopen.
 
 De oplossing die bedacht is moet hier verandering in bieden. Met de nieuwe aanpak kunnen klanten thuis hun boodschappenlijstje al samenstellen. Wanneer ze vervolgens in de winkel zijn, kunnen ze kunnen ze het boodschappenlijstje via een app op hun mobiel bekijken. Tijdens de ronde door de winkel kunnen klanten de gewenste producten scannen met hun telefoon. Deze producten worden vervolgens van het boodschappenlijstje gestreept. Bij de kassa kan met de telefoon betaald worden. Hierdoor
 zijn er geen lange wachtrijen meer. Op basis van de boodschappenlijstjes kan gerichte reclame aan de klant worden getoond. 
