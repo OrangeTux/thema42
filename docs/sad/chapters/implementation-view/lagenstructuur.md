@@ -7,10 +7,12 @@ Deze paragraaf beschrijft de technische invulling van de, in de logica view, ond
 De presentatie laag omvat de deelsystemen die een interface bieden aan de eindgebruikers van het systeem. Dit wordt gedaan door middel van een mobiele applicatie en een website. Beide onderdelen communiceren, via de service laag, met de domein (applicatie) laag voor het ophalen en muteren van gegevens.
 Onderstaand worden de keuzes toegelicht (regels voor de componenten):
 
-__Mobiele Applicatie__  
+#### Mobiele Applicatie
+
 De mobiele applicatie moet een cross-platform applicatie zijn die eenvoudig is in gebruik. Hierdoor is er voor bestaande oplossingen als Cordova en OnsenUI gekozen (zie paragraaf 4.3). Dit neemt werk uit handen, waardoor er meer focus gelegd kan worden op de gebruikerservaring, terwijl de applicatie toch grafisch aantrekkelijk blijft.
 
-__Website__  
+#### Website
+
 Net als de mobiele applicatie, is ook de website met bestaande componenten geïmplementeerd. Voor een aantrekkelijk grafische interface is er Twitter Bootstrap gebruikt. De applicatielogica aan de client kant is gedaan met behulp van de template engine van Laravel. Ook deze punten worden nader toegelicht in paragraaf 4.3.
 
 Het serveren van de webistepagina’s wordt gedaan met behulp van een webservice. Hierbij is er gekozen voor het Laravel framework, omdat dit framework makkelijk is in gebruik, geen stijle leercurve heeft, en er al de nodige ervaring in de groep aanwezig was. De keuzecriteria zijn dus met name ontwikkelsnelheid en onderhoudbaarheid (maintainability) van het systeem.
