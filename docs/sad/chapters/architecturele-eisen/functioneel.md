@@ -1,3 +1,4 @@
+<hr>
 ## Functionele eisen
 
 In onderstaande tabel is zijn de functionele eisen opgenomen. 
