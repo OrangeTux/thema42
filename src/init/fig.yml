@@ -1,0 +1,22 @@
+# TODO(mauvm): Use environment variable to set container environment (when possible).
+web:
+  build: web/
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - web/sites-enabled:/etc/nginx/sites-enabled
+    - ../web:/var/www/html
+    - web/tools:/var/tools
+  environment:
+    WEB_ENV: "development"
+  links:
+    - mysql
+mysql:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: "banaan01"
+    MYSQL_DATABASE: "laravel"
+
