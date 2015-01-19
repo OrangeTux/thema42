@@ -1,0 +1,28 @@
+---
+title: Software Architecture Document
+project: Wobbe 2000
+employer: Winkel van de Toekomst
+authors: Malcolm Kindermans, Jeroen Kruis, Maurits van Mastrigt en Auke Willem Oosterhof.
+version: 0.1
+prepend: [chapters/prepend.jade]
+---
+
+chapter
+    include:markdown chapters/inleiding/inleiding.md
+    include:markdown chapters/inleiding/doel.md
+    include:markdown chapters/inleiding/referenties.md
+    include:markdown chapters/inleiding/documentoverzicht.md
+chapter
+    include:markdown chapters/architecturele-eisen/inleiding.md
+    include:markdown chapters/architecturele-eisen/niet-functioneel.md
+    include:markdown chapters/architecturele-eisen/functioneel.md
+chapter
+    include:markdown chapters/logical-view.md
+chapter
+    include:markdown chapters/implementation-view/inleiding.md
+    include:markdown chapters/implementation-view/packagestructuur.md
+    include:markdown chapters/implementation-view/lagenstructuur.md
+    include:markdown chapters/implementation-view/hergebruik-componenten.md
+chapter
+    include:markdown chapters/deployment-view.md
+
