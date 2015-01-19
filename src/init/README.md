@@ -14,3 +14,7 @@ When finished, run `./project.sh stop` to shut it al down. Additionally run `./p
 
 Run `./project.sh ps` to see the status of the containers.
 
+## App
+
+[TODO: Find/create Android SDK build container.]
+
