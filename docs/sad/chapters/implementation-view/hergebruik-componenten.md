@@ -1,6 +1,6 @@
 ## (Her)gebruik van componenten en frameworks
 
-Deze paragraaf beschrijft de componenten en frameworks die in het project zijn gebruikt/toegepast.
+Deze paragraaf beschrijft de componenten en frameworks die in het project zijn gebruikt.
 
 ### Presentatielaag
 
@@ -20,7 +20,7 @@ De volgende componenten/frameworks zijn gebruikt bij het ontwikkelen van de webs
 - Twitter Bootstrap – Vanwege de moeilijkheidsgraad om er een mooi product mee te maken;
 - Laravel - Laravel biedt zelf een ingebouwde template engine. Vanwege het gemak is deze gebruikt.
 
-### Service laag
+### Servicelaag
 
 De service laag bestaat uit:
 
@@ -30,7 +30,7 @@ De service laag bestaat uit:
 
 De domeinlaag is de applicatielogica en valt te omvatten in de term “back-end”. Hieronder valt de mogelijkheid om boodschappenlijstjes te beheren en de applicatielogica. Hiervoor is het volgende framework gebruikt:
 
-- Laravel (PHP-framework) – Vanwege de hoeveelheid documentatie die er over beschikbaar is en de duidelijke MVC-structuur die het biedt zonder te veel op te leggen.
+- Laravel – Vanwege de hoeveelheid documentatie die er over beschikbaar is en de duidelijke MVC-structuur die het biedt. 
 
 ### Datalaag
 
