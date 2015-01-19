@@ -1,6 +1,6 @@
 ## Documentoverzicht
 
-Onderstaand de hoofdstukken in dit document, de belanghebbende(n) en het doel van het hoofdstuk.
+In onderstaande tabel zijn de belanghebbenden en het doel van alle hoofdstukken opgenomen. 
 
 | Hoofdstuk               | Belanghebbenden                          | Doel                                                                                                                             |
 |-------------------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
