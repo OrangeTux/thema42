@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::group(array('namespace' => 'Api'), function()
 {
-	Route::post('api/user/login', ['uses' => 'UserController@loginUser']);
+	Route::resource('user', 'UserController');
 });
