@@ -12,7 +12,8 @@ cd "$DIR"
 
 # Run container
 docker run -it -privileged \
-	-v $(realpath $(pwd)/../app):/data \
+	-v $(realpath $(pwd)/../../../app):/data \
 	-v /dev/bus/usb:/dev/bus/usb \
+	-v $(realpath $(pwd)/../tools):/var/tools \
 	thema42_app
 
