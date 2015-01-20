@@ -8,7 +8,6 @@ while [ -h "$SOURCE" ]; do # Resolve $SOURCE until the file is no longer a symli
     [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # Resolve symlink
 done
 DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
-
 cd "$DIR"
 
 # Output formatting
