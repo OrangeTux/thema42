@@ -16,5 +16,10 @@ Run `./project.sh ps` to see the status of the containers.
 
 ## App
 
-[TODO: Find/create Android SDK build container.]
+Cordova and the Android SDK are installed inside de app container. The
+container has been configured to build the app and push it to your phone.
 
+1. Build the image with `$ docker build -t="thema42_app app/`
+2. You can start the container by executing `$ tools/run.sh`. By default the
+   build proces for the app is started. You can start a different process by
+   adding options: `$ tools/run.sh /bin/bash`.

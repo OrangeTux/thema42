@@ -11,9 +11,8 @@ DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 cd "$DIR"
 
 # Run container
-docker run -it -privileged \
-	-v $(realpath $(pwd)/../../../app):/data \
+docker run -it --privileged \
+	-v $(realpath $(pwd)/../../app):/data \
 	-v /dev/bus/usb:/dev/bus/usb \
-	-v $(realpath $(pwd)/../tools):/var/tools \
-	thema42_app
-
+	-v $(realpath $(pwd)/.):/var/tools \
+	thema42_app $@
