@@ -6,11 +6,11 @@ class UserTableSeeder extends Seeder
 	{
 		DB::table('users')->truncate();
 
-		$newUser = Sentry::createUser([
+		User::create(array(
 			'name'	=>	'John',
 			'surname'	=>	'Doe',
 			'email'	=>	'johndoe@foobar.com',
 			'password'	=>	'banana'
-		]);
+		));
 	}
 }

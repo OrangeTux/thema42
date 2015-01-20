@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::group(array('namespace' => 'Api'), function()
+{
+	Route::post('api/user/login', ['uses' => 'UserController@loginUser']);
+});
