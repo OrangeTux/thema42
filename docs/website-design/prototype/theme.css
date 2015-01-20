@@ -1,0 +1,199 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.jumbotron-bg-img {
+	background-image: url('assets/images/groenten_mand.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 600px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+	height: 600px;
+	background: transparent;
+	position: relative;
+}
+
+div.wobbe {}
+	div.wobbe h1 {
+		text-align: right;
+		font-weight: bold;
+	}
+
+	div.wobbe h2.first {
+		font-weight: bold;
+		text-align: right;
+	}
+
+	div.wobbe h2.second {
+		font-weight: bold;
+		text-align: right;
+	}
+
+a.home-experience {
+	padding: 10px 45px;
+	font-size: 40px;
+}
+
+div.home-experience-div {
+	position: absolute;
+	bottom: 9%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* > Media Queries */
+@media (min-width: 1430px) {
+	div.wobbe {}
+		div.wobbe h1 {
+			margin-right: -50px;
+		}
+}
+
+/* >> Large devices Desktops */
+@media (min-width: 1200px) {
+	div.wobbe {}
+		div.wobbe h1 {
+				font-size: 86px;
+				margin-top: -15px;
+				margin-bottom: 28px;
+				margin-right: -10px;
+ 			}
+
+		div.wobbe h2.first {
+				margin-right: 85px;
+				font-size: 30px;
+				margin-top: 92px;
+ 			}
+
+		div.wobbe h2.second {
+				margin-top: 26px;
+				font-size: 21px;
+				margin-right: 42px;
+ 			}
+}
+
+/* >> Medium devices Desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	div.wobbe {}
+		div.wobbe h1 {
+			margin-right: -25px;
+			font-size: 82px;
+			margin-top: -13px;
+		}
+
+		div.wobbe h2.first {
+			font-size: 29px;
+			margin-right: 23px;
+			margin-top: 103px;
+		}
+
+		div.wobbe h2.second {
+			margin-top: 11px;
+			font-size: 22px;
+		}
+}
+
+/* >> Small devices Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+	div.wobbe {}
+		div.wobbe h1 {
+			font-size: 81px;
+			margin-top: -15px;
+			margin-bottom: 28px;
+			margin-right: -5px;;
+		}
+
+		div.wobbe h2.first {
+			font-size: 26px;
+			margin-top: 112px;
+			margin-right: 37px;
+		}
+
+		div.wobbe h2.second {
+			margin-top: 4px;
+			font-size: 22px;
+		}
+}
+
+/* >> Extra small devices Phones */
+@media (max-width: 768px) {
+	div.wobbe {}
+		div.wobbe h1 {
+			font-size: 86px;
+			margin-top: -15px;
+			margin-bottom: 28px;
+		}
+
+		div.wobbe h2.first {
+			font-size: 22px;
+			margin-top: 163px;
+		}
+
+		div.wobbe h2.second {
+			margin-top: 1px;
+			font-size: 21px;
+		}
+}
+
+
+
+/*.jumbotron {
+	margin-bottom: 0px;
+	height: 600px;
+	background: transparent;
+	position: relative;
+}
+
+h1.wobbe{
+	font-weight: bold;
+	font-size: 86px;
+}
+
+h2.wobbe-first {
+	font-weight: bold;
+	text-align: right;
+	font-size: 30px;
+	margin-top: 55px;
+}
+
+h2.wobbe-second {
+	margin-top: 13px;
+	font-weight: bold;
+	text-align: right;
+	font-size: 21px;
+}
+
+a.home-experience {
+  padding: 10px 45px;
+  font-size: 40px;
+}
+
+div.home-experience-div {
+	position: absolute;
+	bottom: 85px;
+}*/
