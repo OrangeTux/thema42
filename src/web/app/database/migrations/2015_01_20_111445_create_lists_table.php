@@ -14,13 +14,10 @@ class CreateListsTable extends Migration {
 	{
 		Schema::create('lists', function(Blueprint $table)
 		{
-			$table->increments('list_id');
-			$table->integer('user_id');
-			$table->integer('product_id');
-			$table->integer('quantity');
-
+			$table->increments('list_id')->unsigned();
+			$table->integer('user_id')->unsigned();
 			$table->timestamps();
-		}
+		});
 	}
 
 	/**
@@ -30,7 +27,7 @@ class CreateListsTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('lists');
 	}
 
 }
