@@ -14,5 +14,6 @@ cd "$DIR"
 docker run -it --privileged \
 	-v $(realpath $(pwd)/../../app):/data \
 	-v /dev/bus/usb:/dev/bus/usb \
-	-v $(realpath $(pwd)/.):/var/tools \
+	-v $(pwd)/tools:/var/tools \
 	thema42_app $@
+
