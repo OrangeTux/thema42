@@ -16,7 +16,7 @@ class CreateProductTable extends Migration {
 		{
 			$table->increments('product_id')->unsigned();
 			$table->string('name');
-			$table->('price');
+			$table->decimal('price', 5, 2);
 		}
 	}
 

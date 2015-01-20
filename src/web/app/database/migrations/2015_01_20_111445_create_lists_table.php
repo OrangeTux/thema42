@@ -15,6 +15,7 @@ class CreateListsTable extends Migration {
 		Schema::create('lists', function(Blueprint $table)
 		{
 			$table->increments('list_id');
+			$table->integer('user_id');
 			$table->integer('product_id');
 			$table->integer('quantity');
 
