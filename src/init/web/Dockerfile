@@ -43,11 +43,10 @@ RUN echo "Europe/Amsterdam" > /etc/timezone
 # Install FastCGI
 RUN /usr/share/hhvm/install_fastcgi.sh && \
     update-rc.d hhvm defaults
- 
-# Fix Composer timeout issues (with HHVM)
-# Fix from: http://stackoverflow.com/questions/23471864/installing-composer-using-vagrant-hhvm-and-ubuntu-14-04
-RUN echo "hhvm.resource_limit.socket_default_timeout = 30" >> /etc/hhvm/php.ini && \
-    echo "hhvm.http.slow_query_threshold = 30000" >> /etc/hhvm/php.ini
+
+# Configure HHVM
+ADD php.ini /etc/hhvm/
+ADD server.ini /etc/hhvm/
 
 # Install Nginx
 RUN add-apt-repository -y ppa:nginx/stable && \
