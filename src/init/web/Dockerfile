@@ -37,6 +37,8 @@ RUN locale-gen nl_NL.UTF-8 && \
 
 ENV LANG nl_NL.UTF-8
 ENV LC_ALL nl_NL.UTF-8
+ENV TZ Europe/Amsterdam
+RUN echo "Europe/Amsterdam" > /etc/timezone
 
 # Install FastCGI
 RUN /usr/share/hhvm/install_fastcgi.sh && \
