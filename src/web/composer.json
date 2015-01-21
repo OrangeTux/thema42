@@ -5,6 +5,7 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
+		"vespakoen/menu": "2.0.15",
 		"laravel/framework": "4.2.*"
 	},
 	"autoload": {

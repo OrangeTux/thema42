@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-	Show homepage
+	@include('layouts.layerslider')
 @stop
