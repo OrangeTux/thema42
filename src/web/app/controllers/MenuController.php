@@ -1,5 +1,6 @@
 <?php
-class MenuController extends Controller
+
+class MenuController extends BaseController
 {
 	function renderMain()
 	{
