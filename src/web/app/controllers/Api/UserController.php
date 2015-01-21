@@ -36,7 +36,7 @@ class UserController extends BaseController
 	 */
 	public function store()
 	{
-		//
+		User::create(Input::all());
 	}
 
 
