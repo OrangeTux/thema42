@@ -7,11 +7,11 @@ Deze paragraaf beschrijft de technische invulling van de, in de logica view, ond
 
 De presentatielaag omvat de deelsystemen die een interface bieden aan de eindgebruikers van het systeem. Dit wordt gedaan door middel van een mobiele applicatie en een website. Beide onderdelen communiceren, via de service laag, met de domein-/applicatielaag voor het ophalen en muteren van gegevens.
 
-- Mobiele Applicatie
+#### Mobiele Applicatie
 
 De mobiele applicatie moet een cross-platform applicatie zijn die eenvoudig is in gebruik. Hierdoor is er voor bestaande oplossingen als Cordova en Onsen UI gekozen (zie paragraaf 4.3). Dit neemt werk uit handen, waardoor er meer focus gelegd kan worden op de gebruikerservaring, terwijl de applicatie toch grafisch aantrekkelijk blijft.
 
-- Website
+#### Website
 
 Net als de mobiele applicatie, is ook de website met bestaande componenten geïmplementeerd. Voor een aantrekkelijk grafische interface is er Twitter Bootstrap gebruikt. 
 
@@ -26,6 +26,8 @@ Het HTTP-protocol heeft veel overhead, maar biedt daarentegen veel structuur en 
 ### Domeinlaag
 
 De applicatielogica is volledig uitgewerkt in de PHP scripttaal. Er is hierbij gekozen voor een framework, omdat hiermee sneller en transparanter ontwikkeld kan worden. Dit is voordelig voor alle ontwikkelaars. Tevens is het gekozen framework zeer expressief en biedt het veel mogelijkheden. Dit voorkomt dat ontwikkelaars onnodig tijd besteden aan het “opnieuw uitvinden van het wiel”, wat een gevaar voor elk project is. Het gebruiken van bestaande tools stelt de ontwikkelaars in staat zich meer te richten op de functionaliteiten en minder op implementatie technieken.
+
+---
 
 ### Datalaag
 

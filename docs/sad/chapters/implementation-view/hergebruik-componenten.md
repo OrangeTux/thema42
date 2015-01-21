@@ -26,6 +26,8 @@ De service laag bestaat uit:
 
 - RESTful API – Vanwege de eenvoud van de benadering is er voor gekozen om de API RESTful te implementeren. Complexiteit wordt hierdoor zoveel mogelijk verminderd. Deze API is geïmplementeerd in het Laravel framework. Zie hiervoor ook het kopje “Domeinlaag”.
 
+---
+
 ### Domeinlaag
 
 De domeinlaag is de applicatielogica en valt te omvatten in de term “back-end”. Hieronder valt de mogelijkheid om boodschappenlijstjes te beheren en de applicatielogica. Hiervoor is het volgende framework gebruikt:
