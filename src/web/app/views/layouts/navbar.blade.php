@@ -1,6 +1,7 @@
 @section('navbar')
 	<div class="sixteen columns">
 		<div id="navigation">
+			<!-- {{ ( new MenuController )->renderMain() }} -->
 			<ul id="nav">
 				<li><a id="current" href="{{ URL::route('home.index') }}">Home</a></li>
 				<li><a href="{{ URL::route('list.index') }}">Alle lijsten</a></li>
