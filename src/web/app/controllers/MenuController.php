@@ -4,20 +4,32 @@ class MenuController extends BaseController
 {
 	function renderMain()
 	{
-		// Menu::reset();
-		Menu::setOption('item.active_class', 'active');
-		Menu::setOption('item.active_child_class', 'active');
+		Menu::reset();
+
+		// Init Main
 		$main = Menu::handler('main');
-		$main->add(URL::route('dashboard.index'), 'Dashboard');
-		$main->add(URL::route('demo.ask-question'), trans('demo.labels.ask-question'));
-		$main->add(URL::route('user.user-management'), 'Gebruikersmanagement');
-		$main->add(URL::route('question.question-overview'), 'Vragen');
-		$main->add(URL::route('answer.answer-overview'), 'Antwoorden');
-		$main->add(URL::route('feedback.feedbackOverview'), 'Feedback');
-		$main->add(URL::route('auth.logout'), trans('auth.labels.logout'));
+
+		// Add menu items
+		$main->add(URL::route('home.index'), 'Home');
+		$main->add(URL::route('list.index'), 'Alle lijsten');
+		$main->add(URL::route('list.create'), 'Nieuwe lijst');
+		$main->add(URL::route('home.index'), 'Malcolm Kindermans');
+		$main->add(URL::route('home.index'), 'Uitloggen');
+
+		// Add active class to anchor tags
+		Menu::handler('main')->getItemsAtDepth(0)->map(function($item)
+		{
+			if ($item->isActive()) {
+				$item
+					->getContent()
+					->setAttribute('id', 'current');
+			}
+		});
+
+		// Render menu
 		return $main
 			->setAttribute('id', 'nav')
-			->setAttribute('class', 'nav navbar-nav')
+			// ->setAttribute('class', 'nav navbar-nav')
 			->render();
 	}
 }
