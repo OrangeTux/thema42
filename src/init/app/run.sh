@@ -10,10 +10,15 @@ done
 DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 cd "$DIR"
 
+# Create if image (if not present)
+if [ $(docker images | tail -n +2 | awk '{print $1}' | grep 'thema42_app' | wc -l) -eq 0 ]; then
+	docker build -t="thema42_app" .
+fi
+
 # Run container
 docker run -it --privileged \
 	-v $(realpath $(pwd)/../../app):/data \
-	-v /dev/bus/usb:/dev/bus/usb \
 	-v $(pwd)/tools:/var/tools \
+	--device=/dev/bus/usb:/dev/bus/usb:rwm \
 	thema42_app $@
 
