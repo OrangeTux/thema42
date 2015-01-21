@@ -4986,3 +4986,39 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	}
 
 }
+
+.shoppinglist {
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative; }
+
+	.shoppinglist .shoppinglist-actions {
+		text-align: right;
+ 		width: 100%;
+ 		margin-top: -20px;
+ 		margin-left: 20px;
+ 		visibility: hidden; }
+
+	.shoppinglist:hover .shoppinglist-actions {
+		visibility: visible; }
+
+		.shoppinglist .shoppinglist-actions span.edit,
+		.shoppinglist .shoppinglist-actions span.delete {
+			cursor: pointer; }
+
+ 	.shoppinglist ul {
+ 		list-style: initial; }
+
+ 		.shoppinglist ul li span.scanned {
+			text-decoration: line-through; }
+
+	.shoppinglist div.shoppinglist-show-more {
+		visibility: hidden;
+		position: absolute;
+		bottom: 4%;
+		left: 25%;
+		transform: translate(-50%, -50%); }
+
+	.shoppinglist:hover div.shoppinglist-show-more {
+		visibility: visible; }
