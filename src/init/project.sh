@@ -60,6 +60,10 @@ project_ps () {
     fig ps
 }
 
+project_ssh () {
+	docker exec -it "${FIG_PROJECT_NAME}_web_1" bash
+}
+
 project_update() {
     docker exec -t project_web_1 /var/tools/update.sh
 }
@@ -75,6 +79,7 @@ case "$1" in
     stop)   shift; project_stop;;
     clean)  shift; project_clean;;
     ps)     shift; project_ps;;
+	ssh)    shift; project_ssh;;
     update) shift; project_update;;
     *) project_invalid $@;;
 esac
