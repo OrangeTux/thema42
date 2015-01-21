@@ -20,3 +20,5 @@ Route::group(array('namespace' => 'Api'), function()
 {
 	Route::resource('user', 'UserController');
 });
+
+Route::resource('list', 'ListController');
