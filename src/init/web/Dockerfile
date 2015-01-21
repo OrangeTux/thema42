@@ -35,6 +35,9 @@ RUN cd $WORKDIR && \
 RUN locale-gen nl_NL.UTF-8 && \
     /usr/sbin/update-locale LANG="nl_NL.UTF-8" LANGUAGE="nl_NL.UTF-8" LC_ALL="nl_NL.UTF-8" LC_CTYPE="C"
 
+ENV LANG nl_NL.UTF-8
+ENV LC_ALL nl_NL.UTF-8
+
 # Install FastCGI
 RUN /usr/share/hhvm/install_fastcgi.sh && \
     update-rc.d hhvm defaults
