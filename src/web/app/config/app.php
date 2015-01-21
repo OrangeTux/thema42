@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Menu\MenuServiceProvider',
 	),
 
 	/*
@@ -189,6 +190,7 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 
+		'Menu'              => 'Menu\Menu',
 	),
 
 );
