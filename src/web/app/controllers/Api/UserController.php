@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< HEAD:src/web/app/controllers/UserController.php
-class UserController extends BaseController
-{
-=======
 namespace Api;
->>>>>>> Edit controller add model:src/web/app/controllers/Api/UserController.php
 
 use BaseController;
 use User;
@@ -53,10 +48,7 @@ class UserController extends BaseController
 	 */
 	public function show($id)
 	{
-		$user = User::findOrFail($id);
-
-		var_dump($user->lists);
-		return $user;
+		return User::findOrFail($id);
 	}
 
 
