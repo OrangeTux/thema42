@@ -13,7 +13,7 @@
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
-Route::group(array('namespace' => 'Api'), function()
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
 {
 	Route::resource('user', 'UserController');
 });
