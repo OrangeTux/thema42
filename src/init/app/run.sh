@@ -19,6 +19,5 @@ fi
 docker run -it --privileged \
 	-v $(realpath $(pwd)/../../app):/data \
 	-v $(pwd)/tools:/var/tools \
-	--device=/dev/bus/usb:/dev/bus/usb:rwm \
 	thema42_app $@
 
