@@ -27,6 +27,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->name . ' ' . $this->surname;
 	}
+	
+	static function findUserByCredentials($email, $password)
+	{
+		
+	}
 
 	function lists()
 	{
