@@ -6,9 +6,12 @@ Aan het product worden een aantal eisen gesteld die niet direct omschreven kunne
 functies die het product aan de klant biedt. Deze eisen staan hieronder:
 
 1. _Scanverwerkingstijd_ (het scannen/afhandelen van een product) mag maximaal 2 seconden duren.
-2. De app moet _ondersteund_ worden _door iOS en Android_ (voor de _PoC_ wordt volstaan met alleen Android).
-3. Het systeem moet _minimaal 1,000 actieve app clients tegelijkertijd_ kunnen verwerken.
-4. Het systeem moet (relatief) eenvoudig _uit te rollen zijn_ zijn _in meerdere filialen_, zonder dat deze van elkaar afhankelijk zijn.
+2. De app moet _ondersteund_ worden _door iOS en Android_ (voor de _PoC_ wordt volstaan met alleen
+   Android).
+3. De _PoC_ moet _minimaal 100 actieve app clients tegelijkertijd_ kunnen verwerken. Meer dan 100
+   klanten zullen er niet tegelijkertijd in de winkel aanwezig zijn.
+4. Het systeem moet (relatief) eenvoudig _uit te rollen zijn_ zijn _in meerdere filialen_, zonder
+   dat deze van elkaar afhankelijk zijn.
 
 ## 6.2 Randvoorwaarden
 
@@ -16,7 +19,8 @@ Er zijn een aantal voorwaarden voldaan worden om succesvol een _PoC_ te ontwikke
 
 1. De _PoC_ moet binnen 3 weken kunnen worden gedemonstreerd.
 2. Het systeem dient gekoppeld te kunnen worden aan verschillende soorten voorraadsystemen.
-3. De klant van de supermarkt heeft de beschikking over smartphone met internet (of Wi-Fi ondersteuning) en een camera.
+3. De klant van de supermarkt heeft de beschikking over smartphone met internet (of Wi-Fi
+   ondersteuning) en een camera.
 3. Supermarkt biedt een gratis Wi-Fi aan.
 
 Wanneer het project breder wordt uitgerold zal de de volgende randvoorwaarden voldaan moet worden:
