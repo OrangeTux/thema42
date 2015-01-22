@@ -7,10 +7,10 @@ class UserTableSeeder extends Seeder
 		DB::table('users')->truncate();
 
 		User::create(array(
-			'name'	=>	'Jeroen',
-			'surname'	=>	'Kruis',
+			'first_name'	=>	'Jeroen',
+			'last_name'	=>	'Kruis',
 			'email'	=>	'kruisjeroen@gmail.com',
-			'password'	=>	'Hash::make('banaan')'
+			'password'	=>	Hash::make('banaan')
 		));
 	}
 }
