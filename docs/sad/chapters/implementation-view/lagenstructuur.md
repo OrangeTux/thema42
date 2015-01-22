@@ -15,7 +15,7 @@ De mobiele applicatie moet een cross-platform applicatie zijn die eenvoudig is i
 
 Net als de mobiele applicatie, is ook de website met bestaande componenten geïmplementeerd. Voor een aantrekkelijk grafische interface is er Twitter Bootstrap gebruikt. 
 
-Het serveren van de webistepagina’s wordt gedaan met behulp van een webservice. Hierbij is er gekozen voor het Laravel framework, omdat dit framework makkelijk is in gebruik, geen stijle leercurve heeft en er al de nodige ervaring in de groep aanwezig was. De keuzecriteria zijn dus met name ontwikkelsnelheid en onderhoudbaarheid van het systeem.
+Het serveren van de webpagina’s wordt gedaan met behulp van een webservice. Hierbij is er gekozen voor het Laravel framework, omdat dit framework makkelijk is in gebruik, geen stijle leercurve heeft en er al de nodige ervaring in de groep aanwezig was. De keuzecriteria zijn dus met name ontwikkelsnelheid en onderhoudbaarheid van het systeem.
 
 ### Servicelaag
 

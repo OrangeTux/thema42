@@ -11,7 +11,7 @@ De presentatielaag is op te delen in de mobiele applicatie en de website.
 De volgende componenten/frameworks zijn gebruikt bij het ontwikkelen van de mobiele applicatie:
 
 - Cordova – Vanwege de mogelijkheid om te ontwikkelen zonder gebruik te maken van de native APIs van devices;
-- Onsen UI – Vanwege de mogelijkheid om simpel een native “_look and feel_” te creëren in een webomgeving. Daarnaast heeft Onsen UI een betere performance voor mobiele apparaten dan een regulier HTML5 UI Framework.
+- Onsen UI – Vanwege de mogelijkheid om simpel een native “_look and feel_” te creëren in een webomgeving. Daarnaast heeft Onsen UI een betere performance voor mobiele apparaten dan een regulier HTML5 UI framework.
 
 #### Website
 
@@ -24,7 +24,7 @@ De volgende componenten/frameworks zijn gebruikt bij het ontwikkelen van de webs
 
 De service laag bestaat uit:
 
-- RESTful API – Vanwege de eenvoud van de benadering is er voor gekozen om de API RESTful te implementeren. Complexiteit wordt hierdoor zoveel mogelijk verminderd. Deze API is geïmplementeerd in het Laravel framework. Zie hiervoor ook het kopje “Domeinlaag”.
+- RESTful API – Vanwege de eenvoud van de benadering is er voor gekozen om de API RESTful te implementeren. Complexiteit wordt hierdoor zoveel mogelijk verminderd. Deze API is geïmplementeerd in het Laravel framework. Zie hiervoor ook het kopje “Domeinlaag”.
 
 ---
 
