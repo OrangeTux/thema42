@@ -21,33 +21,33 @@ worden de randvoorwaarden toegelicht.
 __Binnen scope:__
 De volgende onderdelen vallen binnen de projectscope:
 
-- ontwerp van API;
-- implementatie van de website;
-- het aanmaken van een boodschappenlijst;
-- het verwijderen van een boodschappenlijst;
-- het aanpassen van een boodschappenlijst;
-- implementatie van de mobiele applicatie;
-- het bekijken van een boodschappenlijst.
+1. Ontwerp van API;
+2. Implementatie van de website;
+3. Het aanmaken van een boodschappenlijst;
+4. Het verwijderen van een boodschappenlijst;
+5. Het aanpassen van een boodschappenlijst;
+6. Implementatie van de mobiele applicatie;
+7. Het bekijken van een boodschappenlijst.
 
 ---
 
 __Buiten scope:__
 De volgende onderdelen vallen buiten de projectscope:
 
-- onderhoud van de website;
-- onderhoud van de mobiele applicatie;
-- draadloos kunnen betalen via NFC;
-- aanbiedingen krijgen op basis van locatie;
-- smartphones.
+1. Onderhoud van de website;
+2. Onderhoud van de mobiele applicatie;
+3. Draadloos kunnen betalen via NFC;
+4. Aanbiedingen krijgen op basis van locatie;
+5. Smartphones.
 
 __Randvoorwaarden:__
 Voor dit project geldt de volgende randvoorwaarde:
 
-- voorraadsystem moet aangeleverd worden.
+1. Voorraadsystem moet aangeleverd worden.
 
 Voor het opgeleverde product geldt de volgende randvoorwaarde:
 
-- betaalterminals ondersteunen NFC betalingen.
+1. Betaalterminals ondersteunen NFC betalingen.
 
 ## Project werkproducten
 
