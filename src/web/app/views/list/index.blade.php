@@ -6,7 +6,7 @@
 			<div class="large-notice shoppinglist">
 
 				<div class="shoppinglist-actions">
-					<span class="edit">Edit</span>
+					<span class="edit"><a href="{{ URL::route('list.edit', $shoppingList['id']) }}">Edit</a></span>
 					<span class="delete">Delete</span>
 				</div>
 
@@ -14,8 +14,13 @@
 				<ul>
 					@foreach(array_slice($shoppingList['products'], 0, 8) as $product)
 						<li>
-							<span class="{{ $product['scanned'] ? 'scanned' : "" }}">
-								{{ $product['name'] }} {{ $product['quantity'] }}x
+							<span class="product-info {{ $product['scanned'] ? 'scanned' : "" }}">
+								<span class="name">
+									{{ $product['name'] }}
+								</span>
+								<span class="quantity">
+									{{ $product['quantity'] }}x
+								</span>
 							</span>
 						</li>
 					@endforeach

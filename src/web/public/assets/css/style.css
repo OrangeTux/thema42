@@ -4990,8 +4990,30 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 .shoppinglist ul {
 	list-style: initial; }
 
-	.shoppinglist ul li span.scanned {
-		text-decoration: line-through; }
+	.shoppinglist ul li span.product-info {}
+		.shoppinglist ul li span.product-info .name {}
+		.shoppinglist ul li span.product-info .quantity {
+			font-size: smaller;
+			margin-left: 2%; }
+
+		.shoppinglist ul li span.product-info.scanned {
+			text-decoration: line-through; }
+
+	.shoppinglist .shoppinglist-actions {
+		text-align: right;
+		width: 100%;
+		margin-top: -20px;
+		margin-left: 20px; }
+
+	.shoppinglist:hover .shoppinglist-actions {
+		visibility: visible !important;}
+
+		.shoppinglist .shoppinglist-actions .edit,
+		.shoppinglist .shoppinglist-actions .delete {
+			cursor: pointer;}
+
+		/*.shoppinglist .shoppinglist-actions .edit {
+			background: url('/assets/img/icons/actions/edit_black_16.png') no-repeat center center !important;}*/
 
 .all-lists {}
 	.all-lists .shoppinglist {
@@ -5001,18 +5023,10 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 		position: relative; }
 
 		.all-lists .shoppinglist .shoppinglist-actions {
-			text-align: right;
-			width: 100%;
-			margin-top: -20px;
-			margin-left: 20px;
 			visibility: hidden; }
 
-		.all-lists .shoppinglist:hover .shoppinglist-actions {
-			visibility: visible; }
-
-			.all-lists .shoppinglist .shoppinglist-actions span.edit,
-			.all-lists .shoppinglist .shoppinglist-actions span.delete {
-				cursor: pointer; }
+		.all-lists .shoppinglist ul {
+			margin-left: 16px;}
 
 		.all-lists .shoppinglist div.shoppinglist-show-more {
 			visibility: hidden;
@@ -5026,23 +5040,36 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 
 .single-shoppinglist {
 	width: 70%;
-	margin: 35px auto 10px; }
+	margin: 35px auto 10px;
+	position: relative; }
 
 	.single-shoppinglist .shoppinglist {
 		padding-left: 6%;
 		padding-bottom: 10%;}
 
 		.single-shoppinglist .shoppinglist ul {
-			margin-left: 16px;}
+			margin-left: 16px;
+			margin-bottom: 7%;}
 
 			.single-shoppinglist .shoppinglist ul li {
 				margin: 5px 0;
 				font-size: 15px;}
 
-				.single-shoppinglist .shoppinglist ul li span.product-name {}
-				.single-shoppinglist .shoppinglist ul li span.product-quantity {font-size: smaller;margin-left: 2%;}
+	.single-shoppinglist .shoppinglist .shoppinglist-actions {
+		visibility: visible; }
 
-@media (max-width: 768px) {
+	.single-shoppinglist .shoppinglist .goto-edit-list {
+		padding: 12px 40px;
+		font-size: 20px;
+		position: absolute;
+		bottom: 0%;
+		left: 50%;
+		transform: translate(-50%, -50%);; }
+
+@media (max-width: 770px) {
 	.single-shoppinglist {
 		width: 100%; }
+
+		.single-shoppinglist .shoppinglist .goto-edit-list {
+			visibility: hidden; }
 }
