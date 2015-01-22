@@ -7,12 +7,13 @@ version: 0.9
 prepend: [chapters/prepend.jade]
 ---
 
-chapter
+chapter.with-tables
     include:markdown chapters/inleiding/inleiding.md
     include:markdown chapters/inleiding/doel.md
+    hr
     include:markdown chapters/inleiding/referenties.md
     include:markdown chapters/inleiding/documentoverzicht.md
-chapter
+chapter.with-tables
     include:markdown chapters/architecturele-eisen/inleiding.md
     include:markdown chapters/architecturele-eisen/niet-functioneel.md
     include:markdown chapters/architecturele-eisen/functioneel.md
