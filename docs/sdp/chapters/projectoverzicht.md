@@ -43,7 +43,7 @@ De volgende onderdelen vallen buiten de projectscope:
 __Randvoorwaarden:__
 Voor dit project geldt de volgende randvoorwaarde:
 
-1. Voorraadsystem moet aangeleverd worden.
+1. Voorraadsysteem moet aangeleverd worden.
 
 Voor het opgeleverde product geldt de volgende randvoorwaarde:
 

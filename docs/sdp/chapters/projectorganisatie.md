@@ -25,6 +25,6 @@ In onderstaande tabel zijn de rollen en verantwoordelijkheden van diverse person
 | Opdrachtgever    | Evert Nijkamp                                                           | Opdrachtgever            |
 | Projectleider    | Malcolm Kindermans                                                      | Aansturing projectgroep  |
 | Teamlid          | Malcolm Kindermans, Maurits van Mastrigt, Jeroen Kruis, Auke Oosterhoff | Oplevering werkproducten |
-| ICT-architect    | Jeroen Kruis, Maurits van Mastrigt                                      | Ontwerpen architectuur   |
+| ICT-Architect    | Jeroen Kruis, Maurits van Mastrigt                                      | Ontwerpen architectuur   |
 | Acceptatietester | Auke Willem Oosterhoff                                                  | Acceptatieplan uitvoeren |
 
