@@ -162,21 +162,16 @@ class ListController extends BaseController {
 			'id' => 2,
 			'title' => 'Afterpartees',
 			'products' => [
-				['product_id' => 9, 'name' => 'Cras', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 10, 'name' => 'eu', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 11, 'name' => 'nibh', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 4, 'name' => 'sit', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 5, 'name' => 'amet,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 6, 'name' => 'consectetur', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 7, 'name' => 'adipiscing', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 12, 'name' => 'tempus,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 13, 'name' => 'blandit', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 14, 'name' => 'purus', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 15, 'name' => 'convallis,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-				['product_id' => 16, 'name' => 'elementum', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 6, 'name' => 'Melk (halfvolle), 2L', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 7, 'name' => 'Coca Cola', 'price' => 1.95, 'quantity' => 10, 'scanned' => false],
+				['product_id' => 12, 'name' => 'Coca Cola, Light', 'price' => 1.95, 'quantity' => 3, 'scanned' => false],
+				['product_id' => 13, 'name' => 'Coca Cola, Zero', 'price' => 1.95, 'quantity' => 4, 'scanned' => false],
+				['product_id' => 14, 'name' => 'Mayonaise', 'price' => 1.95, 'quantity' => 2, 'scanned' => false],
+				['product_id' => 15, 'name' => 'Ketchup', 'price' => 1.95, 'quantity' => 2, 'scanned' => false],
+				['product_id' => 16, 'name' => 'Bitterballen', 'price' => 1.95, 'quantity' => 10, 'scanned' => false],
 			]
 		];
 
-		return View::make('list.edit')->with('shoppinglist', $shoppingList);
+		return View::make('list.edit')->with('shoppingList', $shoppingList);
 	}
 }

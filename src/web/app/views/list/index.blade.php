@@ -1,13 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
+	@include('layouts.my_wobbe')
 	@foreach($shoppingLists as $shoppingList)
 		<div class="five columns all-lists">
 			<div class="large-notice shoppinglist">
 
 				<div class="shoppinglist-actions">
-					<span class="edit"><a href="{{ URL::route('list.edit', $shoppingList['id']) }}">Edit</a></span>
-					<span class="delete">Delete</span>
+					<span class="edit" onclick="window.location.href='{{ URL::route('list.edit', $shoppingList['id']) }}'"></span>
+					<span class="delete"></span>
 				</div>
 
 				<h3>{{ $shoppingList['title'] }}</h3>

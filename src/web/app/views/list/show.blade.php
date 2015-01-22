@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-	<h1>Mijn Wobbe</h1>
-	<h2>Boodschappenlijst {{ $shoppingList['title'] }}</h2>
+	@include('layouts.my_wobbe')
+	<h3>Boodschappenlijst {{ $shoppingList['title'] }}</h3>
 	<div class="single-shoppinglist">
 		<div class="large-notice shoppinglist">
 
 			<div class="shoppinglist-actions">
-				<span class="edit"><a href="{{ URL::route('list.edit', $shoppingList['id']) }}">Edit</a></span>
-				<span class="delete">Delete</span>
+				<span class="edit" onclick="window.location.href='{{ URL::route('list.edit', $shoppingList['id']) }}'"></span>
+				<span class="delete"></span>
 			</div>
 
 			<h2>{{ $shoppingList['title'] }}</h2>

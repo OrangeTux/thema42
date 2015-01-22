@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-	Nieuwe boodschappenlijst maken
+	@include('layouts.my_wobbe')
+	<h3>Nieuwe boodschappenlijst maken</h3>
 @stop

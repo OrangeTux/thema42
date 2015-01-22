@@ -5012,8 +5012,22 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 		.shoppinglist .shoppinglist-actions .delete {
 			cursor: pointer;}
 
-		/*.shoppinglist .shoppinglist-actions .edit {
-			background: url('/assets/img/icons/actions/edit_black_16.png') no-repeat center center !important;}*/
+		.shoppinglist .shoppinglist-actions .edit,
+		.shoppinglist .shoppinglist-actions .delete {
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			border: none;
+			cursor: pointer;
+			height: 16px;
+			width: 16px;
+			padding-left: 16px;
+			vertical-align: middle;
+			margin-left: 7px;}
+		.shoppinglist .shoppinglist-actions .edit {
+			background-image: url('/assets/img/icons/actions/edit_black_16.png');
+		}
+		.shoppinglist .shoppinglist-actions .delete {
+			background-image: url('/assets/img/icons/actions/delete_black_16.png');}
 
 .all-lists {}
 	.all-lists .shoppinglist {
@@ -5064,7 +5078,7 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 		position: absolute;
 		bottom: 0%;
 		left: 50%;
-		transform: translate(-50%, -50%);; }
+		transform: translate(-50%, -50%); }
 
 @media (max-width: 770px) {
 	.single-shoppinglist {
@@ -5073,3 +5087,103 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 		.single-shoppinglist .shoppinglist .goto-edit-list {
 			visibility: hidden; }
 }
+
+/* Form for editing shoppinglist
+=================================*/
+.edit-shoppinglist {
+	width: 80%;
+	margin: 20px auto;
+	position: relative;
+	padding-bottom: 80px; }
+
+	.edit-shoppinglist form .field {}
+	.edit-shoppinglist form .field .title {
+		width: 97%;
+		font-size: 19px; }
+	.edit-shoppinglist form .field .search_article {
+		width: 97%;
+		margin-top: 36px;
+		margin-bottom: 50px;}
+
+	.edit-shoppinglist form .products {
+		margin: 60px 0px 0px 0px; }
+		.edit-shoppinglist form .products h1,
+		.edit-shoppinglist form .products h2,
+		.edit-shoppinglist form .products h3,
+		.edit-shoppinglist form .products h4,
+		.edit-shoppinglist form .products h5,
+		.edit-shoppinglist form .products h6 {
+			margin: 0px 0px 10px 0px; }
+		.edit-shoppinglist form .products .product-row {}
+		.edit-shoppinglist form .products .product-row .name {
+			display: inline-block;
+			width: 75%;}
+		.edit-shoppinglist form .products .product-row .quantity {
+			display: inline-block;
+			width: 6%;
+			font-size: 12px;
+			padding: 9px 2px 9px 9px;
+			text-align: end;
+			margin-left: 3%;}
+		.edit-shoppinglist form .products .product-row .actions {
+			display: inline-block;
+			margin-left: 2%;}
+		.edit-shoppinglist form .products .product-row .actions .add {
+			background-image: url(/assets/img/icons/actions/plus_black_20.png);
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			border: none;
+			cursor: pointer;
+			height: 20px;
+			padding-left: 20px;
+			vertical-align: middle;
+			display: inline-block;}
+		.edit-shoppinglist form .products .product-row .actions .remove {
+			background-image: url(/assets/img/icons/actions/delete_black_20.png);
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			border: none;
+			cursor: pointer;
+			height: 20px;
+			padding-left: 20px;
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 15px;}
+	.edit-shoppinglist form .button-save {
+		padding: 12px 40px;
+		font-size: 20px;
+		position: absolute;
+		bottom: 0%;
+		left: 50%;
+		transform: translate(-50%, -50%); }
+
+@media (max-width: 960px) {
+	.edit-shoppinglist form .products .product-row .actions .add {
+		background-image: url(/assets/img/icons/actions/plus_black_16.png);
+		height: 16px;
+		padding-left: 16px;}
+	.edit-shoppinglist form .products .product-row .actions .remove {
+		background-image: url(/assets/img/icons/actions/delete_black_16.png);
+		height: 16px;
+		padding-left: 16px;
+		margin-left: 15px;}
+	.edit-shoppinglist form .products .product-row .name {
+		width: 73%;}
+}
+
+@media (max-width: 770px) {
+	.edit-shoppinglist form .products .product-row .actions .add {
+		display: none;}
+	.edit-shoppinglist form .products .product-row .actions .remove {
+		margin-left: 5px;}
+	.edit-shoppinglist form .products .product-row .name {
+		width: 70%;}
+}
+
+@media (max-width: 480px) {
+	.edit-shoppinglist form .products .product-row .name {
+		width: 58%;}
+	.edit-shoppinglist form .products .product-row .quantity {
+		width: 10%;}
+}
+
