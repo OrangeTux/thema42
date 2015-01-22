@@ -128,7 +128,25 @@ class ListController extends BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('list.show');
+		$shoppingList = [
+			'id' => 2,
+			'title' => 'Afterpartees',
+			'products' => [
+				['product_id' => 9, 'name' => 'Cras', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 10, 'name' => 'eu', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 11, 'name' => 'nibh', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 4, 'name' => 'sit', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 5, 'name' => 'amet,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 6, 'name' => 'consectetur', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 7, 'name' => 'adipiscing', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 12, 'name' => 'tempus,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 13, 'name' => 'blandit', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 14, 'name' => 'purus', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 15, 'name' => 'convallis,', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+				['product_id' => 16, 'name' => 'elementum', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
+			]
+		];
+		return View::make('list.show')->with('shoppingList', $shoppingList);
 	}
 
 

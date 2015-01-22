@@ -2,7 +2,7 @@
 
 @section('content')
 	@foreach($shoppingLists as $shoppingList)
-		<div class="five columns">
+		<div class="five columns all-lists">
 			<div class="large-notice shoppinglist">
 
 				<div class="shoppinglist-actions">
@@ -22,7 +22,7 @@
 				</ul>
 
 				<div class="shoppinglist-show-more">
-					<span class="show-more"><a href="{{ URL::route('list.index') }}">Toon meer...</a></span>
+					<span class="show-more"><a href="{{ URL::route('list.show', $shoppingList['id']) }}">Toon meer...</a></span>
 				</div>
 			</div>
 		</div>
