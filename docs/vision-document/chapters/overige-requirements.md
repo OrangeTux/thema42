@@ -40,5 +40,5 @@ documenten/hulpmiddelen opgeleverd worden, te weten:
 3. Trainingsmateriaal voor klanten, zodat zij om kunnen gaan met de website en de app.  
     Dit zal via een online hulpfunctie worden verschaft.
 4. Testdocumentatie (documenten over wat er getest moet worden en wat de testresultaten zijn).
-5. Deploymentdocumentatie (documentatie over hoe het systeem uitgerolt kan worden).
+5. Deploymentdocumentatie (documentatie over hoe het systeem uitgerold kan worden).
 6. Adviesrapport over mogelijke verbeteringen aan het product.

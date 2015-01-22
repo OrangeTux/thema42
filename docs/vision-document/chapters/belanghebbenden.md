@@ -60,12 +60,12 @@ Deze paragraaf beschrijft iedere groep die belang heeft bij het systeem.
 | __Opmerkingen/Issues__    | Omgeving is nog niet klaar. Applicatie niet kunnen uitrollen in de omgeving.                                                                                                |
 #### ICT-Architect
 
-| Eigenschap                | Uitwerking                                                                                                          |
-|---------------------------|---------------------------------------------------------------------------------------------------------------------|
-| __Beschrijving__          | Het ontwikkelen van een architectuur waar de te ontwikkelen software op moet aansluiten.                            |
-| __Verantwoordelijkheden__ | Kennis op het gebied van infrastructuur, applicatielandschap bij het bedrijf. Beoordelen van software archtecturen. |
-| __Succescriteria__        | Software sluit aan op architectuur.                                                                                 |
-| __Opmerkingen/Issues__    | Geschreven software sluit niet aan op de bedachte architectuur.                                                     |
+| Eigenschap                | Uitwerking                                                                                                           |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------|
+| __Beschrijving__          | Het ontwikkelen van een architectuur waar de te ontwikkelen software op moet aansluiten.                             |
+| __Verantwoordelijkheden__ | Kennis op het gebied van infrastructuur, applicatielandschap bij het bedrijf. Beoordelen van software architecturen. |
+| __Succescriteria__        | Software sluit aan op architectuur.                                                                                  |
+| __Opmerkingen/Issues__    | Geschreven software sluit niet aan op de bedachte architectuur.                                                      |
 
 ---
 
@@ -74,15 +74,15 @@ Deze paragraaf beschrijft iedere groep die belang heeft bij het systeem.
 | Eigenschap                | Uitwerking                                                                                                                                               |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | __Beschrijving__          | Zorgt er voor dat de gebruikers betrokken zijn bij de implementatie van het systeem en dat de gebruikers klaar zijn om met het nieuwe systeem te werken. |
-| __Verantwoordelijkheden__ | Evaring met het implementeren van systemen, doelgericht en proactief uitrollen van een product binnen een organisatie.                                   |
-| __Succescriteria__         | Gebruikers klaar zijn om de overstap te maken naar het nieuwe systeem.                                                                                   |
-| __Opmerkingen/Issues__  | Gebruikers zijn niet klaar om de overstap te maken naar een nieuwe systeem. Gebruikers zijn niet overtuigd van het nieuwe systeem.                       |
+| __Verantwoordelijkheden__ | Ervaring met het implementeren van systemen, doelgericht en proactief uitrollen van een product binnen een organisatie.                                  |
+| __Succescriteria__        | Gebruikers klaar zijn om de overstap te maken naar het nieuwe systeem.                                                                                   |
+| __Opmerkingen/Issues__    | Gebruikers zijn niet klaar om de overstap te maken naar een nieuwe systeem. Gebruikers zijn niet overtuigd van het nieuwe systeem.                       |
 #### Acceptatietester
 
 | Eigenschap                | Uitwerking                                                                                              |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
 | __Beschrijving__          | Het uitvoeren van de acceptatietest.                                                          |
-| __Verantwoordelijkheden__ | Uitvoeren van acceptatietest en het ondersteunen van Domeindeskundigen bij de gebruikersacceptatietest. |
+| __Verantwoordelijkheden__ | Uitvoeren van acceptatietest en het ondersteunen van domeindeskundigen bij de gebruikersacceptatietest. |
 | __Succescriteria__        | Het slagen van acceptatietest.                                                                          |
 | __Opmerkingen/Issues__    | Het niet slagen van de acceptatietest.                                                                  |
 

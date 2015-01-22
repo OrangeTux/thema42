@@ -73,7 +73,7 @@ In de huidige situatie zijn een aantal verschillende problemen te onderscheiden.
 | __Het probleem__              | Klanten vergeten het boodschappenlijstje                                   |
 |-------------------------------|----------------------------------------------------------------------------|
 | __Dit beïnvloedt__            | - Klant                                                                |
-| __De impact hiervan is__      | - Klanten weten niet meer wat ze moesten hebben en dat wekt irritates op.  |
+| __De impact hiervan is__      | - Klanten weten niet meer wat ze moesten hebben en dat wekt irritaties op.  |
 | __Een succesvolle oplossing__ | - Aanbieden van een boodschappenlijst die overal en altijd beschikbaar is. |
 
 ---
@@ -89,7 +89,7 @@ Bij de supermarkten van Jumbo kunnen klanten zelf hun boodschappen scannen met e
 __Voordelen:__
 - Klanten kunnen sneller winkelen.
 - Het afrekenen gaat sneller.
-- Minder cassières nodig.
+- Minder caissières nodig.
 
 __Nadelen:__
 - Geen persoonlijke advertenties.
@@ -97,7 +97,7 @@ __Nadelen:__
 
 ### Boodschappen bezorgen
 
-Een andere mogelijkheid is om de boodschappen te laten bezorgen, zoals sommige andere supermarkten mogelijk maken. De voor- en nadelen van deze oplossing worden hieronder opgesomt:
+Een andere mogelijkheid is om de boodschappen te laten bezorgen, zoals sommige andere supermarkten mogelijk maken. De voor- en nadelen van deze oplossing worden hieronder opgesomd:
 
 __Voordelen:__
 - Klanten hoeven niet meer hun huis uit.

@@ -14,7 +14,7 @@ verder uitgewerkt, de Vision dient als basis van waaruit deze uitwerking gestalt
 
 Onderstaand worden de documenten beschreven waarvan dit visie document uit tot stand is gekomen.
 
-| Titel                | Versie | Auteur                    | Vindplaats           |
-|----------------------|--------|---------------------------|----------------------|
-| Projectbeschrijving  | 1.0    | Hanzehogeschool Groningen | http://goo.gl/D9FhDD |
-| Documenttemplate Rup | 3.0    | Rup op Maat               | http://goo.gl/CiJPDm |
+| Titel               | Versie | Auteur                    | Vindplaats           |
+|---------------------|--------|---------------------------|----------------------|
+| Projectbeschrijving | 1.0    | Hanzehogeschool Groningen | http://goo.gl/D9FhDD |
+| Documenttemplate    | 3.0    | Rup op Maat               | http://goo.gl/CiJPDm |
