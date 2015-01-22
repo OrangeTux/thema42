@@ -3,6 +3,7 @@
 namespace Api;
 
 use Basecontroller;
+use User;
 
 class ListController extends BaseController {
 
@@ -13,7 +14,8 @@ class ListController extends BaseController {
 	 */
 	public function index($user_id)
 	{
-	       	
+		$lists = User::find($user_id)->lists;
+		return $lists;		
 	}
 
 

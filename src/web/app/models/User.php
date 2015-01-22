@@ -34,6 +34,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	
 	function lists()
 	{
-		return $this->hasMany('List');
+		return $this->hasMany('ShoppingList');
 	}
 }
