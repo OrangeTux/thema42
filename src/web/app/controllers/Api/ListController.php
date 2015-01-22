@@ -2,28 +2,18 @@
 
 namespace Api;
 
-use BaseController;
-use User;
+use Basecontroller
 
-class UserController extends BaseController 
-{
-	public function create()
-	{
-		return 'Create new user!';
-	}
+class ListController extends BaseController {
 
-	public function login()
-	{
-		return 'Login user!';
-	}
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($user_id)
 	{
-		return User::all();
+		return 'Hello, Api!';
 	}
 
 
@@ -45,7 +35,7 @@ class UserController extends BaseController
 	 */
 	public function store()
 	{
-		User::create(Input::all());
+		//
 	}
 
 
@@ -57,7 +47,7 @@ class UserController extends BaseController
 	 */
 	public function show($id)
 	{
-		return User::findOrFail($id);
+		//				
 	}
 
 

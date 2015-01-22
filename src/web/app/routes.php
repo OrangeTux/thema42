@@ -13,9 +13,10 @@
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
-Route::group(['prefix' => 'api', 'namespace' => 'Api', 'before' => 'auth.basic'], function()
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
 {
-	Route::resource('user', 'UserController');
+	Route::post('/user/create', ['uses' => 'UserController@create']);
+	Route::post('/user/auth', ['uses' => 'UserController@login']);
 });
 
 Route::resource('list', 'ListController');
