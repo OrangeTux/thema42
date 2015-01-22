@@ -83,6 +83,8 @@ fs.readFile(file, 'utf-8', function (err, data) {
     options.encoding = 'UTF-8';
     options.pageSize = 'A4';
 
+    config.basepath = path.dirname(file);
+
     // Styling
     options.userStyleSheet = path.resolve(path.join(generateDir, 'assets', 'style.css'));
     options.marginTop      = '30mm';
@@ -131,8 +133,6 @@ fs.readFile(file, 'utf-8', function (err, data) {
             config: config 
         }
     );
-
-    config.basepath = path.dirname(file);
 
     options.dumpOutline = tocFile;
 

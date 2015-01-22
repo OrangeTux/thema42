@@ -1,11 +1,13 @@
 cover
-    h1= config.employer
+    img.cover-image(src=config.basepath + '/assets/cover.jpg')
+    .image-overlay
+        h1= config.employer
 
-    h2= config.project
-    h2= config.title
+        h2= config.project
+        h2= config.title
 
-    if config.version
-        h3= 'Versie ' + config.version
+        if config.version
+            h3= 'Versie ' + config.version
 
     div.footer
         if config.authors
