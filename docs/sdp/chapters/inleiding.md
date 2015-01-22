@@ -16,7 +16,8 @@ Dit document beschrijft de aanpak van het project Wobbe 2000. Het doel van dit d
 
 Onderstaande tabel bevat referenties naar documenten die de basis vormen voor dit document.
 
-| Titel           | Versie | Auteurs      | Vindplaats                     |
-| ----------------|--------|--------------|--------------------------------|
-| Vision document | 0.1    | Projectgroep | [goo.gl/olmxoM](goo.gl/olmxoM) |
+| Titel            | Versie | Auteurs      | Vindplaats                            |
+|------------------|--------|--------------|---------------------------------------|
+| Vision document  | 0.1    | Projectgroep | [goo.gl/olmxoM](goo.gl/olmxoM)        |
+| Documenttemplate | 3.0    | Rup op Maat  | [goo.gl/sw6ItI](http://goo.gl/sw6ItI) |
 

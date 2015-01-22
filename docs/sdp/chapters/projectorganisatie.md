@@ -22,7 +22,7 @@ In onderstaande tabel zijn de rollen en verantwoordelijkheden van diverse person
 
 | Rol              | Teamleden                                                               | Verantwoordelijkheden    |
 |------------------|-------------------------------------------------------------------------|--------------------------|
-| Opdrachtgever    | Jan-Willem de Boer                                                      | Opdrachtgever            |
+| Opdrachtgever    | Evert Nijkamp                                                           | Opdrachtgever            |
 | Projectleider    | Malcolm Kindermans                                                      | Aansturing projectgroep  |
 | Teamlid          | Malcolm Kindermans, Maurits van Mastrigt, Jeroen Kruis, Auke Oosterhoff | Oplevering werkproducten |
 | ICT-architect    | Jeroen Kruis, Maurits van Mastrigt                                      | Ontwerpen architectuur   |

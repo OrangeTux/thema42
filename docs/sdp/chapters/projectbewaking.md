@@ -4,7 +4,7 @@ Deze sectie behandeld de onderwerpen omtrent projectbewaking en sturing.
 
 ## Scopebewaking
 
-Vanwege de korte doorlooptijd van het project is de scope beperkt. De functionaliteit die opgenomen dienen te worden in de _proof of concept_ zijn duidelijk. Daardoor is de kans minimaal dat er buiten de scope wordt gewerkt. Ondanks deze kleine kans is de projectleider verantwoordelijk voor het bewaken van de scope.
+Vanwege de korte doorlooptijd van het project is de scope beperkt. De functionaliteiten die opgenomen dienen te worden in de _proof of concept_ zijn duidelijk. Daardoor is de kans minimaal dat er buiten de scope wordt gewerkt. De projectleider is verantwoordelijk voor het bewaken van de scope.
 
 Wijzigingen van technische en/of functionele eisen zijn hoogst onwaarschijnlijk.
 
