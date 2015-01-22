@@ -6,7 +6,7 @@ class ListTableSeeder extends Seeder
 	{
 		DB::table('lists')->truncate();
 
-		List::create(array(
+		ShoppingList::create(array(
 			'title'	=>	'Morgenavond',
 			'user_id'	=>	1
 		));
