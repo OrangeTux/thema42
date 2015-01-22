@@ -4,48 +4,32 @@ namespace Api;
 
 use BaseController;
 use User;
+use Input;
+use Response;
+use Auth;
+use Hash;
 
 class UserController extends BaseController 
 {
-	public function create()
-	{
-		return 'Create new user!';
-	}
-
 	public function login()
 	{
-		return 'Login user!';
-	}
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		return User::all();
+		$password = Input::get('password');
+		$email = Input::get('email');
+
+		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+			return User::where('email', '=', $email)->firstOrFail(); 
+		} else {
+			return Response::JSON(['message' => 'Invalid credentials'], 404);
+		}
 	}
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
-		User::create(Input::all());
+		$user = Input::all();
+
+		$user['password'] = Hash::make($user['password']);
+
+		User::create($user);
 	}
 
 

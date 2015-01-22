@@ -15,7 +15,7 @@ Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
 Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
 {
-	Route::post('/user/create', ['uses' => 'UserController@create']);
+	Route::post('/user/create', ['uses' => 'UserController@store']);
 	Route::post('/user/auth', ['uses' => 'UserController@login']);
 });
 
