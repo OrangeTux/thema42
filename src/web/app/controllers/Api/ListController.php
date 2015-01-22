@@ -2,7 +2,7 @@
 
 namespace Api;
 
-use Basecontroller
+use Basecontroller;
 
 class ListController extends BaseController {
 
@@ -13,7 +13,7 @@ class ListController extends BaseController {
 	 */
 	public function index($user_id)
 	{
-		return 'Hello, Api!';
+	       	
 	}
 
 
