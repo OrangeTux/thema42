@@ -7,7 +7,7 @@ In deze sectie worden de projectfases beschreven, met daarop volgend wat er word
 Bij het huidige project zal er, naast een aantal documenten, alleen een _proof of concept_ opgeleverd worden. Daarom heeft het project geen transitiefase. Het project bestaat daarmee uit de volgende drie fases:
 
 __Ontwerpfase:__
-In de ontwerpfase wordt de projectomschrijving vertaald naar een technische productspecificatie. Dit gebeurd in de vorm een aantal documenten en UML-driagrammen.
+In de ontwerpfase wordt de projectomschrijving vertaald naar een technische productspecificatie. Dit gebeurd in de vorm een aantal documenten en UML-diagrammen.
 
 __Implementatiefase:__
 De implementatiefase bestaat uit het vertalen van de technische specificatie naar een _proof of concept_ van het product.
@@ -17,7 +17,7 @@ In de testfase wordt gecontroleerd of de ontwikkelde softwarecomponenten werken 
 
 ### Opleveringen
 
-De oplevering bestaat uit de desbetreffende werkproducten (zie paragraaf 2.3) aan de opdrachtgever, met daarbij een productdemo. Tevens worden de werkproducten met betrekking tot de ontwerpfase opgeleverd aan de stuurgroep.
+De oplevering bestaat uit de desbetreffende werkproducten (zie paragraaf 2.3) aan de opdrachtgever, met daarbij een productdemonstratie. Tevens worden de werkproducten met betrekking tot de ontwerpfase opgeleverd aan de stuurgroep.
 
 ### Projectagenda
 
