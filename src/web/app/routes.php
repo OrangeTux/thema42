@@ -20,6 +20,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
 
 	Route::get('/user/{user_id}/lists', ['uses' => 'ListController@index']);
 	Route::post('/user/{user_id}/list', ['uses' => 'ListController@store']);
+	Route::get('/user/{user_id}/list/{list_id}', ['uses' => 'ListController@show']);
 
 	Route::get('/list/{list_id}', ['uses' => 'ListController@store']);
 });

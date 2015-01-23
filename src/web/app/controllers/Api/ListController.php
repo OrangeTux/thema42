@@ -54,9 +54,14 @@ class ListController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($user_id, $list_id)
 	{
-		//
+		// Retrieve shopping list
+		$list = User::find($user_id)
+					->lists()
+					->find($list_id)->products;
+
+		return $list;
 	}
 
 
