@@ -20,6 +20,7 @@
 
 				<div class="field">
 					<input type="text" name="new_article" class="text new_article search_article" placeholder="Nieuw artikel toevoegen, begin met typen om te zoeken." />
+					<div class="search_results" id="search-results-top"></div>
 				</div>
 
 				<div class="products">
@@ -38,6 +39,7 @@
 
 				<div class="field">
 					<input type="text" name="new_article" class="text new_article search_article" placeholder="Nieuw artikel toevoegen, begin met typen om te zoeken." />
+					<div class="search_results" id="search-results-bottom"></div>
 				</div>
 
 				<div class="field">

@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@include('list.assets')
+
 @section('content')
 	@include('layouts.my_wobbe')
 	@foreach($shoppingLists as $shoppingList)
