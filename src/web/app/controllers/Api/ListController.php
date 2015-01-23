@@ -4,6 +4,7 @@ namespace Api;
 
 use Basecontroller;
 use User;
+use ShoppingList;
 
 class ListController extends BaseController {
 
@@ -56,10 +57,11 @@ class ListController extends BaseController {
 	 */
 	public function show($user_id, $list_id)
 	{
-		// Retrieve shopping list
-		$list = User::find($user_id)
-					->lists()
-					->find($list_id)->products;
+		$list = ShoppingList::find($list_id)
+					->where('user_id', '=', $user_id)
+					->firstOrFail();
+
+		$list->products;
 
 		return $list;
 	}
