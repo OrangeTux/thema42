@@ -1,16 +1,14 @@
-@section('javascript')
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="/assets/js/custom.js"></script>
-	<script src="/assets/js/selectnav.js"></script>
-	<script src="/assets/js/flexslider.js"></script>
-	<script src="/assets/js/twitter.js"></script>
-	<script src="/assets/js/tooltip.js"></script>
-	<script src="/assets/js/effects.js"></script>
-	<script src="/assets/js/fancybox.js"></script>
-	<script src="/assets/js/carousel.js"></script>
-	<script src="/assets/js/isotope.js"></script>
-	<script src="/assets/js/jquery-easing-1.3.js"></script>
-	<script src="/assets/js/jquery-transit-modified.js"></script>
-	<script src="/assets/js/layerslider.transitions.js"></script>
-	<script src="/assets/js/layerslider.kreaturamedia.jquery.js"></script>
-@show
+{{ HTML::script("http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js") }}
+{{ HTML::script("/assets/js/custom.js") }}
+{{ HTML::script("/assets/js/selectnav.js") }}
+{{ HTML::script("/assets/js/flexslider.js") }}
+{{ HTML::script("/assets/js/twitter.js") }}
+{{ HTML::script("/assets/js/tooltip.js") }}
+{{ HTML::script("/assets/js/effects.js") }}
+{{ HTML::script("/assets/js/fancybox.js") }}
+{{ HTML::script("/assets/js/carousel.js") }}
+{{ HTML::script("/assets/js/isotope.js") }}
+{{ HTML::script("/assets/js/jquery-easing-1.3.js") }}
+{{ HTML::script("/assets/js/jquery-transit-modified.js") }}
+{{ HTML::script("/assets/js/layerslider.transitions.js") }}
+{{ HTML::script("/assets/js/layerslider.kreaturamedia.jquery.js") }}

@@ -11,7 +11,7 @@
 
 		@include('layouts.stylesheets')
 		@include('layouts.javascript')
-
+		@yield('javascript')
 	</head>
 	<body>
 		<div id="wrapper">
