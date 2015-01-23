@@ -5,9 +5,9 @@ class ShoppingList extends Eloquent
 	protected $table = 'lists';
 	protected $fillable = array('title');
 
-	function user()
+	function products()
 	{
-		return $this->belongsTo('User');
-	}	
+		return $this->hasManyThrough('Product', 'ListProduct', 'list_id', 'product_id');
+	}
 }
 

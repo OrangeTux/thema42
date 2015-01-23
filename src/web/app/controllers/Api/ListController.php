@@ -4,9 +4,6 @@ namespace Api;
 
 use Basecontroller;
 use User;
-use ListProduct;
-use ShoppingList;
-use Input;
 
 class ListController extends BaseController {
 
@@ -17,8 +14,15 @@ class ListController extends BaseController {
 	 */
 	public function index($user_id)
 	{
+		// Retrieve user lists
 		$lists = User::find($user_id)->lists;
-		return $lists;		
+
+		// Add products to lists
+		foreach ($lists as $list) {
+			$list->products;
+		}
+
+		return $lists;
 	}
 
 
@@ -38,9 +42,9 @@ class ListController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store($user_id)
+	public function store()
 	{
-
+		//
 	}
 
 
@@ -50,9 +54,9 @@ class ListController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($list_id)
+	public function show($id)
 	{
-		return ListProduct::where('list_id', '=', $list_id)->get();		
+		//
 	}
 
 

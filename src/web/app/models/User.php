@@ -8,7 +8,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
-	
+
 	public $timestamps = false;
 
 	/**
@@ -26,12 +26,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'remember_token');
 
 	protected $fillable = array('first_name', 'last_name', 'email', 'password');
-	
+
 	function getFullnameAttribute()
 	{
 		return $this->name . ' ' . $this->surname;
 	}
-	
+
 	function lists()
 	{
 		return $this->hasMany('ShoppingList');
