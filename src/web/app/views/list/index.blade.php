@@ -9,20 +9,20 @@
 			<div class="large-notice shoppinglist">
 
 				<div class="shoppinglist-actions">
-					<span class="edit" onclick="window.location.href='{{ URL::route('list.edit', $shoppingList['id']) }}'"></span>
+					<span class="edit" onclick="window.location.href='{{ URL::route('list.edit', $shoppingList->id) }}'"></span>
 					<span class="delete"></span>
 				</div>
 
-				<h3>{{ $shoppingList['title'] }}</h3>
+				<h3>{{ $shoppingList->title }}</h3>
 				<ul>
-					@foreach(array_slice($shoppingList['products'], 0, 8) as $product)
+					@foreach($shoppingList->products->slice(0,8) as $product)
 						<li>
-							<span class="product-info {{ $product['scanned'] ? 'scanned' : "" }}">
+							<span class="product-info {{ $product->scanned ? 'scanned' : "" }}">
 								<span class="name">
-									{{ $product['name'] }}
+									{{ $product->name }}
 								</span>
 								<span class="quantity">
-									{{ $product['quantity'] }}x
+									{{ $product->quantity }}x
 								</span>
 							</span>
 						</li>
@@ -30,7 +30,7 @@
 				</ul>
 
 				<div class="shoppinglist-show-more">
-					<span class="show-more"><a href="{{ URL::route('list.show', $shoppingList['id']) }}">Toon meer...</a></span>
+					<span class="show-more"><a href="{{ URL::route('list.show', $shoppingList->id) }}">Toon meer...</a></span>
 				</div>
 			</div>
 		</div>

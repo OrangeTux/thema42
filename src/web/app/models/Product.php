@@ -8,6 +8,6 @@ class Product extends Eloquent
 
 	function lists()
 	{
-		return $this->hasMany('ListProduct');
+		return $this->hasMany('ListProduct', 'product_id', 'product_id');
 	}
 }
