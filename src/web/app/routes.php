@@ -19,6 +19,9 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
 	Route::post('/user/auth', ['uses' => 'UserController@login']);
 
 	Route::get('/user/{user_id}/lists', ['uses' => 'ListController@index']);
+	Route::post('/user/{user_id}/list', ['uses' => 'ListController@store']);
+
+	Route::get('/list/{list_id}', ['uses' => 'ListController@store']);
 });
 
 Route::resource('list', 'ListController');

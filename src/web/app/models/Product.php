@@ -5,4 +5,9 @@ class Product extends Eloquent
 	public $timestamps = false;
 
 	protected $table = 'products';
+
+	function lists()
+	{
+		return $this->hasMany('ListProduct');
+	}
 }
