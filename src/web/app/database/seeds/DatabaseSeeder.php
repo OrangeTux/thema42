@@ -9,9 +9,12 @@ class DatabaseSeeder extends Seeder {
 
 		DB::table('users')->truncate();
 		DB::table('products')->truncate();
+		DB::table('shopping_lists')->truncate();
+		DB::table('product_shopping_list')->truncate();
 
 		$this->call('UserTableSeeder');
 		$this->call('ProductTableSeeder');
+		$this->call('ShoppingListTableSeeder');
 
 		$this->command->info('Database is successfully seeded!');
 
