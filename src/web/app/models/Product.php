@@ -1,13 +1,6 @@
 <?php
 
-class Product extends Eloquent
-{
-	public $timestamps = false;
-
+class Product extends Eloquent {
 	protected $table = 'products';
-
-	function lists()
-	{
-		return $this->hasMany('ListProduct', 'product_id', 'product_id');
-	}
+	public $timestamps = false;
 }
