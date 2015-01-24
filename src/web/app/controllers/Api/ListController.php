@@ -6,25 +6,35 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 use Basecontroller;
 use Response;
+use Input;
 use User;
 use ShoppingList;
 
 class ListController extends BaseController {
 
-	public function index($user_id)
-	{
-		$shoppingLists = User::find($user_id)->shoppingLists;
+	public function index($userId) {
+		$shoppingLists = User::find($userId)->shoppingLists;
 		
 		return Response::json([
 			'data' => $shoppingLists
 		], 200);
 	}
+	
+	public function store($userId) {
+		$shoppingList = ShoppingList::create([
+			'title' => Input::get('title'),
+			'user_id' => $userId
+		]);
 
-	public function show($user_id, $list_id)
-	{
+		return Response::json([
+			'data' => $shoppingList
+		], 201);
+	}
+
+	public function show($userId, $listId) {
 		try 
 		{
-			$shoppingList = ShoppingList::where('user_id', '=', $user_id)->findOrFail($list_id)->products;
+			$shoppingList = ShoppingList::where('user_id', '=', $userId)->findOrFail($listId)->products;
 		}
 		catch (ModelNotFoundException $exception) 
 		{

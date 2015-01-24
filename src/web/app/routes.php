@@ -20,6 +20,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 
 	Route::resource('user', 'UserController', ['only' => ['store']]);
 	Route::resource('user.list', 'ListController', ['only' => ['index', 'store', 'show']]);
+	Route::resource('user.list.product', 'ProductController', ['only' => ['store', 'update']]);
 });
 
 Route::resource('list', 'ListController');
