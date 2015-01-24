@@ -26,15 +26,16 @@ class ProductController extends BaseController {
 
 	public function update($userId, $listId, $productId) {
 		$shoppingList = ShoppingList::find($listId);
+		$productPatch = [];
 
-		$product = $shoppingList->products()->updateExistingPivot(Input::get('id'), [
-			'shopping_list_id' => $shoppingList->id,
-			'quantity' => Input::get('quantity'),
-			'scanned' => Input::get('scanned')
-		]);
+		foreach (Input::all() as $key => $value) {
+			$productPatch[$key] = $value;	
+		}
+
+		$shoppingList->products()->updateExistingPivot($productId, $productPatch);
 
 		return Response::json([
-			'data' => $product
+			'message' => 'Product successfully patched'
 		], 200);
 	}
 }
