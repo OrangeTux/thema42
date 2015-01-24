@@ -1701,7 +1701,8 @@ html[xmlns] .slides {display: block;}
 }
 
 .success-message .notification {margin-bottom: 20px;}
-.success-message {display:none;}
+.success-message,
+.error-message {display:none;}
 
 .form-spacer {margin-top: 20px;}
 
@@ -5100,7 +5101,7 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	.edit-shoppinglist form .field .title {
 		width: 97%;
 		font-size: 19px; }
-	.edit-shoppinglist form .field .search_article {
+	.edit-shoppinglist form .field .search_product {
 		width: 97%;
 		margin-top: 36px;
 		margin-bottom: 50px;}
