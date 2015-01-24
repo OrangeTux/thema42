@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductTable extends Migration {
+class CreateProductsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,9 +14,10 @@ class CreateProductTable extends Migration {
 	{
 		Schema::create('products', function(Blueprint $table)
 		{
-			$table->increments('product_id')->unsigned();
-			$table->string('name');
+			$table->increments('id')->unsigned();
+			$table->string('name', 35);
 			$table->decimal('price', 5, 2);
+			$table->timestamps();
 		});
 	}
 
