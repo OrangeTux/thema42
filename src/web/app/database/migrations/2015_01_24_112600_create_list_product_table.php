@@ -21,7 +21,6 @@ class CreateListProductTable extends Migration {
 			$table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 			$table->integer('quantity')->unsigned();
 			$table->boolean('scanned');
-			$table->timestamps();
 		});
 	}
 
