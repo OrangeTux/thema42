@@ -50,6 +50,12 @@ class ListController extends BaseController {
 		], 200);
 	}
 
+	public function destroy($userId, $listId) {
+		$shoppingList =	ShoppingList::destroy($listId);
+
+		return $shoppingList;
+	}
+
 	private function transform($shoppingList) {
 		return array_map(function($shoppingList) {
 			return [

@@ -19,7 +19,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 //	Route::post('/user/auth', ['uses' => 'UserController@login']);
 
 	Route::resource('user', 'UserController', ['only' => ['store']]);
-	Route::resource('user.list', 'ListController', ['only' => ['index', 'store', 'show']]);
+	Route::resource('user.list', 'ListController', ['only' => ['index', 'store', 'show', 'destroy']]);
 	Route::resource('user.list.product', 'ProductController', ['only' => ['store', 'update']]);
 });
 
