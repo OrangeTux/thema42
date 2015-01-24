@@ -16,15 +16,9 @@ class ListController extends BaseController {
 	 */
 	public function index($user_id)
 	{
-		// Retrieve user lists
-		$lists = User::find($user_id)->lists;
+		$shoppingLists = User::find($user_id)->shoppingLists;
 
-		// Add products to lists
-		foreach ($lists as $list) {
-			$list->products;
-		}
-
-		return $lists;
+		return $shoppingLists;
 	}
 
 	/**
@@ -46,13 +40,9 @@ class ListController extends BaseController {
 	 */
 	public function show($user_id, $list_id)
 	{
-		$list = ShoppingList::find($list_id)
-					->where('user_id', '=', $user_id)
-					->firstOrFail();
+		$shoppingList = ShoppingList::find($list_id)->products;
 
-		$list->products;
-
-		return $list;
+		return $shoppingList;
 	}
 
 

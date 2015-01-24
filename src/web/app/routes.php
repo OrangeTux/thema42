@@ -13,16 +13,19 @@
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
-Route::group(['prefix' => 'api', 'namespace' => 'Api'], function()
+Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 {
-	Route::post('/user/create', ['uses' => 'UserController@store']);
-	Route::post('/user/auth', ['uses' => 'UserController@login']);
+//	Route::post('/user/create', ['uses' => 'UserController@store']);
+//	Route::post('/user/auth', ['uses' => 'UserController@login']);
 
-	Route::get('/user/{user_id}/lists', ['uses' => 'ListController@index']);
-	Route::post('/user/{user_id}/list', ['uses' => 'ListController@store']);
-	Route::get('/user/{user_id}/list/{list_id}', ['uses' => 'ListController@show']);
+//	Route::get('/user/{user_id}/lists', ['uses' => 'ListController@index']);
+//	Route::post('/user/{user_id}/list', ['uses' => 'ListController@store']);
+//	Route::get('/user/{user_id}/list/{list_id}', ['uses' => 'ListController@show']);
 
-	Route::get('/list/{list_id}', ['uses' => 'ListController@store']);
+//	Route::get('/list/{list_id}', ['uses' => 'ListController@store']);
+
+	Route::resource('user', 'UserController', ['only' => ['store']]);
+	Route::resource('user.list', 'ListController', ['only' => ['index', 'show']]);
 });
 
 Route::resource('list', 'ListController');
