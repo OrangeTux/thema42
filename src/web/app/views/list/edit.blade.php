@@ -16,12 +16,12 @@
 				</div>
 			</div>
 
-			{{ Form::open() }}
+			{{ Form::open(['class' => 'edit-shoppinglist-form']) }}
 				<div class="field">
 					<input type="text" name="title" class="text title" placeholder="Titel van uw boodschappenlijst" value="{{ $shoppingList['title'] }}"/>
 				</div>
 
-				<div class="field">
+				<div class="field search-products-block">
 					<input type="text" name="new_product" class="text new_product search_product" placeholder="Nieuw product toevoegen, begin met typen om te zoeken." />
 					<div class="search_results" id="search-results-top"></div>
 				</div>
@@ -49,8 +49,8 @@
 					@endforeach
 				</div>
 
-				<div class="field">
-					<input type="text" name="new_product" class="text new_product search_product" placeholder="Nieuw product toevoegen, begin met typen om te zoeken." />
+				<div class="field search-products-block">
+					<input type="text" id="location__bottom" name="new_product" class="text new_product search_product" placeholder="Nieuw product toevoegen, begin met typen om te zoeken." />
 					<div class="search_results" id="search-results-bottom"></div>
 				</div>
 
@@ -59,6 +59,14 @@
 				</div>
 
 			{{ Form::close() }}
+		</div>
+	</div>
+
+	<!-- Templates -->
+	<div id="tpl_search_result_product_row" style="display: none;">
+		<div class="search-result-product-row" id="field__search_result_product_row___location__{#location#}___product_id__{#product_id#}">
+			<span class="product-name">{#product_name#}</span>
+			<span class="add-product"></span>
 		</div>
 	</div>
 @stop

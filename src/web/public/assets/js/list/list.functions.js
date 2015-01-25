@@ -11,9 +11,10 @@ var fieldNamePrefixes = {
 	'product_row' : 'field__product_row___',
 	'quantity' : 'field__quantity___',
 	'remove_product' : 'action__remove___',
+	'search_result_product_row' : 'field__search_result_product_row___',
 };
 
-// >> Default values
+// >> Default values.
 var defaults = {
 	error_msg_duration_hide : 400,
 	error_msg_duration_show : 400,
@@ -22,8 +23,97 @@ var defaults = {
 	wait_for_rumble : 1000,
 };
 
-function saveChanges() {
+// >> Template IDs.
 
+var templates = {
+	product_search_result_row : '#tpl_search_result_product_row',
+};
+
+// >> Temporary list with all products.
+var products = {
+	"data" : {
+		"products" : [
+			{
+				"id" : 1,
+				"name" : "Melk",
+				"price" : 1.00
+			},
+			{
+				"id" : 2,
+				"name" : "Brood",
+				"price" : 1.90
+			},
+			{
+				"id" : 3,
+				"name" : "Kaas",
+				"price" : 3.45
+			},
+			{
+				"id" : 4,
+				"name" : "Worst",
+				"price" : 2.30
+			},
+			{
+				"id" : 5,
+				"name" : "Appel",
+				"price" : 0.35
+			},
+			{
+				"id" : 6,
+				"name" : "Banaan",
+				"price" : 0.65
+			},
+			{
+				"id" : 7,
+				"name" : "Gehakt",
+				"price" : 2.50
+			},
+			{
+				"id" : 8,
+				"name" : "Hamlappen",
+				"price" : 6.55
+			},
+			{
+				"id" : 9,
+				"name" : "Toiletpapier",
+				"price" : 3.55
+			},
+			{
+				"id" : 10,
+				"name" : "Vuilniszakken",
+				"price" : 2.25
+			},
+		]
+	}
+};
+
+function addProductToList(productID) {
+	console.log('Adding product with ID: ' + productID);
+}
+
+function saveChanges() {
+	$.ajax({
+		url: '/route/to/patch/list',
+		type: 'PATCH',
+		data: {list: $('.edit-shoppinglist-form').serialize()},
+		statusCode : {
+			404 : 	function() {
+						displayErrorMessage('Er ging iets mis aan onze kant, de pagina kon niet gevonden worden.', '404 Page not found.');
+					},
+			500 : 	function() {
+						displayErrorMessage('Server could not be reached.', '500 Server probz.');
+					}
+		}
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 }
 
 function createProduct() {
@@ -135,7 +225,139 @@ function bindActions() {
 		// Bind actions to product.
 		bindActionsToProduct(elementData.product_id);
 	});
+
+	bindActionToSaveButton();
+	bindActionsToSearchBoxes();
 }
+
+function bindActionToSaveButton() {
+	$('#send').on('click', function() {
+		saveChanges();
+	});
+}
+
+function bindActionsToSearchBoxes() {
+	$('.search_product').each(function() {
+		bindActionsToSearchBox($(this));
+	});
+}
+
+function bindActionsToSearchBox(searchBox) {
+	// Autocomplete when typing in box
+	addSearchAutocomplete(searchBox);
+
+	// Hide results when focus loose
+	$(searchBox).parent('.search-products-block').on('blur', function() {
+		var resultBlock = getClosestResultBlock(searchBox);
+		$(resultBlock).html('');
+	});
+
+	// When focusing on the search box, show suggestions
+	$(searchBox).on('focus', function() {
+		$(searchBox).autocomplete("search");
+	});
+}
+
+function addSearchAutocomplete(searchBox) {
+	$(searchBox).autocomplete({
+		source: function(request, response) {
+			var resultData = searchProducts(request.term);
+			showMatchingProducts(searchBox, resultData);
+		}
+	});
+}
+
+function searchProducts(term) {
+	var resultData = [];
+
+	$.each(products.data.products, function(){
+		if ((this.name).toLowerCase().indexOf(term) >= 0) {
+			resultData.push(this);
+		}
+	});
+
+	return resultData;
+}
+
+function showMatchingProducts(searchBox, products) {
+	var searchResult = buildSearchResults(products);
+	var resultsBlock = getClosestResultBlock(searchBox);
+
+	// Store the location of the searchbox in de product row
+	var searchBoxLocation = getSearchBoxLocation(searchBox);
+	searchResult = searchResult.join("");
+	searchResult = replaceValuesInContent(searchResult, {location : searchBoxLocation});
+
+	$(resultsBlock).html(searchResult);
+
+	bindActionToSearchResults(searchBox);
+}
+
+function bindActionToSearchResults(searchBox) {
+	var searchBoxLocation = getSearchBoxLocation(searchBox);
+	var fieldNamePrefix = getFieldNamePrefix('search_result_product_row');
+
+	$("[id^='" + fieldNamePrefix + "location__" + searchBoxLocation + "']").each(function() {
+		bindActionsToSearchResultProductRow(this);
+	});
+}
+
+function bindActionsToSearchResultProductRow(row) {
+	elementID = $(row).attr('id');
+	var elementData = parseElementID(elementID);
+
+	$(row).on('click', function() {
+		addProductToList(elementData.product_id);
+	});
+}
+
+function getSearchBoxLocation(searchBox) {
+	var elementData = parseElementID($(searchBox).attr('id'));
+	return elementData.location;
+}
+
+function getClosestResultBlock(searchBox) {
+	return $(searchBox).next('.search_results');
+}
+
+function buildSearchResults(products) {
+	var searchResults = [];
+
+	$(products).each(function(index, product) {
+		var searchResult = buildSearchResult(product);
+		searchResults.push(searchResult);
+	});
+
+	return searchResults;
+}
+
+function buildSearchResult(product) {
+	var template = $(templates.product_search_result_row).html();
+
+	params = {
+		product_name : product.name,
+		product_id : product.id
+	};
+
+	template = replaceValuesInContent(template, params);
+
+	return template.toString();
+}
+
+function replaceValuesInContent( content, values ){
+	$.each(values, function(index, value){
+		if (! (parseInt(index) >= 0)) { // jshint ignore:line
+			content = replaceValueInContent( content, index, value);
+		}
+	});
+
+	return content;
+}
+
+function replaceValueInContent( content, search, value ){
+	return content.replace(new RegExp( '{#'+search+'#}' , 'g'), value);
+}
+
 
 function parseElementID(elementID) {
 	var blocks = elementID.split(blockSplitString);

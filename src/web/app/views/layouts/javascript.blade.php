@@ -12,3 +12,4 @@
 {{ HTML::script("/assets/js/jquery-transit-modified.js") }}
 {{ HTML::script("/assets/js/layerslider.transitions.js") }}
 {{ HTML::script("/assets/js/layerslider.kreaturamedia.jquery.js") }}
+{{ HTML::script("//code.jquery.com/ui/1.11.2/jquery-ui.js") }}

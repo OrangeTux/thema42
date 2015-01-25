@@ -5101,10 +5101,32 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	.edit-shoppinglist form .field .title {
 		width: 97%;
 		font-size: 19px; }
-	.edit-shoppinglist form .field .search_product {
-		width: 97%;
+	.edit-shoppinglist form .search-products-block {
 		margin-top: 36px;
-		margin-bottom: 50px;}
+		margin-bottom: 50px;
+		position: relative;}
+		.edit-shoppinglist form .search-products-block .search_product {
+			width: 97%;
+			margin-bottom: 0px;}
+		.edit-shoppinglist form .search-products-block .search_results {
+			position: absolute;
+			background: white;
+			width: 99%;
+			z-index: 10;
+			border-left: 1px solid #d8d8d8;
+			border-bottom: 1px solid #d8d8d8;
+			border-right: 1px solid #d8d8d8;
+			-webkit-box-shadow: 0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+			box-shadow: 0px 1px 1px 0px rgba(180, 180, 180, 0.1);
+			cursor: pointer;}
+		.edit-shoppinglist form .search-products-block .search_results .search-result-product-row {
+			padding: 9px;}
+		.edit-shoppinglist form .search-products-block .search_results .search-result-product-row:hover {;
+			background-color: #DFDFDF;
+			cursor: pointer;
+			color: black;}
+		.edit-shoppinglist form .search-products-block .search_results .search-result-product-row .product-name {}
+		.edit-shoppinglist form .search-products-block .search_results .search-result-product-row .add-product {}
 
 	.edit-shoppinglist form .products {
 		margin: 60px 0px 0px 0px; }

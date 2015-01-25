@@ -11,6 +11,8 @@ class ListController extends BaseController {
 	{
 		$shoppingLists = App::make('Api\ListController')->index(1);
 
+		// print_r($shoppingLists);
+
 		// $shoppingLists[] = [
 		// 	'id' => 1,
 		// 	'title' => 'Gourmetten',
