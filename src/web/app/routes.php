@@ -15,12 +15,9 @@ Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 {
-//	Route::post('/user/create', ['uses' => 'UserController@store']);
-//	Route::post('/user/auth', ['uses' => 'UserController@login']);
-
 	Route::resource('user', 'UserController', ['only' => ['store']]);
-	Route::resource('list', 'ListController', ['only' => ['index', 'store', 'show', 'destroy']]);
-	Route::resource('product', 'ProductController', ['only' => ['store', 'update']]);
+	Route::resource('list', 'ListController', ['only' => ['index', 'store', 'show', 'update', 'destroy']]);
+	Route::resource('product', 'ProductController', ['only' => ['index']]);
 });
 
 Route::resource('list', 'ListController');
