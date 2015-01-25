@@ -17,7 +17,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 {
 	Route::resource('user', 'UserController', ['only' => ['store']]);
 	Route::resource('list', 'ListController', ['only' => ['index', 'store', 'show', 'update', 'destroy']]);
-	Route::resource('list.product', 'ProductController', ['only' => ['store', 'update']]);
+	Route::resource('list.product', 'ProductController', ['only' => ['store', 'update', 'destroy']]);
 	Route::resource('product', 'ProductController', ['only' => ['index']]);
 });
 

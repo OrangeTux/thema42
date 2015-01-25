@@ -18,9 +18,13 @@ class UserController extends BaseController
 
 		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
 			return User::where('email', '=', $email)->firstOrFail(); 
-		} else {
-			return Response::JSON(['message' => 'Invalid credentials'], 404);
 		}
+		
+		return Response::json([
+			'error' => [
+				'message' => 'Invalid credentials'
+			]
+		], 404);
 	}
 
 	public function store()
@@ -31,54 +35,4 @@ class UserController extends BaseController
 
 		User::create($user);
 	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		return User::findOrFail($id);
-	}
-
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
-
 }

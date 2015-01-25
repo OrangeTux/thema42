@@ -70,11 +70,7 @@ class ProductController extends BaseController {
 		}
 
 		return Response::json([
-			'data' => $shoppingList->products,
-			'meta' => [
-				'update_product' => Request::url() . '/' . $products[0]['id'],
-				'delete_product' => Request::url() . '/' . $products[0]['id']
-			]
+			'data' => $shoppingList->products
 		], 201);
 	}
 
@@ -105,6 +101,27 @@ class ProductController extends BaseController {
 		$productData = Input::get('product');
 
 		$shoppingList->products()->updateExistingPivot($productId, $productData);
+
+		return Response::json([
+			'data' => $shoppingList->products
+		], 200);
+	}
+
+	public function destroy($listId, $productId) {
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
+
+		$shoppingList->products()->detach($productId);
 
 		return Response::json([
 			'data' => $shoppingList->products

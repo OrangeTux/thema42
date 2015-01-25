@@ -15,6 +15,16 @@ use ShoppingList;
 class ListController extends BaseController {
 
 	public function index() {
+		$validator = Validator::make(Input::all(), ['user_id' => 'required']);
+
+		if($validator->fails()) {
+			return Response::json([
+				'error' => [
+					'message' => 'Malformed request'
+				]
+			], 400);
+		}
+
 	       	try
 		{
 			$shoppingLists = User::findOrFail(Input::get('user_id'))->shoppingLists;
@@ -56,10 +66,7 @@ class ListController extends BaseController {
 		$shoppingList = ShoppingList::create($shoppingListData);
 
 		return Response::json([
-			'data' => $shoppingList,
-			'meta' => [
-				'add_products' => Request::url() . '/' . $shoppingList->id . '/product'
-			]
+			'data' => $shoppingList
 		], 201);
 
 	}
@@ -85,6 +92,16 @@ class ListController extends BaseController {
 	}
 
 	public function update($listId) {
+		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
+
+		if($validator->fails()) {
+			return Response::json([
+				'error' => [
+					'message' => 'Malformed request'
+				]
+			], 400);
+		}
+
 		try
 		{
 			$shoppingList = ShoppingList::findOrFail($listId);
@@ -98,27 +115,38 @@ class ListController extends BaseController {
 			], 404);
 		}
 		
-		$title = Input::get('data.title');
-		$products = Input::get('data.products');
+		$title = Input::get('shopping_list.title');
 
 		if ($title) {
 			$shoppingList->title = $title;
 			$shoppingList->save();
 		}
 
-		if ($products) {
-			foreach ($products as $product) {
-				$productId = $product['id'];
-				unset($product['id']);
-
-				$shoppingList->products()->updateExistingPivot($productId, $product);
-			}
-		}
+		return Response::json([
+			'data' => $shoppingList
+		], 200);
 	}
 
 	public function destroy($listId) {
-		$shoppingList =	ShoppingList::destroy($listId);
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
 
-		return $shoppingList;
+		$shoppingList->delete();
+
+		return Response::json([
+			'success' => [
+				'message' => 'Shopping list has been removed'
+			]
+		], 200);
 	}
 }
