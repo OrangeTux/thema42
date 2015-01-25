@@ -12,8 +12,25 @@ use ShoppingList;
 
 class ListController extends BaseController {
 
-	public function index($userId) {
-		$shoppingLists = User::find($userId)->shoppingLists;
+	public function index() {
+	       	try
+		{
+			$shoppingLists = User::findOrFail(Input::get('user_id'))->shoppingLists;
+
+			foreach ($shoppingLists as $shoppingList) {
+				$shoppingList->products;
+			}
+
+			return $shoppingLists;
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'User does not exist'
+				]
+			], 404);
+		}	
 		
 		return Response::json([
 			'data' => $shoppingLists
@@ -31,10 +48,12 @@ class ListController extends BaseController {
 		], 201);
 	}
 
-	public function show($userId, $listId) {
+	public function show($listId) {
 		try 
 		{
-			$shoppingList = ShoppingList::where('user_id', '=', $userId)->findOrFail($listId)->products;
+			// $shoppingList = ShoppingList::where('user_id', '=', $userId)->findOrFail($listId)->products;
+			$shoppingList = ShoppingList::findOrFail($listId);
+			$shoppingList->products;
 		}
 		catch (ModelNotFoundException $exception) 
 		{
@@ -46,11 +65,11 @@ class ListController extends BaseController {
 		}
 		
 		return Response::json([
-			'data' => $this->transform($shoppingList)
+			'data' => $shoppingList 
 		], 200);
 	}
 
-	public function destroy($userId, $listId) {
+	public function destroy($listId) {
 		$shoppingList =	ShoppingList::destroy($listId);
 
 		return $shoppingList;
