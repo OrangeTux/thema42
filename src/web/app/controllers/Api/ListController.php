@@ -20,8 +20,6 @@ class ListController extends BaseController {
 			foreach ($shoppingLists as $shoppingList) {
 				$shoppingList->products;
 			}
-
-			return $shoppingLists;
 		}
 		catch (ModelNotFoundException $exception)
 		{
@@ -37,7 +35,7 @@ class ListController extends BaseController {
 		], 200);
 	}
 	
-	public function store($userId) {
+	public function store() {
 		$shoppingList = ShoppingList::create([
 			'title' => Input::get('title'),
 			'user_id' => $userId
@@ -51,7 +49,6 @@ class ListController extends BaseController {
 	public function show($listId) {
 		try 
 		{
-			// $shoppingList = ShoppingList::where('user_id', '=', $userId)->findOrFail($listId)->products;
 			$shoppingList = ShoppingList::findOrFail($listId);
 			$shoppingList->products;
 		}
@@ -73,17 +70,5 @@ class ListController extends BaseController {
 		$shoppingList =	ShoppingList::destroy($listId);
 
 		return $shoppingList;
-	}
-
-	private function transform($shoppingList) {
-		return array_map(function($shoppingList) {
-			return [
-				'id' => (integer) $shoppingList['id'],
-				'name' => $shoppingList['name'],
-				'price' => (float) $shoppingList['price'],
-				'quantity' => (integer) $shoppingList['pivot']['quantity'],
-				'scanned' => (boolean) $shoppingList['pivot']['scanned']
-			];
-		}, $shoppingList->toArray());	
 	}
 }
