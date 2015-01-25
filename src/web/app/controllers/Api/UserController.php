@@ -11,12 +11,12 @@ use Hash;
 
 class UserController extends BaseController 
 {
-	public function login()
+	public function auth()
 	{
 		$password = Input::get('password');
 		$email = Input::get('email');
 
-		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+		if (Auth::attempt(['email' => $email, 'password' => $password])) {
 			return User::where('email', '=', $email)->firstOrFail(); 
 		}
 		

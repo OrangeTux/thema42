@@ -13,6 +13,7 @@
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
+Route::post('/user/auth', ['prefix' => 'api/v1', 'uses' => 'Api\UserController@auth']);
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 {
 	Route::resource('user', 'UserController', ['only' => ['store']]);
