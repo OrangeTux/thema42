@@ -2,40 +2,112 @@
 
 namespace Api;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 use BaseController;
+use Validator;
 use Input;
+use Request;
 use Response;
 use Product;
 use ShoppingList;
 
 class ProductController extends BaseController {
-	
-	public function store($userId, $listId) {
-		$shoppingList = ShoppingList::find($listId);
-		
-		$product = $shoppingList->products()->attach(Input::get('product_id'), [
-			'shopping_list_id' => $shoppingList->id, 
-			'quantity' => Input::get('quantity'), 
-			'scanned' => Input::get('scanned')
-		]);
 
-		return Response::json([
-			'data' => $product
-		], 201);	
-	}
-
-	public function update($userId, $listId, $productId) {
-		$shoppingList = ShoppingList::find($listId);
-		$productPatch = [];
-
-		foreach (Input::all() as $key => $value) {
-			$productPatch[$key] = $value;	
+	public function index() {
+		try
+		{
+			$products = Product::all();
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'No products available'
+				]
+			], 404);
 		}
 
-		$shoppingList->products()->updateExistingPivot($productId, $productPatch);
+		return Response::json([
+			'data' => $products
+		], 200);
+	}
+	
+	public function store($listId) {
+		$validator = Validator::make(Input::all(), ['products' => 'required']);
+
+		if ($validator->fails()) {
+			return Response::json([
+				'error' => [
+					'message' => 'Malformed request'
+				]
+			], 400);
+		}
+
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
+
+		$products = Input::get('products');
+
+		foreach ($products as $product) {
+			$productData = [
+				'product_id' => (integer) $product['id'],
+				'quantity' => (integer) $product['quantity'],
+				'scanned' => (boolean) false
+			];
+
+			$shoppingList->products()->attach($shoppingList->id, $productData);	
+		}
 
 		return Response::json([
-			'message' => 'Product successfully patched'
+			'data' => $shoppingList->products,
+			'meta' => [
+				'update_product' => Request::url() . '/' . $products[0]['id'],
+				'delete_product' => Request::url() . '/' . $products[0]['id']
+			]
+		], 201);
+	}
+
+	public function update($listId, $productId) {
+		$validator = Validator::make(Input::all(), ['product' => 'required']);
+
+		if($validator->fails()) {
+			return Response::json([
+				'error' => [
+					'message' => 'Malformed request'
+				]
+			], 400);
+		}
+
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
+
+		$productData = Input::get('product');
+
+		$shoppingList->products()->updateExistingPivot($productId, $productData);
+
+		return Response::json([
+			'data' => $shoppingList->products
 		], 200);
 	}
 }

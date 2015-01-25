@@ -8,6 +8,7 @@ use Basecontroller;
 use Response;
 use Validator;
 use Input;
+use Request;
 use User;
 use ShoppingList;
 
@@ -37,7 +38,7 @@ class ListController extends BaseController {
 	}
 	
 	public function store() {
-		$validator = Validator::make(Input::all(), ['data' => 'required', 'data.title' => 'required', 'data.products' => 'required']);
+		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
 
 		if ($validator->fails()) {
 			return Response::json([
@@ -47,28 +48,18 @@ class ListController extends BaseController {
 			], 400);
 		}
 
-		$shoppingList = [
-			'user_id' => 1,
-			'title' => Input::get('data.title')
+		$shoppingListData = [
+			'user_id' => 1, // get user_id from auth in the future
+			'title' => Input::get('shopping_list.title')
 		];
-		$products = Input::get('data.products');
 
-		$newShoppingList = ShoppingList::create($shoppingList);
-
-		foreach ($products as $product) {
-			$productData = [
-				'product_id' => (integer) $product['id'],
-				'quantity' => (integer) $product['quantity'],
-				'scanned' => (boolean) false 
-			];
-			
-			$newShoppingList->products()->attach($newShoppingList->id, $productData);	
-		}
-
-		$newShoppingList->products;
+		$shoppingList = ShoppingList::create($shoppingListData);
 
 		return Response::json([
-			'data' => $newShoppingList
+			'data' => $shoppingList,
+			'meta' => [
+				'add_products' => Request::url() . '/' . $shoppingList->id . '/product'
+			]
 		], 201);
 
 	}
@@ -91,6 +82,38 @@ class ListController extends BaseController {
 		return Response::json([
 			'data' => $shoppingList 
 		], 200);
+	}
+
+	public function update($listId) {
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
+		
+		$title = Input::get('data.title');
+		$products = Input::get('data.products');
+
+		if ($title) {
+			$shoppingList->title = $title;
+			$shoppingList->save();
+		}
+
+		if ($products) {
+			foreach ($products as $product) {
+				$productId = $product['id'];
+				unset($product['id']);
+
+				$shoppingList->products()->updateExistingPivot($productId, $product);
+			}
+		}
 	}
 
 	public function destroy($listId) {
