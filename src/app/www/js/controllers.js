@@ -40,12 +40,7 @@ angular.module('wobbe.controllers', [])
 
 .controller('ListCtrl', function ($scope, $stateParams, Lists) {
 	var listId = $stateParams.listId;
-	return $scope.lists.$promise.then(function (lists) {
-		var list = lists.filter(function (list) {
-			return list.id == listId;
-		})[0];
-		$scope.list = list;
-	});
+	$scope.list = Lists.get({ id: listId });
 })
 
 ;
