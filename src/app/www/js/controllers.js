@@ -5,7 +5,7 @@ angular.module('wobbe.controllers', [])
 		$ionicSideMenuDelegate.toggleLeft();
 	};
 
-	$scope.lists = Lists.all();
+	$scope.lists = Lists.query();
 })
 
 .controller('SignInCtrl', function ($scope, $state) {
@@ -14,6 +14,4 @@ angular.module('wobbe.controllers', [])
 		$state.go('menu.about');
 	};
 })
-
 ;
-
