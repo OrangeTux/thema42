@@ -1,11 +1,24 @@
 angular.module('wobbe.controllers', [])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists) {
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup) {
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
 
 	$scope.lists = Lists.query();
+
+	$scope.showOverlay = function (title, content) {
+		$ionicPopup.alert({
+			title: title,
+			template: content
+		});
+	};
+	$scope.showAdvertisement = function () {
+		$scope.showOverlay(
+			'De laatste aanbieding!',
+			'<span class="advertisement">Deze week:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de Tina.</span>'
+		);
+	};
 })
 
 .controller('SignInCtrl', function ($scope, $state) {
