@@ -2,11 +2,6 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
-		.state('signin', {
-			url: '/sign-in',
-			templateUrl: 'templates/sign-in.html',
-			controller: 'SignInCtrl'
-		})
 		.state('menu', {
 			url: '/menu',
 			abstract: true,
@@ -22,6 +17,6 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 		})
 		;
 
-	// $urlRouterProvider.otherwise('/sign-in');
-	$urlRouterProvider.otherwise('/menu/about');
+	$urlRouterProvider.otherwise('/about');
 });
+

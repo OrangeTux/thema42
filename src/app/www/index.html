@@ -1,9 +1,9 @@
-<html>
+<html ng-app="wobbe">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<title>Wobbe 2000</title>
-	
+
 	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
@@ -17,12 +17,7 @@
 	<script src="js/controllers.js"></script>
 	<script src="js/services.js"></script>
 </head>
-<body ng-app="wobbe">
-	<ion-nav-bar class="bar-positive">
-		<ion-nav-back-button class="button-icon ion-arrow-left-c">
-		</ion-nav-back-button>
-	</ion-nav-bar>
-					 
+<body ng-controller="MainCtrl">
 	<ion-nav-view></ion-nav-view>
 </body>
 </html>
