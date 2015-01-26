@@ -1,19 +1,23 @@
 <ion-view view-title="Inloggen">
 	<ion-content>
-		<div class="list">
-			<label class="item item-input">
-				<span class="input-label">E-mailadres</span>
-				<input type="text" ng-model="user.username"/>
-			</label>
-			<label class="item item-input">
-				<span class="input-label">Wachtwoord</span>
-				<input type="password" ng-model="user.password"/>
-			</label>
-		</div>
-		<div class="padding">
-			<button class="button button-block button-positive" ng-click="signIn(user)">
-				Inloggen
-			</button>
+		<div id="login">
+			<h1>Wobbe 2000</h1>
+			<h3>Inloggen</h3>
+			<div class="list list-inset">
+				<label class="item item-input">
+					<span class="input-label">E-mailadres</span>
+					<input type="text" ng-model="user.username"/>
+				</label>
+				<label class="item item-input">
+					<span class="input-label">Wachtwoord</span>
+					<input type="password" ng-model="user.password"/>
+				</label>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="signIn(user)">
+					Inloggen
+				</button>
+			</div>
 		</div>
 	</ion-content>
 </ion-view>
