@@ -38,6 +38,16 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 				}
 			}
 		})
+        .state('menu.payment', {
+            url: '/payment/:listId',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/payment.html',
+					controller: 'PaymentCtrl'
+				}
+			}
+		})
+
 		;
 
 	// $urlRouterProvider.otherwise('/sign-in');

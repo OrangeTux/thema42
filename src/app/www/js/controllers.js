@@ -43,5 +43,22 @@ angular.module('wobbe.controllers', [])
 	$scope.list = Lists.get({ id: listId });
 })
 
+.controller('PaymentCtrl', function ($scope, $stateParams, Lists) {
+	var listId = $stateParams.listId;
+
+	$scope.list = Lists.get({ id: listId });
+
+    $scope.total = function() {
+        if (!$scope.list.products) {
+            return 0
+        }
+
+        var total = 0;
+        $scope.list.products.forEach(function (product) {
+            total += product.scanned * product.price
+        });
+        return total;
+    };
+})
 ;
 
