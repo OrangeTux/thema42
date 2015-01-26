@@ -2,10 +2,12 @@
 	<ion-content padding="true">
 		<div ng-if="list">
 			<ion-list>
-				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.scanned==true}">
+				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.quantity==product.scanned}">
 					<h2>{{ product.name }}</h2>
-					<span class="item-note">&euro; {{ product.price }}</span>
-					<p>Aantal: {{ product.quantity }}</p>
+					<span class="item-note">
+						{{ product.quantity }} &times; &euro; {{ product.price }} = &euro; {{ product.quantity * product.price }}
+					</span>
+					<p>Aantal: {{ product.scanned }} / {{ product.quantity }}</p>
 				</ion-item>
 			</ion-list>
 		</div>
