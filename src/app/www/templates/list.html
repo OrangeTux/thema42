@@ -1,7 +1,13 @@
 <ion-view view-title="Lijst {{ list.title || 'Onbekend' }}">
 	<ion-content padding="true">
 		<div ng-if="list">
-			<p>Dit is lijst {{ list.id }}.</p>
+			<ion-list>
+				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.scanned==true}">
+					<h2>{{ product.name }}</h2>
+					<span class="item-note">&euro; {{ product.price }}</span>
+					<p>Aantal: {{ product.quantity }}</p>
+				</ion-item>
+			</ion-list>
 		</div>
 		<div ng-if="!list">
 			<p>De opgevraagde lijst is niet gevonden.</p>
