@@ -13,6 +13,13 @@
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
+if (!headers_sent()) {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    header('Access-Control-Allow-Credentials: true');
+}
+
 Route::post('/user/auth', ['prefix' => 'api/v1', 'uses' => 'Api\UserController@auth']);
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function()
 {
