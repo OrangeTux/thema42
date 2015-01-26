@@ -5,7 +5,7 @@
 				<ion-item ng-repeat="product in list.products">
 					<h2>{{ product.name }}</h2>
 					<span class="item-note">
-						{{ product.scanned }} &times; &euro; {{ product.price }} = &euro; {{ product.scanned * product.price }}
+						{{ product.scanned }} &times; {{ product.price | currency }} = {{ product.scanned * product.price | currency }}
 					</span>
 					<p>Aantal: {{ product.scanned }}</p>
 				</ion-item>
@@ -18,7 +18,7 @@
 	</ion-content>
 
     <div class="bar bar-footer bar-energized">
-        <div class="title">&euro; {{ total() }}</div>
+        <div class="title">{{ total() | currency }}</div>
         <button class="button">Betalen</button>
     </div>
 </ion-view>

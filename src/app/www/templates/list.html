@@ -5,7 +5,7 @@
 				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.quantity==product.scanned}">
 					<h2>{{ product.name }}</h2>
 					<span class="item-note">
-						{{ product.quantity }} &times; &euro; {{ product.price }} = &euro; {{ product.quantity * product.price }}
+						{{ product.quantity }} &times; {{ product.price | currency }} = {{ product.quantity * product.price | currency }}
 					</span>
 					<p>Aantal: {{ product.scanned }} / {{ product.quantity }}</p>
 				</ion-item>
