@@ -1,13 +1,19 @@
 angular.module('wobbe.controllers', [])
 
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists) {
+	$scope.toggleLeft = function() {
+		$ionicSideMenuDelegate.toggleLeft();
+	};
+
+	$scope.lists = Lists.all();
+})
+
 .controller('SignInCtrl', function ($scope, $state) {
 	$scope.signIn = function(user) {
 		console.log('Sign-In', user);
-		$state.go('tabs.home');
+		$state.go('menu.about');
 	};
 })
 
-.controller('HomeTabCtrl', function($scope) {
-	console.log('HomeTabCtrl');
-});
+;
 
