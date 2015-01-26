@@ -1,0 +1,11 @@
+<ion-view view-title="Lijst {{ list.title || 'Onbekend' }}">
+	<ion-content padding="true">
+		<div ng-if="list">
+			<p>Dit is lijst {{ list.id }}.</p>
+		</div>
+		<div ng-if="!list">
+			<p>De opgevraagde lijst is niet gevonden.</p>
+		</div>
+	</ion-content>
+</ion-view>
+

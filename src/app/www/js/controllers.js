@@ -1,4 +1,4 @@
-angular.module('wobbe.controllers', [])
+angular.module('wobbe.controllers', ['ngRoute'])
 
 .controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists) {
 	$scope.toggleLeft = function() {
@@ -14,4 +14,15 @@ angular.module('wobbe.controllers', [])
 		$state.go('menu.about');
 	};
 })
+
+.controller('HomeCtrl', function ($scope, $state) {
+	$scope.list = $scope.lists[0];
+})
+
+.controller('ListCtrl', function ($scope, $routeParams) {
+	console.log($routeParams);
+	// $scope.list = Lists.get(parseInt($routeParams.listId));
+})
+
 ;
+
