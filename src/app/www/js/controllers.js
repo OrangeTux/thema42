@@ -1,6 +1,6 @@
 angular.module('wobbe.controllers', [])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup) {
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location) {
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
@@ -18,6 +18,10 @@ angular.module('wobbe.controllers', [])
 			'De laatste aanbieding!',
 			'<span class="advertisement">Deze week:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de Tina.</span>'
 		);
+	};
+
+	$scope.isActive = function (viewLocation) { 
+		return viewLocation === $location.path();
 	};
 })
 

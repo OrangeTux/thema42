@@ -20,7 +20,7 @@
 		<ion-content>
 			<ul id="menu" class="list">
 				<li>
-					<a href="#/menu/about" class="item" menu-close>Over deze app</a>
+				<a href="#/menu/about" class="item" ng-class="{active: isActive('/menu/about')}" menu-close>Over deze app</a>
 				</li>
 				<li>
 					<a href="#/sign-out" class="item" menu-close>Uitloggen</a>
@@ -29,7 +29,7 @@
 					Lijsten
 				</li>
 				<li ng-repeat="list in lists">
-					<a href="#/menu/list/{{ list.id }}" class="item" menu-close>{{ list.title }}</a>
+				<a href="#/menu/list/{{ list.id }}" class="item" ng-class="{active: isActive('/menu/list/' + list.id) || ($index === 0 && isActive('/menu/home'))}" menu-close>{{ list.title }}</a>
 				</li>
 			</ul>
 		</ion-content>
