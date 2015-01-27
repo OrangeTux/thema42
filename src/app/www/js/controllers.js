@@ -101,6 +101,13 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
         return total;
     };
+
+	if (Math.random() > 0.6) {
+		$scope.showOverlay(
+			'"Willekeurige" steekproef',
+			'Helaas, u bent geselecteerd voor een steekproef. Een medewerker komt zo snel mogelijk bij u. Deze steekproef is volledig "willekeurig" en is bepaald ongeacht uw etniciteit.'
+		);
+	}
 })
 ;
 

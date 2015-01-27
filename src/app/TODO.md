@@ -14,7 +14,7 @@
 	- Refresh list
 - Payment
 	- Process payment when NFC is triggered
-	- Random 'steekproef' (Math.random ftw, $scope.showOverlay())
+	- [OK] Random 'steekproef' (Math.random ftw, $scope.showOverlay())
 - Advertisement (optional)
   	- [OK] Show advertisement popup
 	- Show when in range of beacon
