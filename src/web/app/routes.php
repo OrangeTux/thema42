@@ -21,7 +21,7 @@ if (!headers_sent()) {
 }
 
 Route::post('/user/auth', ['prefix' => 'api/v1', 'uses' => 'Api\UserController@auth']);
-Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'auth.basic'], function()
+Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'basic.once'], function()
 {
 	Route::resource('user', 'UserController', ['only' => ['store']]);
 	Route::resource('list', 'ListController', ['only' => ['index', 'store', 'show', 'update', 'destroy']]);
