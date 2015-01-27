@@ -1,11 +1,11 @@
 # To Do
 
-- Login
-	- Process form
-	- Create user service (API call)
-	- Handle result (show error message or store token)
-	- Use auth token in other requests
-	- Logout (forget token)
+- [OK] Login
+	- [OK] Process form
+	- [OK] Create user service (API call)
+	- [OK] Handle result (show error message or store token)
+	- [OK] Use auth token in other requests
+	- [OK] Logout (forget token)
 - Scanner
 	- Print out barcodes & QR codes
 	- Create product service (API call)
