@@ -1,6 +1,8 @@
 angular.module('wobbe.controllers', ['ngCordova'])
 
 .controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner, $q) {
+	window.$scope = $scope; // DEBUG
+
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
@@ -42,7 +44,6 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
     };
 
-	window.$scope = $scope;
 	document.addEventListener('deviceready', function () {
 		if (window.nfc) {
 			window.nfc.addTagDiscoveredListener(
