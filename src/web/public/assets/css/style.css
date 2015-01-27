@@ -5180,6 +5180,12 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 		left: 50%;
 		transform: translate(-50%, -50%); }
 
+.new-product-row {
+	/*display: none;
+	height: 0%;
+	opacity: 0;*/
+}
+
 @media (max-width: 960px) {
 	.edit-shoppinglist form .products .product-row .actions .add {
 		background-image: url(/assets/img/icons/actions/plus_black_16.png);

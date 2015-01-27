@@ -41,7 +41,7 @@
 					@foreach($shoppingList->products as $product)
 						<div class="field product-row" id="field__product_row___product_id__{{ $product->id }}">
 							<div id="field__name___product_id__{{ $product->id }}" class="text name">{{ $product->name }}</div>
-							<input type="number" name="products[][quantity]" id="field__quantity___product_id__{{ $product->id }}" class="text quantity" value="{{ $product->quantity }}" />
+							<input type="number" id="field__quantity___product_id__{{ $product->id }}" class="text quantity" value="{{ $product->quantity }}" />
 							<span id="field__scanned___product_id__{{ $product->id }}___is_scanned__{{ $product->scanned }}" style="display: none;"></span>
 							<div class="actions">
 								<div id="action__increment___product_id__{{ $product->id }}" class="add"></div>
@@ -64,11 +64,30 @@
 		</div>
 	</div>
 
-	<!-- Templates -->
+	<!--
+		 ########################
+		 # 		Templates 		#
+		 ########################
+	 -->
+
+	 <!-- Template search result product row. -->
 	<div id="tpl_search_result_product_row" style="display: none;">
 		<div class="search-result-product-row" id="field__search_result_product_row___location__{#location#}___product_id__{#product_id#}">
 			<span class="product-name">{#product_name#}</span>
 			<span class="add-product"></span>
+		</div>
+	</div>
+
+	<!-- Template new product row. -->
+	<div id="tpl_new_product_row" style="display: none;">
+		<div class="field product-row new-product-row" id="field__product_row___product_id__{#product_id#}">
+			<div id="field__name___product_id__{#product_id#}" class="text name">{#product_name#}</div>
+			<input type="number" id="field__quantity___product_id__{#product_id#}" class="text quantity" value="{#product_quantity#}" />
+			<span id="field__scanned___product_id__{#product_id#}___is_scanned__{#product_scanned#}" style="display: none;"></span>
+			<div class="actions">
+				<div id="action__increment___product_id__{#product_id#}" class="add"></div>
+				<div id="action__remove___product_id__{#product_id#}" class="remove"></div>
+			</div>
 		</div>
 	</div>
 @stop

@@ -3,6 +3,7 @@
 // (used for storing and parsing data in element ID)
 var blockSplitString = "___";
 var elementSplitString = "__";
+var api_version = 'v1';
 
 // >> Field name prefixes
 var fieldNamePrefixes = {
@@ -29,6 +30,7 @@ var defaults = {
 // >> Template IDs.
 
 var templates = {
+	new_product_row : '#tpl_new_product_row',
 	product_search_result_row : '#tpl_search_result_product_row',
 };
 
@@ -91,7 +93,81 @@ var products = {
 };
 
 function addProductToList(productID) {
-	console.log('Adding product with ID: ' + productID);
+	var listID = getShoppingListID();
+	$.ajax({
+		url: '/api/' + api_version + '/list/' + listID + '/product',
+		type: 'POST',
+		dataType: 'JSON',
+		data: {
+			products: [
+				{
+					"id" : productID,
+					"quantity" : 1,
+				}
+			]
+		},
+	})
+	.done(function(response) {
+		console.group("success");
+			console.group('Response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+		var productData = getNewProductFromResponse(productID, response);
+		addProductRowToList(productData);
+	})
+	.fail(function(response) {
+		console.group("error");
+			console.group('Response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	})
+	.always(function(response) {
+		console.group("complete");
+			console.group('Response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	});
+
+}
+
+function getNewProductFromResponse(productID, response) {
+	var newProduct;
+
+	$(response).each(function(index, product) {
+		if (product.id == productID) {
+			newProduct = product;
+			return false;
+		}
+	});
+
+	return newProduct;
+}
+
+function addProductRowToList(productData) {
+	console.log(productData);
+
+	var template = buildNewProductRow(productData);
+
+	$('.products').append(template);
+}
+
+function buildNewProductRow(productData) {
+	var template = getTemplate('new_product_row');
+	console.log(template);
+
+	params = {
+		product_id : productData.id,
+		product_name : productData.name,
+		product_quantity : productData.quantity,
+		product_scanned : productData.scanned,
+	};
+
+	template = replaceValuesInContent(template, params);
+
+	return template.toString();
 }
 
 function buildShoppingListObject() {
@@ -534,6 +610,10 @@ function getAllProducts() {
 		console.log("complete");
 	});
 
+}
+
+function getTemplate(templateName) {
+	return $(templates[templateName]).html();
 }
 
 $(function() {
