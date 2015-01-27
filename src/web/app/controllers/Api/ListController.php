@@ -112,6 +112,24 @@ class ListController extends BaseController {
 		], 200);
 	}
 
+	public function showList($listId) {
+		try
+		{
+			$shoppingList = ShoppingList::findOrFail($listId);
+			$shoppingList->products;
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'Shopping list does not exist'
+				]
+			], 404);
+		}
+
+		return $shoppingList;
+	}
+
 	public function update($listId) {
 		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
 
