@@ -9,10 +9,11 @@ class ListController extends BaseController {
 	 */
 	public function index()
 	{
-		$shoppingLists = App::make('Api\ListController')->index(1);
+		$shoppingLists = App::make('Api\ListController')->getLists(1);
 
 		// print_r($shoppingLists);
 
+		return View::make('list.index')->with('shoppingLists', $shoppingLists);
 		// $shoppingLists[] = [
 		// 	'id' => 1,
 		// 	'title' => 'Gourmetten',
@@ -110,7 +111,6 @@ class ListController extends BaseController {
 		// 	]
 		// ];
 
-		return View::make('list.index')->with('shoppingLists', $shoppingLists);
 	}
 
 

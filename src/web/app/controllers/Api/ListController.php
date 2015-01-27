@@ -25,7 +25,7 @@ class ListController extends BaseController {
 			], 400);
 		}
 
-	       	try
+     	try
 		{
 			$shoppingLists = User::findOrFail(Input::get('user_id'))->shoppingLists;
 
@@ -40,13 +40,34 @@ class ListController extends BaseController {
 					'message' => 'User does not exist'
 				]
 			], 404);
-		}	
-		
+		}
+
 		return Response::json([
 			'data' => $shoppingLists
 		], 200);
 	}
-	
+
+	public function getLists($user_id) {
+		try
+		{
+			$shoppingLists = User::findOrFail($user_id)->shoppingLists;
+
+			foreach ($shoppingLists as $shoppingList) {
+				$shoppingList->products;
+			}
+		}
+		catch (ModelNotFoundException $exception)
+		{
+			return Response::json([
+				'error' => [
+					'message' => 'User does not exist'
+				]
+			], 404);
+		}
+
+		return $shoppingLists;
+	}
+
 	public function store() {
 		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
 
@@ -72,12 +93,12 @@ class ListController extends BaseController {
 	}
 
 	public function show($listId) {
-		try 
+		try
 		{
 			$shoppingList = ShoppingList::findOrFail($listId);
 			$shoppingList->products;
 		}
-		catch (ModelNotFoundException $exception) 
+		catch (ModelNotFoundException $exception)
 		{
 			return Response::json([
 				'error' => [
@@ -85,9 +106,9 @@ class ListController extends BaseController {
 				]
 			], 404);
 		}
-		
+
 		return Response::json([
-			'data' => $shoppingList 
+			'data' => $shoppingList
 		], 200);
 	}
 
@@ -114,7 +135,7 @@ class ListController extends BaseController {
 				]
 			], 404);
 		}
-		
+
 		$title = Input::get('shopping_list.title');
 
 		if ($title) {
