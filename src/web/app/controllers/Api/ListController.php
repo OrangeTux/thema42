@@ -15,7 +15,7 @@ use ShoppingList;
 class ListController extends BaseController {
 
 	public function index() {
-		$validator = Validator::make(Input::all(), ['user_id' => 'required']);
+        $validator = Validator::make(Input::all(), ['user_id' => 'required']);
 
 		if($validator->fails()) {
 			return Response::json([
@@ -25,7 +25,7 @@ class ListController extends BaseController {
 			], 400);
 		}
 
-     	try
+        try
 		{
 			$shoppingLists = User::findOrFail(Input::get('user_id'))->shoppingLists;
 
@@ -42,9 +42,7 @@ class ListController extends BaseController {
 			], 404);
 		}
 
-		return Response::json([
-			'data' => $shoppingLists
-		], 200);
+		return Response::json($shoppingLists, 200);
 	}
 
 	public function getLists($user_id) {
@@ -63,9 +61,9 @@ class ListController extends BaseController {
 					'message' => 'User does not exist'
 				]
 			], 404);
-		}
+        }
 
-		return $shoppingLists;
+        return $shoppingLists;
 	}
 
 	public function store() {
@@ -86,10 +84,7 @@ class ListController extends BaseController {
 
 		$shoppingList = ShoppingList::create($shoppingListData);
 
-		return Response::json([
-			'data' => $shoppingList
-		], 201);
-
+		return Response::json($shoppingList, 201);
 	}
 
 	public function show($listId) {
@@ -107,9 +102,7 @@ class ListController extends BaseController {
 			], 404);
 		}
 
-		return Response::json([
-			'data' => $shoppingList
-		], 200);
+		return Response::json($shoppingList, 200);
 	}
 
 	public function showList($listId) {
@@ -161,9 +154,7 @@ class ListController extends BaseController {
 			$shoppingList->save();
 		}
 
-		return Response::json([
-			'data' => $shoppingList
-		], 200);
+		return Response::json($shoppingList, 200);
 	}
 
 	public function destroy($listId) {

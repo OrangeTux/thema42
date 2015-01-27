@@ -33,6 +33,8 @@ class UserController extends BaseController
 
 		$user['password'] = Hash::make($user['password']);
 
-		User::create($user);
+        User::create($user);
+
+        return Response::json($user, 201);
 	}
 }
