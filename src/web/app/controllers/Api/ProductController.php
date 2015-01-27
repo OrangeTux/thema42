@@ -28,15 +28,13 @@ class ProductController extends BaseController {
 			], 404);
 		}
 
-		return Response::json([
-			'data' => $products
-		], 200);
+		return Response::json($products, 200);
 	}
-	
-	public function store($listId) {
-		$validator = Validator::make(Input::all(), ['products' => 'required']);
 
-		if ($validator->fails()) {
+	public function store($listId) {
+        $validator = Validator::make(Input::all(), ['products' => 'required']);
+
+        if ($validator->fails()) {
 			return Response::json([
 				'error' => [
 					'message' => 'Malformed request'
@@ -63,15 +61,13 @@ class ProductController extends BaseController {
 			$productData = [
 				'product_id' => (integer) $product['id'],
 				'quantity' => (integer) $product['quantity'],
-				'scanned' => (boolean) false
+				'scanned' => (integer) false
 			];
 
-			$shoppingList->products()->attach($shoppingList->id, $productData);	
+			$shoppingList->products()->attach($shoppingList->id, $productData);
 		}
 
-		return Response::json([
-			'data' => $shoppingList->products
-		], 201);
+		return Response::json($shoppingList->products, 201);
 	}
 
 	public function update($listId, $productId) {
@@ -102,9 +98,7 @@ class ProductController extends BaseController {
 
 		$shoppingList->products()->updateExistingPivot($productId, $productData);
 
-		return Response::json([
-			'data' => $shoppingList->products
-		], 200);
+		return Response::json($shoppingList->products, 200);
 	}
 
 	public function destroy($listId, $productId) {
@@ -123,8 +117,6 @@ class ProductController extends BaseController {
 
 		$shoppingList->products()->detach($productId);
 
-		return Response::json([
-			'data' => $shoppingList->products
-		], 200);
+		return Response::json($shoppingList->products, 200);
 	}
 }
