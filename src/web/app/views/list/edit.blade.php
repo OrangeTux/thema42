@@ -17,6 +17,7 @@
 			</div>
 
 			{{ Form::open(['class' => 'edit-shoppinglist-form']) }}
+				<span id="field__list_info___list_id__{{ $shoppingList['id'] }}" style="display: none;"></span>
 				<div class="field">
 					<input type="text" name="title" class="text title" placeholder="Titel van uw boodschappenlijst" value="{{ $shoppingList['title'] }}"/>
 				</div>

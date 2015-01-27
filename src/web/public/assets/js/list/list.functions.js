@@ -12,6 +12,7 @@ var fieldNamePrefixes = {
 	'quantity' : 'field__quantity___',
 	'remove_product' : 'action__remove___',
 	'search_result_product_row' : 'field__search_result_product_row___',
+	'shopping_list_info' : 'field__list_info___',
 };
 
 // >> Default values.
@@ -91,11 +92,33 @@ function addProductToList(productID) {
 	console.log('Adding product with ID: ' + productID);
 }
 
+function buildShoppingListObject() {
+	return shoppingListObject = {
+		'title' : $('[name=title]').val()
+	};
+}
+
+function getShoppingListData() {
+	var fieldNamePrefix = getFieldNamePrefix('shopping_list_info');
+	var elementID = $("[id^='" + fieldNamePrefix + "']").attr('id');
+	return parseElementID(elementID);
+}
+
+function getShoppingListID() {
+	var shoppingListData = getShoppingListData();
+	return shoppingListData.list_id;
+}
+
 function saveChanges() {
+	// Build default shopping list as object.
+	var shoppingList = buildShoppingListObject();
+
+	var shoppingListID = getShoppingListID();
+
 	$.ajax({
-		url: '/route/to/patch/list',
+		url: '/api/v1/list/' + shoppingListID,
 		type: 'PATCH',
-		data: {list: $('.edit-shoppinglist-form').serialize()},
+		data: {shopping_list: shoppingList},
 		statusCode : {
 			404 : 	function() {
 						displayErrorMessage('Er ging iets mis aan onze kant, de pagina kon niet gevonden worden.', '404 Page not found.');
@@ -105,13 +128,15 @@ function saveChanges() {
 					}
 		}
 	})
-	.done(function() {
+	.done(function(response) {
 		console.log("success");
+		console.log(response);
 	})
-	.fail(function() {
+	.fail(function(response) {
 		console.log("error");
+		console.log(response);
 	})
-	.always(function() {
+	.always(function(response) {
 		console.log("complete");
 	});
 }
@@ -418,7 +443,28 @@ function shakeRow(productID) {
 	}, defaults.rumble_time);
 }
 
+function getAllProducts() {
+	$.ajax({
+		url: '/api/v1/product',
+		type: 'GET',
+		dataType: 'JSON',
+	})
+	.done(function(response) {
+		console.log("success");
+		console.log(response);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+}
+
 $(function() {
 	// Bind actions to some buttons
 	bindActions();
+
+	// getAllProducts();
 });

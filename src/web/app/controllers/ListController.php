@@ -11,8 +11,6 @@ class ListController extends BaseController {
 	{
 		$shoppingLists = App::make('Api\ListController')->getLists(1);
 
-		// print_r($shoppingLists);
-
 		return View::make('list.index')->with('shoppingLists', $shoppingLists);
 	}
 
@@ -51,19 +49,5 @@ class ListController extends BaseController {
 		$shoppingList = App::make('Api\ListController')->show($list);
 
 		return View::make('list.edit')->with('shoppingList', $shoppingList);
-
-		// $shoppingList = [
-		// 	'id' => 2,
-		// 	'title' => 'Afterpartees',
-		// 	'products' => [
-		// 		['product_id' => 6, 'name' => 'Melk (halfvolle), 2L', 'price' => 1.95, 'quantity' => 1, 'scanned' => false],
-		// 		['product_id' => 7, 'name' => 'Coca Cola', 'price' => 1.95, 'quantity' => 10, 'scanned' => false],
-		// 		['product_id' => 12, 'name' => 'Coca Cola, Light', 'price' => 1.95, 'quantity' => 3, 'scanned' => false],
-		// 		['product_id' => 13, 'name' => 'Coca Cola, Zero', 'price' => 1.95, 'quantity' => 4, 'scanned' => false],
-		// 		['product_id' => 14, 'name' => 'Mayonaise', 'price' => 1.95, 'quantity' => 2, 'scanned' => false],
-		// 		['product_id' => 15, 'name' => 'Ketchup', 'price' => 1.95, 'quantity' => 2, 'scanned' => false],
-		// 		['product_id' => 16, 'name' => 'Bitterballen', 'price' => 1.95, 'quantity' => 10, 'scanned' => false],
-		// 	]
-		// ];
 	}
 }
