@@ -220,23 +220,35 @@ function removeProductRow(productID) {
 }
 
 function removeProduct(productID) {
+	var listID = getShoppingListID();
+
 	$.ajax({
-		url: '/api/route/to/remove/',
-		type: 'POST',
+		url: '/api/v1/list/' + listID + '/product/' + productID,
+		type: 'DELETE',
 		dataType: 'JSON',
-		data: {product_id: productID},
 	})
-	.done(function(data) {
-		console.log("success");
+	.done(function(response) {
+		console.group("success");
+			console.log('Response Data:');
+			console.log(response);
+			console.groupEnd();
+
 		removeProductRow(productID);
 	})
-	.fail(function() {
-		console.log("error");
+	.fail(function(response) {
+		console.group("error");
+			console.log('Response Data:');
+			console.log(response);
+			console.groupEnd();
+
 		displayErrorMessage('Uw product kon niet verwijderd worden. Dat worden dus extra boodschappen voor u!');
 		shakeRow(productID);
 	})
-	.always(function() {
-		console.log("complete");
+	.always(function(response) {
+		console.group("complete");
+			console.log('Response Data:');
+			console.log(response);
+			console.groupEnd();
 	});
 }
 
