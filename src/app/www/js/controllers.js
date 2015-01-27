@@ -38,11 +38,13 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
     };
 
+	window.$scope = $scope;
 	document.addEventListener('deviceready', function () {
 		if (window.nfc) {
 			window.nfc.addTagDiscoveredListener(
 				function () {
-					console.log('WOBBEEEEE');
+					console.log('NFC tag discovered.');
+					$scope.$broadcast('nfc-detected');
 				},
 				function () { // success callback
 				},
@@ -99,7 +101,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 	$scope.list = Lists.get({ id: listId });
 })
 
-.controller('PaymentCtrl', function ($scope, $stateParams, Lists) {
+.controller('PaymentCtrl', function ($scope, $stateParams, Lists, $location) {
 	var listId = $stateParams.listId;
 
 	$scope.list = Lists.get({ id: listId });
@@ -122,6 +124,20 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			'Helaas, u bent geselecteerd voor een steekproef. Een medewerker komt zo snel mogelijk bij u. Deze steekproef is volledig "willekeurig" en is bepaald ongeacht uw etniciteit.'
 		);
 	}
+
+	$scope.paymentCompletePopup = function () {
+		$scope.showOverlay(
+			'Betaling afgerond',
+			'Uw betaling is afgerond.<br/><br/>Bedankt voor uw aankauf bei WOBBE ZWEITAUSEND!'
+		);
+	};
+
+	$scope.$on('nfc-detected', function () {
+		if ( ! $location.path().match(/^\/menu\/payment/)) {
+			return;
+		}
+		$scope.paymentCompletePopup();
+	});
 })
 ;
 

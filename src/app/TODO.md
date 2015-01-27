@@ -14,7 +14,7 @@
 	- Refresh list
 - Payment
   	- [OK] Add NFC support
-	- Process payment when NFC is triggered
+	- [OK] Process payment when NFC is triggered
 	- [OK] Random 'steekproef' (Math.random ftw, $scope.showOverlay())
 - Advertisement (optional)
   	- [OK] Show advertisement popup
