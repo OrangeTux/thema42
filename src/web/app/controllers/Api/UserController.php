@@ -16,8 +16,10 @@ class UserController extends BaseController
 		$password = Input::get('password');
 		$email = Input::get('email');
 
-		if (Auth::attempt(['email' => $email, 'password' => $password])) {
-			return User::where('email', '=', $email)->firstOrFail(); 
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            $user = User::where('email', '=', $email)->firstOrFail();
+            $user['token'] = 'Basic ' . base64_encode($user->email . ':' . $password);
+			return $user;
 		}
 		
 		return Response::json([

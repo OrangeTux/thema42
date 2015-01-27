@@ -6,11 +6,11 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $table = 'users';
 	protected $hidden = ['password'];
-	protected $fillable = ['first_name', 'last_name', 'email', 'password'];
+    protected $fillable = ['first_name', 'last_name', 'email', 'password'];
 
 	public function shoppingLists() {
 		return $this->hasMany('ShoppingList');
-	}
+    }
 
 	public function getAuthIdentifier() {
 		return $this->getKey();
