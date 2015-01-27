@@ -23,7 +23,7 @@
 				</div>
 
 				<div class="field search-products-block">
-					<input type="text" name="new_product" class="text new_product search_product" placeholder="Nieuw product toevoegen, begin met typen om te zoeken." />
+					<input type="text" id="location__top" name="new_product" class="text new_product search_product" placeholder="Nieuw product toevoegen, begin met typen om te zoeken." />
 					<div class="search_results" id="search-results-top"></div>
 				</div>
 

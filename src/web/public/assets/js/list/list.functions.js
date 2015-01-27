@@ -161,11 +161,12 @@ function getNewProductFromResponse(productID, response) {
 }
 
 function addProductRowToList(productData) {
-	console.log(productData);
 
 	var template = buildNewProductRow(productData);
 
 	$('.products').append(template);
+
+	bindActionsToProduct(productData.id);
 }
 
 function buildNewProductRow(productData) {
@@ -305,7 +306,7 @@ function removeProductRow(productID) {
 		'height': 'toggle',
 		'opacity': 'toggle'},
 		500, function(){
-			$(this).empty();
+			$(this).remove();
 		});
 }
 
@@ -435,15 +436,18 @@ function bindActionsToSearchBox(searchBox) {
 	// Autocomplete when typing in box
 	addSearchAutocomplete(searchBox);
 
-	// Hide results when focus loose
-	$(searchBox).parent('.search-products-block').on('blur', function() {
-		var resultBlock = getClosestResultBlock(searchBox);
-		$(resultBlock).html('');
+	var timer;
+
+	$(searchBox).on('focus', function() {
+		clearTimeout(timer);
+		$(searchBox).autocomplete("search");
 	});
 
-	// When focusing on the search box, show suggestions
-	$(searchBox).on('focus', function() {
-		$(searchBox).autocomplete("search");
+	$(searchBox).on('focusout', function() {
+		timer = setTimeout(function() {
+			var resultBlock = getClosestResultBlock(searchBox);
+			$(resultBlock).html('');
+		}, 200);
 	});
 }
 
@@ -460,7 +464,7 @@ function searchProducts(term) {
 	var resultData = [];
 
 	$.each(products.data.products, function(){
-		if ((this.name).toLowerCase().indexOf(term) >= 0) {
+		if ((this.name).toLowerCase().indexOf(term.toLowerCase()) >= 0) {
 			resultData.push(this);
 		}
 	});
@@ -472,7 +476,7 @@ function showMatchingProducts(searchBox, products) {
 	var searchResult = buildSearchResults(products);
 	var resultsBlock = getClosestResultBlock(searchBox);
 
-	// Store the location of the searchbox in de product row
+	// Store the location of the search box in de product row
 	var searchBoxLocation = getSearchBoxLocation(searchBox);
 	searchResult = searchResult.join("");
 	searchResult = replaceValuesInContent(searchResult, {location : searchBoxLocation});
@@ -487,17 +491,23 @@ function bindActionToSearchResults(searchBox) {
 	var fieldNamePrefix = getFieldNamePrefix('search_result_product_row');
 
 	$("[id^='" + fieldNamePrefix + "location__" + searchBoxLocation + "']").each(function() {
-		bindActionsToSearchResultProductRow(this);
+		bindActionsToSearchResultProductRow({'row' : this, 'searchBox' : searchBox});
 	});
 }
 
-function bindActionsToSearchResultProductRow(row) {
-	elementID = $(row).attr('id');
+function bindActionsToSearchResultProductRow(data) {
+	elementID = $(data.row).attr('id');
 	var elementData = parseElementID(elementID);
 
-	$(row).on('click', function() {
+	$(data.row).on('click', function() {
+		clearSearchBox(data.searchBox);
 		addProductToList(elementData.product_id);
 	});
+}
+
+function clearSearchBox(searchBox) {
+	var searchBoxLocation = getSearchBoxLocation(searchBox);
+	$('.search-products-block #location__' + searchBoxLocation).val('');
 }
 
 function getSearchBoxLocation(searchBox) {
