@@ -7,9 +7,11 @@ var elementSplitString = "__";
 // >> Field name prefixes
 var fieldNamePrefixes = {
 	'increment_product_quantity' : 'action__increment___',
+	'product_id' : 'product_id__',
 	'product_name' : 'field__name___',
 	'product_row' : 'field__product_row___',
-	'quantity' : 'field__quantity___',
+	'product_scanned' : 'field__scanned___',
+	'product_quantity' : 'field__quantity___',
 	'remove_product' : 'action__remove___',
 	'search_result_product_row' : 'field__search_result_product_row___',
 	'shopping_list_info' : 'field__list_info___',
@@ -93,9 +95,11 @@ function addProductToList(productID) {
 }
 
 function buildShoppingListObject() {
-	return shoppingListObject = {
+	var shoppingListObject = {
 		'title' : $('[name=title]').val()
 	};
+
+	return shoppingListObject;
 }
 
 function getShoppingListData() {
@@ -145,6 +149,65 @@ function createProduct() {
 
 }
 
+function getListProductName(productID) {
+	var fieldNamePrefix = getFieldNamePrefix('product_name');
+	var productIDPrefix = getFieldNamePrefix('product_id');
+	var elementID = $("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").attr('id');
+	var listProductData = parseElementID(elementID);
+	return listProductData.name;
+}
+
+function getListProductScanned(productID) {
+	var fieldNamePrefix = getFieldNamePrefix('product_scanned');
+	var productIDPrefix = getFieldNamePrefix('product_id');
+	var elementID = $("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").attr('id');
+	var listProductData = parseElementID(elementID);
+	return listProductData.is_scanned;
+}
+
+function getListProductData(productID) {
+	var listProductData = {
+		'id' : parseInt(productID),
+		'quantity' : getCurrentQuantity(productID),
+		'scanned' : getListProductScanned(productID),
+	};
+	return listProductData;
+}
+
+function updateProduct(productID) {
+	var listProductData = getListProductData(productID);
+	var listID = getShoppingListID();
+
+	console.group("List Product Data:");
+		console.log(listProductData);
+		console.groupEnd();
+
+	$.ajax({
+		url: '/api/v1/list/' + listID + '/product/' + productID,
+		type: 'PATCH',
+		dataType: 'JSON',
+		data: { product : listProductData }
+	})
+	.done(function(response) {
+		console.group("success");
+			console.log(response);
+			console.groupEnd();
+	})
+	.fail(function(response) {
+		console.group("error");
+			console.log(response);
+			console.groupEnd();
+		displayErrorMessage('Uw product kon niet gewijzigd worden. Onze excuses voor het ongemak.');
+		shakeRow(productID);
+	})
+	.always(function(response) {
+		console.group("complete");
+			console.log(response);
+			console.groupEnd();
+	});
+
+}
+
 function removeProductRow(productID) {
 	var fieldNamePrefix = getFieldNamePrefix('product_row');
 	$('#' + fieldNamePrefix + 'product_id__' + productID)
@@ -182,47 +245,35 @@ function decrementQuantity() {
 }
 
 function incrementQuantity(productID) {
-	$.ajax({
-		url: '/api/route/to/increment/',
-		type: 'POST',
-		dataType: 'JSON',
-		data: {product_id: productID},
-	})
-	.done(function(data) {
-		console.log("success");
-		var currentQuantity = getCurrentQuantity(productID);
-		var newQuantity = currentQuantity + 1;
-		setQuantity(productID, newQuantity);
-	})
-	.fail(function() {
-		console.log("error");
-		displayErrorMessage('Het aantal van uw product kon niet verhoogd worden. Onze excuses voor het ongemak.');
-		shakeRow(productID);
-	})
-	.always(function() {
-		console.log("complete");
-	});
+	var currentQuantity = getCurrentQuantity(productID);
+	var newQuantity = currentQuantity + 1;
+	setQuantity(productID, newQuantity);
+
+	updateProduct(productID);
 }
 
 function getCurrentQuantity(productID) {
-	var fieldNamePrefix = getFieldNamePrefix('quantity');
-	return parseInt($('#' + fieldNamePrefix + 'product_id__' + productID).val());
+	var fieldNamePrefix = getFieldNamePrefix('product_quantity');
+	var productIDPrefix = getFieldNamePrefix('product_id');
+	return parseInt($("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").val());
 }
 
 function setQuantity(productID, quantity) {
 	// Get field name prefix.
-	var fieldNamePrefix = getFieldNamePrefix('quantity');
+	var fieldNamePrefix = getFieldNamePrefix('product_quantity');
+	var productIDPrefix = getFieldNamePrefix('product_id');
 
 	// Set quantity.
-	$('#' + fieldNamePrefix + 'product_id__' + productID).val(quantity);
+	$("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").val(quantity);
 }
 
 function bindAddAction(productID) {
 	// Get field name prefix.
 	var fieldNamePrefix = getFieldNamePrefix('increment_product_quantity');
+	var productIDPrefix = getFieldNamePrefix('product_id');
 
 	// Bind action.
-	$('#' + fieldNamePrefix + 'product_id__' + productID).on('click', function() {
+	$("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").on('click', function() {
 		incrementQuantity(productID);
 	});
 }
@@ -230,16 +281,27 @@ function bindAddAction(productID) {
 function bindRemoveAction(productID) {
 	// Get field name prefix.
 	var fieldNamePrefix = getFieldNamePrefix('remove_product');
+	var productIDPrefix = getFieldNamePrefix('product_id');
 
 	// Bind action.
-	$('#' + fieldNamePrefix + 'product_id__' + productID).on('click', function() {
+	$("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").on('click', function() {
 		removeProduct(productID);
+	});
+}
+
+function bindQuantityChangeAction(productID) {
+	var fieldNamePrefix = getFieldNamePrefix('product_quantity');
+	var productIDPrefix = getFieldNamePrefix('product_id');
+
+	$("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").on('change', function() {
+		updateProduct(productID);
 	});
 }
 
 function bindActionsToProduct(productID) {
 	bindAddAction(productID);
 	bindRemoveAction(productID);
+	bindQuantityChangeAction(productID);
 }
 
 function bindActions() {

@@ -4,7 +4,7 @@
 
 @section('content')
 	@include('layouts.my_wobbe')
-	<h3>Wijzigen boodschappenlijst {{ $shoppingList['title'] }}</h3>
+	<h3>Wijzigen boodschappenlijst {{ $shoppingList->title }}</h3>
 
 	<div class="sixteen columns">
 		<div class="large-notice edit-shoppinglist">
@@ -17,9 +17,9 @@
 			</div>
 
 			{{ Form::open(['class' => 'edit-shoppinglist-form']) }}
-				<span id="field__list_info___list_id__{{ $shoppingList['id'] }}" style="display: none;"></span>
+				<span id="field__list_info___list_id__{{ $shoppingList->id }}" style="display: none;"></span>
 				<div class="field">
-					<input type="text" name="title" class="text title" placeholder="Titel van uw boodschappenlijst" value="{{ $shoppingList['title'] }}"/>
+					<input type="text" name="title" class="text title" placeholder="Titel van uw boodschappenlijst" value="{{ $shoppingList->title }}"/>
 				</div>
 
 				<div class="field search-products-block">
@@ -38,13 +38,14 @@
 
 				<div class="products">
 					<h2>Uw producten</h2>
-					@foreach($shoppingList['products'] as $product)
-						<div class="field product-row" id="field__product_row___product_id__{{ $product['product_id'] }}">
-							<input type="text" name="products[][name]" id="field__name___product_id__{{ $product['product_id'] }}" class="text name" value="{{ $product['name'] }}" />
-							<input type="number" name="products[][quantity]" id="field__quantity___product_id__{{ $product['product_id'] }}" class="text quantity" value="{{ $product['quantity'] }}" />
+					@foreach($shoppingList->products as $product)
+						<div class="field product-row" id="field__product_row___product_id__{{ $product->id }}">
+							<input type="text" name="products[][name]" id="field__name___product_id__{{ $product->id }}" class="text name" value="{{ $product->name }}" />
+							<input type="number" name="products[][quantity]" id="field__quantity___product_id__{{ $product->id }}" class="text quantity" value="{{ $product->quantity }}" />
+							<span id="field__scanned___product_id__{{ $product->id }}___is_scanned__{{ $product->scanned }}" style="display: none;"></span>
 							<div class="actions">
-								<div id="action__increment___product_id__{{ $product['product_id'] }}" class="add"></div>
-								<div id="action__remove___product_id__{{ $product['product_id'] }}" class="remove"></div>
+								<div id="action__increment___product_id__{{ $product->id }}" class="add"></div>
+								<div id="action__remove___product_id__{{ $product->id }}" class="remove"></div>
 							</div>
 						</div>
 					@endforeach
