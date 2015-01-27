@@ -7,6 +7,7 @@ sleep 5
 
 echo ">> Deleting app..."
 adb shell pm uninstall nl.hanze.wobbe
+adb shell am force-stop nl.hanze.wobbe
 
 cordova run --device
 

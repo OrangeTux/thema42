@@ -18,14 +18,12 @@
 	</ion-content>
 
     <div class="bar bar-footer bar-balanced">
-            <div class="title">
-		        <a href="#">
-                    <button class="button button-icon icon ion-camera"></button>
-                </a>
-            </div>
-            <a href="#/menu/payment/{{ list.id }}">
-                <button class="button button-clear">Betalen</button>
-            </a>
+        <div class="title">
+            <button class="button button-icon icon ion-camera" ng-click="scan()"></button>
+        </div>
+        <a href="#/menu/payment/{{ list.id }}">
+            <button class="button button-clear">Betalen</button>
+        </a>
     </div>
 </ion-view>
 

@@ -1,6 +1,6 @@
-angular.module('wobbe.controllers', [])
+angular.module('wobbe.controllers', ['ngCordova'])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location) {
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner) {
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
@@ -28,6 +28,16 @@ angular.module('wobbe.controllers', [])
 		delete $http.defaults.headers.common['Authorization'];
 		$state.go('sign-in');
 	};
+
+    $scope.scan = function() { $cordovaBarcodeScanner.scan().then(function(data) {
+            alert(data.text);
+            console.log('Wobbe: scanned!');
+        }, function(error) {
+            alert('Scan is misgegaan. Probeer het opnieuw.')
+            console.log('Wobbe: scan failed!');
+        });
+    };
+
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
