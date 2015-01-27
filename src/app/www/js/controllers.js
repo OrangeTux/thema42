@@ -38,6 +38,20 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
     };
 
+	document.addEventListener('deviceready', function () {
+		if (window.nfc) {
+			window.nfc.addTagDiscoveredListener(
+				function () {
+					console.log('WOBBEEEEE');
+				},
+				function () { // success callback
+				},
+				function (error) { // error callback
+					console.log('Error adding NFC listener!' + JSON.stringfy(error));
+				}
+			);
+		}
+	}, false);
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
