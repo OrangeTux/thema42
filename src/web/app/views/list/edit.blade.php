@@ -40,7 +40,7 @@
 					<h2>Uw producten</h2>
 					@foreach($shoppingList->products as $product)
 						<div class="field product-row" id="field__product_row___product_id__{{ $product->id }}">
-							<input type="text" name="products[][name]" id="field__name___product_id__{{ $product->id }}" class="text name" value="{{ $product->name }}" />
+							<div id="field__name___product_id__{{ $product->id }}" class="text name">{{ $product->name }}</div>
 							<input type="number" name="products[][quantity]" id="field__quantity___product_id__{{ $product->id }}" class="text quantity" value="{{ $product->quantity }}" />
 							<span id="field__scanned___product_id__{{ $product->id }}___is_scanned__{{ $product->scanned }}" style="display: none;"></span>
 							<div class="actions">
