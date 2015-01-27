@@ -23,12 +23,37 @@ angular.module('wobbe.controllers', [])
 	$scope.isActive = function (viewLocation) { 
 		return viewLocation === $location.path();
 	};
+
+	$scope.signOut = function () {
+		delete $http.defaults.headers.common['Authorization'];
+		$state.go('sign-in');
+	};
 })
 
-.controller('SignInCtrl', function ($scope, $state) {
+.controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
+	$scope.message = '';
+
 	$scope.signIn = function(user) {
-		console.log('Sign-In', user);
-		$state.go('menu.about');
+		if ( ! user || ! user.username || ! user.password) {
+			$scope.message = 'Vul a.u.b. alle velden in.';
+			return;
+		}
+		$scope.message = '';
+		$http({
+			method: 'POST',
+			url: APIURL + 'api/v1/user/auth',
+			data: {
+				email: user.username,
+				password: user.password
+			}
+		}).then(function (response) {
+			$http.defaults.headers.common['Authorization'] = response.data.token;
+			$scope.message = '';
+			$state.go('menu.home');
+		}, function () {
+			$scope.message = 'Uw inloggegevens zijn onjuist.';
+			console.log(arguments);
+		});
 	};
 })
 

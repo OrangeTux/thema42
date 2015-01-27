@@ -1,5 +1,7 @@
 angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
+.constant('APIURL', 'http://private-a4221-wobbe1.apiary-mock.com/')
+
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('signin', {
@@ -50,8 +52,7 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
 		;
 
-	// $urlRouterProvider.otherwise('/sign-in');
-	$urlRouterProvider.otherwise('/menu/home');
+	$urlRouterProvider.otherwise('/sign-in');
 })
 
 ;
