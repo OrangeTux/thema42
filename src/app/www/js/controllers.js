@@ -1,6 +1,6 @@
 angular.module('wobbe.controllers', ['ngCordova'])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner) {
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner, $q) {
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
@@ -29,12 +29,16 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		$state.go('sign-in');
 	};
 
-    $scope.scan = function() { $cordovaBarcodeScanner.scan().then(function(data) {
-            alert(data.text);
-            console.log('Wobbe: scanned!');
-        }, function(error) {
-            alert('Scan is misgegaan. Probeer het opnieuw.')
-            console.log('Wobbe: scan failed!');
+    $scope.scan = function() { 
+        return $q(function(resolve, reject) {
+            //resolve(5);
+            $cordovaBarcodeScanner.scan().then(function(data) {
+                resolve(parseInt(data.text, 10));
+
+            }, function(error) {
+                alert('Scan is misgegaan. Probeer het opnieuw.')
+                reject(undefined)
+            });
         });
     };
 
@@ -54,6 +58,16 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			);
 		}
 	}, false);
+
+    $scope.update_list = function(list, scan_id) { 
+        scan_id.then(function(scan_id) {
+            list.products.forEach(function (product) {
+                if(product.id === scan_id) {
+                    product.scanned += 1;
+                };
+            });
+        });
+    };
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
