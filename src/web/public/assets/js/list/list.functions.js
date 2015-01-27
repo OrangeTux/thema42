@@ -92,8 +92,22 @@ var products = {
 	}
 };
 
+function isProductOnList(productID) {
+	var fieldNamePrefix = getFieldNamePrefix('product_row');
+	var productIDPrefix = getFieldNamePrefix('product_id');
+
+	return $("[id^='" + fieldNamePrefix + productIDPrefix + productID + "']").length > 0;
+}
+
 function addProductToList(productID) {
 	var listID = getShoppingListID();
+
+	// If product is already on list, just increment.
+	if (isProductOnList(productID)) {
+		incrementQuantity(productID);
+		return;
+	}
+
 	$.ajax({
 		url: '/api/' + api_version + '/list/' + listID + '/product',
 		type: 'POST',
