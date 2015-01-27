@@ -8,6 +8,7 @@ use Basecontroller;
 use Response;
 use Validator;
 use Input;
+use Auth;
 use Request;
 use User;
 use ShoppingList;
@@ -66,7 +67,11 @@ class ListController extends BaseController {
         return $shoppingLists;
 	}
 
-	public function store() {
+    public function store() {
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+        }
+
 		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
 
 		if ($validator->fails()) {
@@ -78,7 +83,7 @@ class ListController extends BaseController {
 		}
 
 		$shoppingListData = [
-			'user_id' => 1, // get user_id from auth in the future
+			'user_id' => $userId,
 			'title' => Input::get('shopping_list.title')
 		];
 
