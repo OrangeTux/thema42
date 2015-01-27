@@ -15,10 +15,12 @@ use ShoppingList;
 
 class ListController extends BaseController {
 
-	public function index() {
-        $validator = Validator::make(Input::all(), ['user_id' => 'required']);
+    public function index() {
+        if (Auth::check()) {
+            $userId = Auth::user()->id;
+        }
 
-		if($validator->fails()) {
+		if(!Auth::check()) {
 			return Response::json([
 				'error' => [
 					'message' => 'Malformed request'
@@ -28,7 +30,7 @@ class ListController extends BaseController {
 
         try
 		{
-			$shoppingLists = User::findOrFail(Input::get('user_id'))->shoppingLists;
+			$shoppingLists = User::findOrFail($userId)->shoppingLists;
 
 			foreach ($shoppingLists as $shoppingList) {
 				$shoppingList->products;
