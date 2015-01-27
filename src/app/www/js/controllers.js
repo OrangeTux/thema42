@@ -60,9 +60,16 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			$http.defaults.headers.common['Authorization'] = response.data.token;
 			$scope.message = '';
 			$state.go('menu.home');
-		}, function () {
-			$scope.message = 'Uw inloggegevens zijn onjuist.';
-			console.log(arguments);
+		}, function (error) {
+			console.log(error);
+			switch (error.status) {
+				default:
+					$scope.message = 'Er is een fout opgetreden. Probeer het opnieuw.';
+					break;
+				case 200:
+					$scope.message = 'Uw inloggegevens zijn onjuist.';
+					break;
+			}
 		});
 	};
 })
