@@ -27,8 +27,6 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'auth.basi
 	Route::resource('list', 'ListController', ['only' => ['index', 'store', 'show', 'update', 'destroy']]);
 	Route::resource('list.product', 'ProductController', ['only' => ['store', 'update', 'destroy']]);
 	Route::resource('product', 'ProductController', ['only' => ['index']]);
-	Route::get('/getLists/{user_id}', ['uses' => 'ListController@getLists']);
-	Route::get('/getList/{listId}', ['uses' => 'ListController@gshowList']);
 });
 
 Route::resource('list', 'ListController');

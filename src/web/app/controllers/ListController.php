@@ -11,6 +11,8 @@ class ListController extends BaseController {
 	{
 		$shoppingLists = App::make('Api\ListController')->getLists(1);
 
+		// print_r($shoppingLists);
+
 		return View::make('list.index')->with('shoppingLists', $shoppingLists);
 	}
 
@@ -33,7 +35,7 @@ class ListController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$shoppingList = App::make('Api\ListController')->show(1, $id);
+		$shoppingList = App::make('Api\ListController')->show($id);
 		return View::make('list.show')->with('shoppingList', $shoppingList);
 	}
 
@@ -46,7 +48,7 @@ class ListController extends BaseController {
 	 */
 	public function edit($list)
 	{
-		$shoppingList = App::make('Api\ListController')->showList($list);
+		$shoppingList = App::make('Api\ListController')->show($list);
 
 		return View::make('list.edit')->with('shoppingList', $shoppingList);
 

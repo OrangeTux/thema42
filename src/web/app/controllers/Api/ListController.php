@@ -84,28 +84,10 @@ class ListController extends BaseController {
 
 		$shoppingList = ShoppingList::create($shoppingListData);
 
-		return Response::json($shoppingList, 201);
+		return $shoppingList;
 	}
 
 	public function show($listId) {
-		try
-		{
-			$shoppingList = ShoppingList::findOrFail($listId);
-			$shoppingList->products;
-		}
-		catch (ModelNotFoundException $exception)
-		{
-			return Response::json([
-				'error' => [
-					'message' => 'Shopping list does not exist'
-				]
-			], 404);
-		}
-
-		return Response::json($shoppingList, 200);
-	}
-
-	public function showList($listId) {
 		try
 		{
 			$shoppingList = ShoppingList::findOrFail($listId);
@@ -154,7 +136,7 @@ class ListController extends BaseController {
 			$shoppingList->save();
 		}
 
-		return Response::json($shoppingList, 200);
+		return $shoppingList;
 	}
 
 	public function destroy($listId) {
