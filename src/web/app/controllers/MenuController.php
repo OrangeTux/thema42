@@ -15,7 +15,7 @@ class MenuController extends BaseController
 		if (Auth::check()) {
 			$main->add(URL::route('list.index'), 'Alle lijsten');
 			$main->add(URL::route('list.create'), 'Nieuwe lijst');
-			$main->add(URL::route('home.index'), Auth::user()->full_name);
+			$main->add('#', Auth::user()->full_name);
 			$main->add(URL::route('user.logout'), 'Uitloggen');
 		} else {
 			$main->add(URL::route('user.login'), 'Inloggen');

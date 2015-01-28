@@ -8,14 +8,18 @@ var api_version = 'v1';
 // >> Field name prefixes
 var fieldNamePrefixes = {
 	'increment_product_quantity' : 'action__increment___',
+	'list_id' : 'shopping_list_id__',
 	'product_id' : 'product_id__',
 	'product_name' : 'field__name___',
+	'product_quantity' : 'field__quantity___',
 	'product_row' : 'field__product_row___',
 	'product_scanned' : 'field__scanned___',
-	'product_quantity' : 'field__quantity___',
 	'remove_product' : 'action__remove___',
+	'remove_shopping_list' : 'field__remove_shopping_list___',
 	'search_result_product_row' : 'field__search_result_product_row___',
+	'shopping_list_id' : 'shopping_list_id__',
 	'shopping_list_info' : 'field__list_info___',
+	'shopping_list_row' : 'field__shopping_list_row___',
 };
 
 // >> Default values.
@@ -125,7 +129,49 @@ function createList() {
 				console.groupEnd();
 			console.groupEnd();
 	});
+}
 
+function removeShoppingList(shoppingListID) {
+	$.ajax({
+		url: '/api/' + api_version + '/list/' + shoppingListID,
+		type: 'DELETE',
+		dataType: 'JSON',
+	})
+	.done(function(response) {
+		console.group("success");
+			console.group('response data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+		hideShoppingList(shoppingListID);
+	})
+	.fail(function(response) {
+		console.group("error");
+			console.group('response data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	})
+	.always(function(response) {
+		console.group("complete");
+			console.group('response data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	});
+}
+
+function hideShoppingList(shoppingListID) {
+	var fieldNamePrefix = getFieldNamePrefix('shopping_list_row');
+	var listIDPrefix = getFieldNamePrefix('list_id');
+
+	$("[id^='" + fieldNamePrefix + listIDPrefix + shoppingListID + "']").parent().animate({
+		'width' : 'toggle',
+		'height' : 'toggle',
+		'opacity' : 'toggle',
+	}, 500, function() {
+		$(this).remove();
+	});
 }
 
 function isProductOnList(productID) {
@@ -249,7 +295,7 @@ function saveChanges() {
 	$.ajax({
 		url: '/api/v1/list/' + shoppingListID,
 		type: 'PATCH',
-		data: {shoppingList},
+		data: shoppingList,
 		statusCode : {
 			404 : 	function() {
 						displayErrorMessage('Er ging iets mis aan onze kant, de pagina kon niet gevonden worden.', '404 Page not found.');
@@ -682,6 +728,27 @@ function getAllProducts() {
 		console.log("complete");
 	});
 
+}
+
+function bindActionsToShoppingLists() {
+	$('.shoppinglist').each(function() {
+		var elementID = $(this).attr('id');
+		var elementData = parseElementID(elementID);
+		bindActionsToShoppingList(elementData.shopping_list_id);
+	});
+}
+
+function bindActionsToShoppingList(shoppingListID) {
+	bindRemoveActionToShoppingList(shoppingListID);
+}
+
+function bindRemoveActionToShoppingList(shoppingListID) {
+	var fieldNamePrefix = getFieldNamePrefix('remove_shopping_list');
+	var listIDPrefix = getFieldNamePrefix('shopping_list_id');
+
+	$("[id^='" + fieldNamePrefix + listIDPrefix + shoppingListID + "']").on('click', function() {
+		removeShoppingList(shoppingListID);
+	});
 }
 
 function getTemplate(templateName) {
