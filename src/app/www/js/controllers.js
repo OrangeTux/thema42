@@ -15,6 +15,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			template: content
 		});
 	};
+
 	$scope.showAdvertisement = function () {
 		$scope.showOverlay(
 			'De laatste aanbieding!',
@@ -33,14 +34,14 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
-            //resolve(5);
-            $cordovaBarcodeScanner.scan().then(function(data) {
-                resolve(parseInt(data.text, 10));
+            resolve(22);
+            //$cordovaBarcodeScanner.scan().then(function(data) {
+                //resolve(parseInt(data.text, 10));
 
-            }, function(error) {
-                alert('Scan is misgegaan. Probeer het opnieuw.')
-                reject(undefined)
-            });
+            //}, function(error) {
+                //alert('Scan is misgegaan. Probeer het opnieuw.')
+                //reject(undefined)
+            //});
         });
     };
 
@@ -60,13 +61,26 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		}
 	}, false);
 
-    $scope.update_list = function(list, scan_id) { 
-        scan_id.then(function(scan_id) {
+    $scope.update_list = function (list, scan_id) { 
+        scan_id.then( function (scan_id) {
             list.products.forEach(function (product) {
                 if(product.id === scan_id) {
                     product.scanned += 1;
+                    return; 
                 };
+
+                list.products.push({ 
+                    id: scan_id,
+                    scanned: 1,
+                    quantity: 1,
+                });
+                list.$update();
+                console.log(list.products);
             });
+
+            //list.$update();
+
+            //$scope.list = list;
         });
     };
 

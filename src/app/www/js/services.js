@@ -1,7 +1,17 @@
 angular.module('wobbe.services', ['ngResource'])
 
 .factory('Lists', function ($resource, APIURL) {
-	return $resource(APIURL + 'api/v1/list/:id');
+	return $resource(
+        APIURL + 'api/v1/list/:id', 
+        {}, 
+        {
+            update: { 
+                url: APIURL + 'api/v1/list/:id',
+                method: 'PUT',
+                params: {id: '@id'}
+            }
+        }
+    );
 })
 
 .factory('Products', function ($resource, APIURL) {
