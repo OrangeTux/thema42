@@ -1,5 +1,6 @@
-<ion-view view-title="Lijst {{ list.title || 'wordt geladen…' }}">
+<ion-view view-title="Boodschappenlijstje">
 	<ion-content padding="true">
+		<h2 class="list-title">{{ list.title || 'Zonder titel' }}</h2>
 		<div ng-if="list">
 			<ion-list>
 				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.quantity==product.scanned}">
