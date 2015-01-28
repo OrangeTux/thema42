@@ -34,7 +34,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
-            resolve(22);
+            resolve(5);
             //$cordovaBarcodeScanner.scan().then(function(data) {
                 //resolve(parseInt(data.text, 10));
 
@@ -64,23 +64,24 @@ angular.module('wobbe.controllers', ['ngCordova'])
     $scope.update_list = function (list, scan_id) { 
         scan_id.then( function (scan_id) {
             list.products.forEach(function (product) {
+                var new_product = true;
                 if(product.id === scan_id) {
                     product.scanned += 1;
-                    return; 
+                    new_product = false;
                 };
-
-                list.products.push({ 
-                    id: scan_id,
-                    scanned: 1,
-                    quantity: 1,
-                });
-                list.$update();
-                console.log(list.products);
+                
+                if(new_product) {
+                    list.products.push({ 
+                        id: scan_id,
+                        scanned: 1,
+                        quantity: 1,
+                    });
+                }
             });
 
-            //list.$update();
+            list.$update();
 
-            //$scope.list = list;
+            $scope.list = list;
         });
     };
 
