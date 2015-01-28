@@ -31,8 +31,7 @@ class UserController extends BaseController
 
 	public function store()
 	{
-		$user = Input::all();
-
+        $user = Input::all();
 		$user['password'] = Hash::make($user['password']);
 
         User::create($user);
