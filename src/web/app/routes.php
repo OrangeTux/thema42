@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
 if (!headers_sent()) {
     header('Access-Control-Allow-Origin: *');
@@ -29,6 +28,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'basic.onc
 	Route::resource('product', 'ProductController', ['only' => ['index']]);
 });
 
+Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 Route::group(['before' => 'basic.once'], function()
 {
 	Route::resource('list', 'ListController');

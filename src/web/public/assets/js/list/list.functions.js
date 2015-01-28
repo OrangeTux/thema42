@@ -305,6 +305,8 @@ function updateProduct(productID) {
 	var listProductData = getListProductData(productID);
 	var listID = getShoppingListID();
 
+	delete listProductData.id;
+
 	console.group("List Product Data:");
 		console.log(listProductData);
 		console.groupEnd();

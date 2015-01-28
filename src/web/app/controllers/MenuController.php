@@ -13,8 +13,15 @@ class MenuController extends BaseController
 		$main->add(URL::route('home.index'), 'Home');
 		$main->add(URL::route('list.index'), 'Alle lijsten');
 		$main->add(URL::route('list.create'), 'Nieuwe lijst');
-		$main->add(URL::route('home.index'), Auth::user()->first_name . ' ' . Auth::user()->last_name);
-		$main->add(URL::route('home.index'), 'Uitloggen');
+
+		Auth::logout();
+
+		if (Auth::check()) {
+			$main->add(URL::route('home.index'), Auth::user()->first_name . ' ' . Auth::user()->last_name);
+			$main->add(URL::route('home.index'), 'Uitloggen');
+		} else {
+			$main->add(URL::route('home.index'), 'Inloggen');
+		}
 
 		// Add active class to anchor tags
 		Menu::handler('main')->getItemsAtDepth(0)->map(function($item)
