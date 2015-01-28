@@ -11,7 +11,7 @@ DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 cd "$DIR"
 
 # Check for Fig
-if [ ! which fig > /dev/null ]; then
+if ! which fig > /dev/null; then
 	curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` \
  	   > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
 fi
