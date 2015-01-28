@@ -25,4 +25,10 @@ class UserController extends BaseController {
 		return Redirect::intended(URL::route('home.index'));
 	}
 
+	function register()
+	{
+		Auth::logout();
+		return View::make('user.register');
+	}
+
 }

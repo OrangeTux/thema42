@@ -18,6 +18,7 @@ class MenuController extends BaseController
 			$main->add('#', Auth::user()->full_name);
 			$main->add(URL::route('user.logout'), 'Uitloggen');
 		} else {
+			$main->add(URL::route('user.register'), 'Registreren');
 			$main->add(URL::route('user.login'), 'Inloggen');
 		}
 

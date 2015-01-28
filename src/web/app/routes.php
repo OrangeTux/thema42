@@ -20,6 +20,7 @@ if (!headers_sent()) {
 }
 
 Route::post('/user/auth', ['prefix' => 'api/v1', 'uses' => 'Api\UserController@auth']);
+
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'basic.once'], function()
 {
 	Route::resource('user', 'UserController', ['only' => ['store']]);
@@ -32,8 +33,10 @@ Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 Route::get('/login', ['as' => 'user.login', 'uses' => 'UserController@login']);
 Route::post('/login', ['as' => 'user.doLogin', 'uses' => 'UserController@doLogin']);
 Route::get('/logout', ['as' => 'user.logout', 'uses' => 'UserController@logout']);
+
 Route::group(['before' => 'auth.basic'], function()
 {
 	Route::resource('list', 'ListController');
 });
 
+Route::get('/register', ['as' => 'user.register', 'uses' => 'UserController@register']);
