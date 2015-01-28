@@ -149,6 +149,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 					$scope.message = 'Er is een fout opgetreden. Probeer het opnieuw.';
 					break;
 				case 200:
+				case 404:
 					$scope.message = 'Uw inloggegevens zijn onjuist.';
 					break;
 			}

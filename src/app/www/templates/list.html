@@ -24,7 +24,7 @@
             <button class="button button-icon icon ion-camera" ng-click="increase_scanned_product(list, scan())"></button>
         </div>
 
-        <a href="#/menu/payment/{{ list.id }}">
+        <a ng-click="$state.go('menu.payment', {listId: list.id})">
             <button class="button button-clear">Betalen</button>
         </a>
 
