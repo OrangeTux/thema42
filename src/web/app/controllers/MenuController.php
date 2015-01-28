@@ -14,13 +14,11 @@ class MenuController extends BaseController
 		$main->add(URL::route('list.index'), 'Alle lijsten');
 		$main->add(URL::route('list.create'), 'Nieuwe lijst');
 
-		Auth::logout();
-
 		if (Auth::check()) {
-			$main->add(URL::route('home.index'), Auth::user()->first_name . ' ' . Auth::user()->last_name);
-			$main->add(URL::route('home.index'), 'Uitloggen');
+			$main->add(URL::route('home.index'), Auth::user()->full_name);
+			$main->add(URL::route('user.logout'), 'Uitloggen');
 		} else {
-			$main->add(URL::route('home.index'), 'Inloggen');
+			$main->add(URL::route('user.login'), 'Inloggen');
 		}
 
 		// Add active class to anchor tags

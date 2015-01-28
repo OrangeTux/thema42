@@ -13,11 +13,11 @@ class UserController extends BaseController
 {
 	public function auth()
 	{
+		$email    = Input::get('email');
 		$password = Input::get('password');
-		$email = Input::get('email');
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            $user = User::where('email', '=', $email)->firstOrFail();
+            $user          = Auth::user();
             $user['token'] = 'Basic ' . base64_encode($user->email . ':' . $password);
 			return $user;
 		}

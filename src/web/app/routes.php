@@ -29,7 +29,11 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'basic.onc
 });
 
 Route::get('/', ['as' => 'home.index', 'uses' => 'HomeController@index']);
-Route::group(['before' => 'basic.once'], function()
+Route::get('/login', ['as' => 'user.login', 'uses' => 'UserController@login']);
+Route::post('/login', ['as' => 'user.doLogin', 'uses' => 'UserController@doLogin']);
+Route::get('/logout', ['as' => 'user.logout', 'uses' => 'UserController@logout']);
+Route::group(['before' => 'auth.basic'], function()
 {
 	Route::resource('list', 'ListController');
 });
+
