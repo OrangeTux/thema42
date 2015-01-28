@@ -6,12 +6,12 @@
 	- [OK] Handle result (show error message or store token)
 	- [OK] Use auth token in other requests
 	- [OK] Logout (forget token)
-- Scanner
+- [OK] Scanner
 	- Print out barcodes & QR codes
-	- Create product service (API call)
-	- Update scanned products
-	- Add new products
-	- Refresh list
+	- [OK] Create product service (API call)
+	- [OK] Update scanned products
+	- [OK] Add new products
+	- [OK] Refresh list
 - Payment
   	- [OK] Add NFC support
 	- [OK] Process payment when NFC is triggered
