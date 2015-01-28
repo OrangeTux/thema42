@@ -448,7 +448,17 @@ function bindActionsToEditForm() {
 }
 
 function bindActionsToCreateForm() {
+	bindActionsToTitleField();
 	bindActionToCreateButton();
+}
+
+function bindActionsToTitleField() {
+	$("[name='title']").keypress(function(e) {
+        if(e.which == 13) {
+            $('#create').trigger('click');
+			e.preventDefault();
+        }
+    });
 }
 
 function bindActionToSaveButton() {
