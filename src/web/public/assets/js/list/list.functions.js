@@ -249,7 +249,7 @@ function saveChanges() {
 	$.ajax({
 		url: '/api/v1/list/' + shoppingListID,
 		type: 'PATCH',
-		data: {shopping_list: shoppingList},
+		data: {shoppingList},
 		statusCode : {
 			404 : 	function() {
 						displayErrorMessage('Er ging iets mis aan onze kant, de pagina kon niet gevonden worden.', '404 Page not found.');
