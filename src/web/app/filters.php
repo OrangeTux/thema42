@@ -53,6 +53,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('basic.once', function()
 {
+    if (Auth::check()) return;
     return Auth::onceBasic();
 });
 
