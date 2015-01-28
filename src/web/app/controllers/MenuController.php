@@ -11,10 +11,10 @@ class MenuController extends BaseController
 
 		// Add menu items
 		$main->add(URL::route('home.index'), 'Home');
-		$main->add(URL::route('list.index'), 'Alle lijsten');
-		$main->add(URL::route('list.create'), 'Nieuwe lijst');
 
 		if (Auth::check()) {
+			$main->add(URL::route('list.index'), 'Alle lijsten');
+			$main->add(URL::route('list.create'), 'Nieuwe lijst');
 			$main->add(URL::route('home.index'), Auth::user()->full_name);
 			$main->add(URL::route('user.logout'), 'Uitloggen');
 		} else {
