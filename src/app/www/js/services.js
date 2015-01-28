@@ -8,27 +8,35 @@ angular.module('wobbe.services', ['ngResource'])
 	return $resource(APIURL + 'api/v1/product/:id');
 })
 
-.factory('Beacons', function () {
-	var delegate = new cordova.plugins.locationManager.Delegate();
+.factory('Beacons', function ($q) {
+	var deferred  = $q.defer();
+	var callbacks = [];
+	var delegate  = new cordova.plugins.locationManager.Delegate();
+
 
 	document.addEventListener('deviceready', function () {
+		console.log('[BEACON] init');
+
 		delegate.didDetermineStateForRegion = function (pluginResult) {
-			console.log('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
+			console.log('[BEACON] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
 		};
 
 		delegate.didStartMonitoringForRegion = function (pluginResult) {
-			console.log('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
+			console.log('[BEACON] didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
 		};
 
-		delegate.didRangeBeaconsInRegion: function (pluginResult) {
-			console.log('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
-			// Do stuff here..
+		delegate.didRangeBeaconsInRegion = function (pluginResult) {
+			console.log('[BEACON] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
+			callbacks.forEach(function (cb) {
+				cb(pluginResult);
+			});
 		};
 
-		var uuid = 'DA5336AE-2042-453A-A57F-F80DD34DFCD9';
-		var identifier = 'beaconOnTheMacBooksShelf';
-		var minor = 1000;
-		var major = 5;
+		// var uuid = '00287661-76E4-237C-9E81-AD4BA1190000';
+		var identifier = 'Wobbe2000Beacon';
+		var uuid       = 'FABFA2BD-0146-7D6E-3804-ABAD05160A18';
+		var major      = 1796;
+		var minor      = 1289;
 		var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
 
 		cordova.plugins.locationManager.setDelegate(delegate);
@@ -42,7 +50,12 @@ angular.module('wobbe.services', ['ngResource'])
 		deferred.resolve();
 	}, false);
 
-	return deferred.promise;
+	return {
+		addCallback: function (cb) {
+			callbacks.push(cb);
+		},
+		promise: deferred.promise
+	};
 })
 
 ;

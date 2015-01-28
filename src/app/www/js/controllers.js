@@ -1,6 +1,6 @@
 angular.module('wobbe.controllers', ['ngCordova'])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner, $q) {
+.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner, $q, Beacons) {
 	window.$scope = $scope; // DEBUG
 
 	$scope.toggleLeft = function() {
@@ -69,6 +69,11 @@ angular.module('wobbe.controllers', ['ngCordova'])
             });
         });
     };
+
+	// Beacons.addCallback(function (beacons) {
+		// console.log('[BEACON] HOLY SHIT ' + JSON.stringify(beacons));
+		// $scope.showAdvertisement();
+	// });
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
