@@ -52,8 +52,8 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
 		;
 
-	// $urlRouterProvider.otherwise('/sign-in');
-	$urlRouterProvider.otherwise('/menu/home');
+    $urlRouterProvider.otherwise('/sign-in');
+    //$urlRouterProvider.otherwise('/menu/home');
 })
 
 ;

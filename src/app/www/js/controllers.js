@@ -7,6 +7,10 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		$ionicSideMenuDelegate.toggleLeft();
 	};
 
+    $scope.increase = function () {
+        console.log("Clicked");
+    }
+
 	$scope.lists = Lists.query();
 
 	$scope.showOverlay = function (title, content) {
@@ -34,14 +38,14 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
-            resolve(5);
-            //$cordovaBarcodeScanner.scan().then(function(data) {
-                //resolve(parseInt(data.text, 10));
+            //resolve(5);
+            $cordovaBarcodeScanner.scan().then(function(data) {
+                resolve(parseInt(data.text, 10));
 
-            //}, function(error) {
-                //alert('Scan is misgegaan. Probeer het opnieuw.')
-                //reject(undefined)
-            //});
+            }, function(error) {
+                alert('Scan is misgegaan. Probeer het opnieuw.')
+                reject(undefined)
+            });
         });
     };
 
@@ -60,12 +64,38 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			);
 		}
 	}, false);
+    
 
-    $scope.update_list = function (list, scan_id) { 
-        scan_id.then( function (scan_id) {
+    /**
+     * Decrease 'scanned' attribute of product by 1. When `scanned` reaches
+     * 0 product is removed from list. List is saved on server.
+     */
+    $scope.decrease_scanned_product = function (list, product_id) {
+        for(i = 0; i < list.products.length; i++) {
+
+            if(list.products[i].id === product_id) {
+                list.products[i].scanned -= 1;
+            }
+
+            if (list.products[i].scanned <= 0) {
+                list.products.splice(i, 1);
+                break;
+            }
+
+        }
+
+        list.$update();
+    }
+
+    /**
+     * Increase 'scanned' attribute of product by 1. When product id new, 
+     * product is added to list. List is saved on server.
+     */
+    $scope.increase_scanned_product = function (list, product_id) { 
+        product_id.then( function (product_id) {
             var new_product = true;
             list.products.forEach(function (product) {
-                if(product.id === scan_id) {
+                if(product.id === product_id) {
                     product.scanned += 1;
 					if (product.scanned > product.quantity) {
 						product.quantity = product.scanned;
@@ -75,7 +105,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
             });
             if(new_product) {
                 list.products.push({
-                    id: scan_id,
+                    id: product_id,
                     scanned: 1,
                     quantity: 1,
                 });

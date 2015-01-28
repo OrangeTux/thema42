@@ -3,7 +3,7 @@
 		<h2 class="list-title">{{ list.title || 'Zonder titel' }}</h2>
 		<div ng-if="list">
 			<ion-list>
-				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.quantity==product.scanned}">
+				<ion-item ng-repeat="product in list.products" ng-class="{scanned: product.quantity==product.scanned}" ng-click="decrease_scanned_product(list, product.id)">
 					<h2>{{ product.name }}</h2>
 					<span class="item-note">
 						{{ product.quantity }} &times; {{ product.price | currency }} = {{ product.quantity * product.price | currency }}
@@ -21,7 +21,7 @@
     <div class="bar bar-footer bar-balanced">
 
         <div class="title">
-            <button class="button button-icon icon ion-camera" ng-click="update_list(list, scan())"></button>
+            <button class="button button-icon icon ion-camera" ng-click="increase_scanned_product(list, scan())"></button>
         </div>
 
         <a href="#/menu/payment/{{ list.id }}">
