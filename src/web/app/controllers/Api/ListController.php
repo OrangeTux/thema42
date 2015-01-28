@@ -113,7 +113,7 @@ class ListController extends BaseController {
 	}
 
 	public function update($listId) {
-		$validator = Validator::make(Input::all(), ['shopping_list' => 'required', 'shopping_list.title' => 'required']);
+		$validator = Validator::make(Input::all(), ['title' => 'required']);
 
 		if($validator->fails()) {
 			return Response::json([
@@ -136,14 +136,28 @@ class ListController extends BaseController {
 			], 404);
 		}
 
-		$title = Input::get('shopping_list.title');
+		$title = Input::get('title');
 
 		if ($title) {
 			$shoppingList->title = $title;
 			$shoppingList->save();
-		}
+        }
 
-		return $shoppingList;
+        $products = $shoppingList->products;
+        foreach ($products as $product) {
+            $shoppingList->products()->detach($product->id);
+        }
+
+        foreach (Input::get('products') as $product) {
+            $productId = $product['id'];
+            unset($product['id']);
+            unset($product['price']);
+            unset($product['name']);
+
+            $shoppingList->products()->attach($productId, $product);
+        }
+
+        return Response::json(Input::all(), 200);
 	}
 
 	public function destroy($listId) {
