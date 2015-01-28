@@ -13,9 +13,9 @@ class UserController extends BaseController {
 		$password = Input::get('password');
 
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
-			return Redirect::intended(URL::route('home.index'));
+			return Redirect::intended(URL::route('list.index'));
 		} else {
-			// Invalid credentials
+			return Redirect::intended(URL::route('user.login'));
 		}
 	}
 
