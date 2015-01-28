@@ -2,7 +2,11 @@
 	margin-top: 100px;
 	text-align: center;
 }
+#login .icon {
+	margin-right: 10px;
+}
 #login h3 {
+	margin: 20px 0 30px;
 	text-align: center;
 }
 
