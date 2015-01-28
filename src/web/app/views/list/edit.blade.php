@@ -93,6 +93,7 @@
 
 	<script type="text/javascript">
 		$(function() {
+			getAllProducts();
 			bindActionsToEditForm();
 		});
 	</script>

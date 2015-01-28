@@ -4,6 +4,7 @@
 var blockSplitString = "___";
 var elementSplitString = "__";
 var api_version = 'v1';
+var products;
 
 // >> Field name prefixes
 var fieldNamePrefixes = {
@@ -36,64 +37,6 @@ var defaults = {
 var templates = {
 	new_product_row : '#tpl_new_product_row',
 	product_search_result_row : '#tpl_search_result_product_row',
-};
-
-// >> Temporary list with all products.
-var products = {
-	"data" : {
-		"products" : [
-			{
-				"id" : 1,
-				"name" : "Melk",
-				"price" : 1.00
-			},
-			{
-				"id" : 2,
-				"name" : "Brood",
-				"price" : 1.90
-			},
-			{
-				"id" : 3,
-				"name" : "Kaas",
-				"price" : 3.45
-			},
-			{
-				"id" : 4,
-				"name" : "Worst",
-				"price" : 2.30
-			},
-			{
-				"id" : 5,
-				"name" : "Appel",
-				"price" : 0.35
-			},
-			{
-				"id" : 6,
-				"name" : "Banaan",
-				"price" : 0.65
-			},
-			{
-				"id" : 7,
-				"name" : "Gehakt",
-				"price" : 2.50
-			},
-			{
-				"id" : 8,
-				"name" : "Hamlappen",
-				"price" : 6.55
-			},
-			{
-				"id" : 9,
-				"name" : "Toiletpapier",
-				"price" : 3.55
-			},
-			{
-				"id" : 10,
-				"name" : "Vuilniszakken",
-				"price" : 2.25
-			},
-		]
-	}
 };
 
 function createList() {
@@ -557,7 +500,7 @@ function addSearchAutocomplete(searchBox) {
 function searchProducts(term) {
 	var resultData = [];
 
-	$.each(products.data.products, function(){
+	$.each(products, function(){
 		if ((this.name).toLowerCase().indexOf(term.toLowerCase()) >= 0) {
 			resultData.push(this);
 		}
@@ -753,4 +696,35 @@ function bindRemoveActionToShoppingList(shoppingListID) {
 
 function getTemplate(templateName) {
 	return $(templates[templateName]).html();
+}
+
+function getAllProducts() {
+	$.ajax({
+		url: '/api/' + api_version + '/product',
+		type: 'GET',
+		dataType: 'JSON',
+	})
+	.done(function(response) {
+		console.group("success");
+			console.group('response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+		products = response;
+	})
+	.fail(function(response) {
+		console.group("error");
+			console.group('response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	})
+	.always(function(response) {
+		console.group("complete");
+			console.group('response Data:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	});
+
 }
