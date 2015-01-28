@@ -63,23 +63,24 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     $scope.update_list = function (list, scan_id) { 
         scan_id.then( function (scan_id) {
+            var new_product = true;
             list.products.forEach(function (product) {
-                var new_product = true;
                 if(product.id === scan_id) {
                     product.scanned += 1;
+					if (product.scanned > product.quantity) {
+						product.quantity = product.scanned;
+					}
                     new_product = false;
                 };
-                
-                if(new_product) {
-                    list.products.push({ 
-                        id: scan_id,
-                        scanned: 1,
-                        quantity: 1,
-                    });
-                }
             });
-
-            list.$update();
+            if(new_product) {
+                list.products.push({
+                    id: scan_id,
+                    scanned: 1,
+                    quantity: 1,
+                });
+            }
+			list.$update();
 
             $scope.list = list;
         });
