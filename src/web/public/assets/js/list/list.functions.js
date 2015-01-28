@@ -92,6 +92,42 @@ var products = {
 	}
 };
 
+function createList() {
+	$.ajax({
+		url: '/api/' + api_version + '/list/',
+		type: 'POST',
+		dataType: 'JSON',
+		data: {
+			shopping_list: {
+				'title' : $('.title').val()
+			}
+		},
+	})
+	.done(function(response) {
+		console.group("success");
+			console.group('Response Object:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+			$(location).attr('href', '/list/' + response.id + '/edit');
+	})
+	.fail(function(response) {
+		console.group("error");
+			console.group('Response Object:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	})
+	.always(function(response) {
+		console.group("complete");
+			console.group('Response Object:');
+				console.log(response);
+				console.groupEnd();
+			console.groupEnd();
+	});
+
+}
+
 function isProductOnList(productID) {
 	var fieldNamePrefix = getFieldNamePrefix('product_row');
 	var productIDPrefix = getFieldNamePrefix('product_id');
@@ -407,7 +443,7 @@ function bindActionsToProduct(productID) {
 	bindQuantityChangeAction(productID);
 }
 
-function bindActions() {
+function bindActionsToEditForm() {
 	$('.product-row').each(function() {
 		// Get product ID.
 		var elementData = parseElementID($(this).attr('id'));
@@ -420,9 +456,19 @@ function bindActions() {
 	bindActionsToSearchBoxes();
 }
 
+function bindActionsToCreateForm() {
+	bindActionToCreateButton();
+}
+
 function bindActionToSaveButton() {
 	$('#send').on('click', function() {
 		saveChanges();
+	});
+}
+
+function bindActionToCreateButton() {
+	$('#create').on('click', function() {
+		createList();
 	});
 }
 
@@ -639,10 +685,3 @@ function getAllProducts() {
 function getTemplate(templateName) {
 	return $(templates[templateName]).html();
 }
-
-$(function() {
-	// Bind actions to some buttons
-	bindActions();
-
-	// getAllProducts();
-});

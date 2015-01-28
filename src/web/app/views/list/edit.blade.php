@@ -90,4 +90,10 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(function() {
+			bindActionsToEditForm();
+		});
+	</script>
 @stop

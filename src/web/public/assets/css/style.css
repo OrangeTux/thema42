@@ -5091,16 +5091,21 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 
 /* Form for editing shoppinglist
 =================================*/
-.edit-shoppinglist {
+.edit-shoppinglist,
+.new-shoppinglist {
 	width: 80%;
 	margin: 20px auto;
 	position: relative;
 	padding-bottom: 80px; }
 
-	.edit-shoppinglist form .field {}
-	.edit-shoppinglist form .field .title {
+	.edit-shoppinglist form .field,
+	.new-shoppinglist form .field {}
+	.edit-shoppinglist form .field .title,
+	.new-shoppinglist form .field .title {
 		width: 97%;
 		font-size: 19px; }
+	.new-shoppinglist form .field .title {
+		margin-bottom: 50px; }
 	.edit-shoppinglist form .search-products-block {
 		margin-top: 36px;
 		margin-bottom: 50px;
@@ -5172,13 +5177,17 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 			vertical-align: middle;
 			display: inline-block;
 			margin-left: 15px;}
-	.edit-shoppinglist form .button-save {
+	.edit-shoppinglist form .button-save,
+	.new-shoppinglist form .button-save {
 		padding: 12px 40px;
 		font-size: 20px;
 		position: absolute;
 		bottom: 0%;
 		left: 50%;
 		transform: translate(-50%, -50%); }
+	.new-shoppinglist form .button-save {
+
+	}
 
 .new-product-row {
 	/*display: none;

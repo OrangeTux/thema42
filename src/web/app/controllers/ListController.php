@@ -9,7 +9,7 @@ class ListController extends BaseController {
 	 */
 	public function index()
 	{
-		$shoppingLists = App::make('Api\ListController')->getLists(1);
+		$shoppingLists = App::make('Api\ListController')->getLists(Auth::user()->id);
 
 		return View::make('list.index')->with('shoppingLists', $shoppingLists);
 	}

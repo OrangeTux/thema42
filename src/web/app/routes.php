@@ -29,4 +29,7 @@ Route::group(['prefix' => 'api/v1', 'namespace' => 'Api', 'before' => 'basic.onc
 	Route::resource('product', 'ProductController', ['only' => ['index']]);
 });
 
-Route::resource('list', 'ListController');
+Route::group(['before' => 'basic.once'], function()
+{
+	Route::resource('list', 'ListController');
+});
