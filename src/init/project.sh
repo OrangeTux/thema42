@@ -12,8 +12,8 @@ cd "$DIR"
 
 # Check for Fig
 if ! which fig > /dev/null; then
-	curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` \
- 	   > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
+    curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` \
+       > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
 fi
 
 # Output formatting
@@ -67,7 +67,7 @@ project_ps () {
 }
 
 project_ssh () {
-	docker exec -it "${FIG_PROJECT_NAME}_web_1" bash
+    docker exec -it "${FIG_PROJECT_NAME}_web_1" bash
 }
 
 project_update() {
@@ -85,7 +85,7 @@ case "$1" in
     stop)   shift; project_stop;;
     clean)  shift; project_clean;;
     ps)     shift; project_ps;;
-	ssh)    shift; project_ssh;;
+    ssh)    shift; project_ssh;;
     update) shift; project_update;;
     *) project_invalid $@;;
 esac
