@@ -19,9 +19,10 @@ angular.module('wobbe.controllers', ['ngCordova'])
 	};
 
 	$scope.showAdvertisement = function () {
+		var name = window.user.first_name;
 		$scope.showOverlay(
 			'De laatste aanbieding!',
-			'<span class="advertisement">Deze week:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de TINA.</span>'
+			'<span class="advertisement">' + name + ', speciaal voor jou:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de TINA.</span>'
 		);
 	};
 
@@ -38,7 +39,6 @@ angular.module('wobbe.controllers', ['ngCordova'])
         return $q(function(resolve, reject) {
             $cordovaBarcodeScanner.scan().then(function(data) {
                 resolve(parseInt(data.text, 10));
-
             }, function(error) {
                 alert('Scan is misgegaan. Probeer het opnieuw.')
                 reject(undefined)
@@ -68,9 +68,8 @@ angular.module('wobbe.controllers', ['ngCordova'])
      * 0 product is removed from list. List is saved on server.
      */
     $scope.decrease_scanned_product = function (list, product_id) {
-        for(i = 0; i < list.products.length; i++) {
-
-            if(list.products[i].id === product_id) {
+        for (i = 0; i < list.products.length; i++) {
+            if (list.products[i].id === product_id) {
                 list.products[i].scanned -= 1;
             }
 
@@ -78,11 +77,10 @@ angular.module('wobbe.controllers', ['ngCordova'])
                 list.products.splice(i, 1);
                 break;
             }
-
         }
 
         list.$update();
-    }
+    };
 
     /**
      * Increase 'scanned' attribute of product by 1. When product id new, 
@@ -114,13 +112,16 @@ angular.module('wobbe.controllers', ['ngCordova'])
     };
 
      Beacons.addCallback(function (beacons) {
-         console.log('[BEACON] HOLY SHIT ' + JSON.stringify(beacons));
          $scope.showAdvertisement();
      });
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
 	$scope.message = '';
+
+	$scope.user = {
+		username: 'm.van.mastrigt@st.hanze.nl'
+	};
 
 	$scope.signIn = function(user) {
 		if ( ! user || ! user.username || ! user.password) {
@@ -137,6 +138,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 			}
 		}).then(function (response) {
 			$http.defaults.headers.common['Authorization'] = response.data.token;
+			window.user = response.data;
 			$scope.message = '';
 			$state.go('menu.home');
 		}, function (error) {
