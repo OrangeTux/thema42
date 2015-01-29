@@ -93,7 +93,7 @@ function registerUser() {
 				console.log(response);
 				console.groupEnd();
 			console.groupEnd();
-		$(location).attr('href', '/list');
+		$(location).attr('href', '/');
 	})
 	.fail(function(response) {
 		console.group("error");
