@@ -5204,13 +5204,26 @@ form.login {}
 		width: 50%;
 		margin: 30px auto;
 		height: 30px; }
-	form.login .login-form .submit-form {
+	form.login .login-form .submit-form,
+	form.register .register-form .submit-form {
 		padding: 12px 40px;
 		font-size: 20px;
 		position: absolute;
 		bottom: 0%;
 		left: 50%;
 		transform: translate(-50%, -50%); }
+form.register {}
+	form.register .register-form {
+		position: relative;
+		padding-bottom: 90px; }
+		form.register .register-form .field {
+			width: 50%;
+			margin: 10px auto;}
+			form.register .register-form .field input[type="text"],
+			form.register .register-form .field input[type="password"] {
+				width: 100%;
+				margin: 30px auto;
+				height: 30px; }
 
 @media (max-width: 960px) {
 	.edit-shoppinglist form .products .product-row .actions .add {
@@ -5224,13 +5237,16 @@ form.login {}
 		margin-left: 15px;}
 	.edit-shoppinglist form .products .product-row .name {
 		width: 73%;}
+
 	form.login {}
 		form.login .login-form input[type="text"],
 		form.login .login-form input[type="password"] {
 			width: 70%;
 			margin: 30px auto;
-			height: 30px;
-		}
+			height: 30px; }
+
+	form.register .register-form .field {
+		width: 70%; }
 }
 
 @media (max-width: 770px) {
@@ -5240,13 +5256,16 @@ form.login {}
 		margin-left: 5px;}
 	.edit-shoppinglist form .products .product-row .name {
 		width: 70%;}
+
 	form.login {}
 		form.login .login-form input[type="text"],
 		form.login .login-form input[type="password"] {
 			width: 100%;
 			margin: 30px auto;
-			height: 30px;
-		}
+			height: 30px; }
+
+	form.register .register-form .field {
+		width: 100%;}
 }
 
 @media (max-width: 480px) {
