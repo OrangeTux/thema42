@@ -13,7 +13,8 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 		.state('menu', {
 			url: '/menu',
 			abstract: true,
-			templateUrl: 'templates/menu.html'
+			templateUrl: 'templates/menu.html',
+			controller: 'MainCtrl'
 		})
 		.state('menu.home', {
 			url: '/home',

@@ -1,17 +1,15 @@
 angular.module('wobbe.controllers', ['ngCordova'])
 
-.controller('MainCtrl', function ($scope, $ionicSideMenuDelegate, Lists, $ionicPopup, $location, $cordovaBarcodeScanner, $q, Beacons) {
+.controller('MainCtrl', function ($scope, Lists, $ionicSideMenuDelegate, $ionicPopup,
+	$location, $http, $state, $cordovaBarcodeScanner, $q, Beacons) {
+
 	window.$scope = $scope; // DEBUG
+
+	$scope.lists = Lists.query();
 
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
-
-    $scope.increase = function () {
-        console.log("Clicked");
-    }
-
-	$scope.lists = Lists.query();
 
 	$scope.showOverlay = function (title, content) {
 		$ionicPopup.alert({
@@ -23,7 +21,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 	$scope.showAdvertisement = function () {
 		$scope.showOverlay(
 			'De laatste aanbieding!',
-			'<span class="advertisement">Deze week:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de Tina.</span>'
+			'<span class="advertisement">Deze week:<br/>een GRATIS album van<br/>The Afterpartees<br/>bij aanschaf van de TINA.</span>'
 		);
 	};
 
@@ -38,7 +36,6 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
-            //resolve(5);
             $cordovaBarcodeScanner.scan().then(function(data) {
                 resolve(parseInt(data.text, 10));
 
