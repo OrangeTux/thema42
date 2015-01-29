@@ -20,7 +20,7 @@ if (!headers_sent()) {
 }
 
 Route::group(['prefix' => 'api/v1', 'namespace' => 'Api'], function() {
-    Route::post('/user/auth', ['uses' => 'Api\UserController@auth']);
+    Route::post('/user/auth', ['uses' => 'UserController@auth']);
     Route::resource('user', 'UserController', ['only' => ['store']]);
 });
 

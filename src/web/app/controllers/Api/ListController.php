@@ -4,7 +4,7 @@ namespace Api;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-use Basecontroller;
+use BaseController;
 use Response;
 use Validator;
 use Input;
