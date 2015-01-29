@@ -5,7 +5,7 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
-		.state('signin', {
+		.state('sign-in', {
 			url: '/sign-in',
 			templateUrl: 'templates/sign-in.html',
 			controller: 'SignInCtrl'
