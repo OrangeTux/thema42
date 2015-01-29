@@ -116,10 +116,10 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
     };
 
-	// Beacons.addCallback(function (beacons) {
-		// console.log('[BEACON] HOLY SHIT ' + JSON.stringify(beacons));
-		// $scope.showAdvertisement();
-	// });
+     Beacons.addCallback(function (beacons) {
+         console.log('[BEACON] HOLY SHIT ' + JSON.stringify(beacons));
+         $scope.showAdvertisement();
+     });
 })
 
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
@@ -169,7 +169,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 })
 
 .controller('PaymentCtrl', function ($scope, $stateParams, Lists, $location) {
-	var listId = $stateParams.listId;
+    var listId = $stateParams.listId;
 
 	$scope.list = Lists.get({ id: listId });
 

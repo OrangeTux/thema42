@@ -22,10 +22,10 @@ angular.module('wobbe.services', ['ngResource'])
 	var deferred  = $q.defer();
 	var callbacks = [];
 
-	if (! window.cordova || ! cordova.plugins.locationManager) {
-		console.log('[BEACON] Not supported.');
-		deferred.reject('Not supported');
-	} else {
+    if (! window.cordova) {
+        console.log('[BEACON] Not supported.');
+        deferred.reject('Not supported');
+    } else {
 		document.addEventListener('deviceready', function () {
 			console.log('[BEACON] Initialize.');
 
@@ -39,19 +39,16 @@ angular.module('wobbe.services', ['ngResource'])
 				console.log('[BEACON] didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
 			};
 
-			delegate.didRangeBeaconsInRegion = function (pluginResult) {
+			delegate.didEnterRegion = function (pluginResult) {
 				console.log('[BEACON] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
 				callbacks.forEach(function (cb) {
 					cb(pluginResult);
 				});
 			};
 
-			// var uuid = '00287661-76E4-237C-9E81-AD4BA1190000';
 			var identifier = 'Wobbe2000Beacon';
-			var uuid       = 'FABFA2BD-0146-7D6E-3804-ABAD05160A18';
-			var major      = 1796;
-			var minor      = 1289;
-			var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
+			var uuid       = 'F7826DA6-4FA2-4E98-8024-BC5B71E0893E'
+			var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid);
 
 			cordova.plugins.locationManager.setDelegate(delegate);
 
@@ -63,7 +60,7 @@ angular.module('wobbe.services', ['ngResource'])
 
 			deferred.resolve();
 		}, false);
-	}
+    }
 
 	return {
 		addCallback: function (cb) {
