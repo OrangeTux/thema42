@@ -1,16 +1,20 @@
 angular.module('wobbe.controllers', ['ngCordova'])
 
+// Main controller, adds functionality to global scope. Loaded after login.
 .controller('MainCtrl', function ($scope, Lists, $ionicSideMenuDelegate, $ionicPopup,
 	$location, $http, $state, $cordovaBarcodeScanner, $q, Beacons) {
 
 	window.$scope = $scope; // DEBUG
 
+	// Preload lists for app wide usage
 	$scope.lists = Lists.query();
 
+	// Toggle sidebar menu
 	$scope.toggleLeft = function() {
 		$ionicSideMenuDelegate.toggleLeft();
 	};
 
+	// Show popup
 	$scope.showOverlay = function (title, content) {
 		$ionicPopup.alert({
 			title: title,
@@ -18,6 +22,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		});
 	};
 
+	// Advertisement popup
 	$scope.showAdvertisement = function () {
 		var name = window.user.first_name;
 		$scope.showOverlay(
@@ -26,7 +31,8 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		);
 	};
 
-	$scope.isActive = function (viewLocation) { 
+	// Check if route is active (used in menu template).
+	$scope.isActive = function (viewLocation) {
 		return viewLocation === $location.path();
 	};
 
@@ -35,17 +41,19 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		$state.go('sign-in');
 	};
 
+	// Scan barcode. This will open up the camera and start scanning for barcodes and QR codes.
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
             $cordovaBarcodeScanner.scan().then(function(data) {
                 resolve(parseInt(data.text, 10));
             }, function(error) {
-                alert('Scan is misgegaan. Probeer het opnieuw.')
-                reject(undefined)
+                alert('Scan is misgegaan. Probeer het opnieuw.');
+                reject(undefined);
             });
         });
     };
 
+	// Start discovering NFC tags, this will broadcast a global 'nfc-detected' event.
 	document.addEventListener('deviceready', function () {
 		if (window.nfc) {
 			window.nfc.addTagDiscoveredListener(
@@ -53,9 +61,9 @@ angular.module('wobbe.controllers', ['ngCordova'])
 					console.log('NFC tag discovered.');
 					$scope.$broadcast('nfc-detected');
 				},
-				function () { // success callback
+				function () { // Success callback
 				},
-				function (error) { // error callback
+				function (error) { // Error callback
 					console.log('Error adding NFC listener!' + JSON.stringfy(error));
 				}
 			);
@@ -65,7 +73,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
     /**
      * Decrease 'scanned' attribute of product by 1. When `scanned` reaches
-     * 0 product is removed from list. List is saved on server.
+     * an amount of 0 product is removed from list. List is saved on server.
      */
     $scope.decrease_scanned_product = function (list, product_id) {
         for (i = 0; i < list.products.length; i++) {
@@ -83,14 +91,14 @@ angular.module('wobbe.controllers', ['ngCordova'])
     };
 
     /**
-     * Increase 'scanned' attribute of product by 1. When product id new, 
-     * product is added to list. List is saved on server.
+     * Increase 'scanned' attribute of product by 1. When product ID is new, 
+     * the product is added to list. List is saved on server.
      */
     $scope.increase_scanned_product = function (list, product_id) { 
         product_id.then( function (product_id) {
             var new_product = true;
             list.products.forEach(function (product) {
-                if(product.id === product_id) {
+                if (product.id === product_id) {
                     product.scanned += 1;
 					if (product.scanned > product.quantity) {
 						product.quantity = product.scanned;
@@ -98,7 +106,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
                     new_product = false;
                 };
             });
-            if(new_product) {
+            if (new_product) {
                 list.products.push({
                     id: product_id,
                     scanned: 1,
@@ -111,11 +119,13 @@ angular.module('wobbe.controllers', ['ngCordova'])
         });
     };
 
-     Beacons.addCallback(function (beacons) {
-         $scope.showAdvertisement();
-     });
+	// Show advertisement when in range of a beacon.
+	Beacons.addCallback(function (beacons) {
+		$scope.showAdvertisement();
+	});
 })
 
+// Handle login attempts and make user available to app.
 .controller('SignInCtrl', function ($scope, $state, $http, APIURL) {
 	$scope.message = '';
 
@@ -156,17 +166,20 @@ angular.module('wobbe.controllers', ['ngCordova'])
 	};
 })
 
+// Show first list
 .controller('HomeCtrl', function ($scope, $state) {
 	return $scope.lists.$promise.then(function (lists) {
 		$scope.list = lists[0];
 	});
 })
 
+// Show requested list
 .controller('ListCtrl', function ($scope, $stateParams, Lists) {
 	var listId = $stateParams.listId;
 	$scope.list = Lists.get({ id: listId });
 })
 
+// Show receipt for requested list, with the ability to start the payment.
 .controller('PaymentCtrl', function ($scope, $stateParams, Lists, $location) {
     var listId = $stateParams.listId;
 
@@ -184,6 +197,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
         return total;
     };
 
+	// Show popup for cart inspection in a given percentage of the checkouts.
 	if (Math.random() > 0.6) {
 		$scope.showOverlay(
 			'"Willekeurige" steekproef',
@@ -191,6 +205,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		);
 	}
 
+	// Show popup indicating that the payment is fulfilled.
 	$scope.paymentCompletePopup = function () {
 		$scope.showOverlay(
 			'Betaling afgerond',
@@ -198,6 +213,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 		);
 	};
 
+	// Fulfil payment when NFC tag is detected.
 	$scope.$on('nfc-detected', function () {
 		if ( ! $location.path().match(/^\/menu\/payment/)) {
 			return;

@@ -5,6 +5,7 @@ angular.module('wobbe.services', ['ngResource'])
         APIURL + 'api/v1/list/:id', 
         {}, 
         {
+			// Custom resource action for updating an entire list.
             update: { 
                 url: APIURL + 'api/v1/list/:id',
                 method: 'PUT',
@@ -22,10 +23,8 @@ angular.module('wobbe.services', ['ngResource'])
 	var deferred  = $q.defer();
 	var callbacks = [];
 
-    if (! window.cordova) {
-        console.log('[BEACON] Not supported.');
-        deferred.reject('Not supported');
-    } else {
+    if (window.cordova) {
+		// Start beacon ranging as soon as device is ready.
 		document.addEventListener('deviceready', function () {
 			console.log('[BEACON] Initialize.');
 
@@ -60,6 +59,9 @@ angular.module('wobbe.services', ['ngResource'])
 
 			deferred.resolve();
 		}, false);
+    } else {
+        console.log('[BEACON] Not supported.');
+        deferred.reject('Not supported');
     }
 
 	return {

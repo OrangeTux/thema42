@@ -1,8 +1,10 @@
 angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 
+// Define API url, the resources (defined in services.js) will use this for API requests
 //.constant('APIURL', 'http://private-a4221-wobbe1.apiary-mock.com/')
 .constant('APIURL', 'http://188.166.58.49/')
 
+// Configure routes
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('sign-in', {
@@ -51,11 +53,10 @@ angular.module('wobbe', ['ionic', 'wobbe.controllers', 'wobbe.services'])
 				}
 			}
 		})
-
 		;
 
+	// Default route
     $urlRouterProvider.otherwise('/sign-in');
 })
-
 ;
 
