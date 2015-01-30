@@ -3,3 +3,5 @@ Dit onderdeel gaat dieper in op contactloze betaling met de app. Het betaalproce
 
 __Prototype:__
 Het prototype laat zien dat het mogelijk is om, met behulp van de ontwikkelde app, betalingen te doen met een NFC-chip. Momenteel worden de betalingen nog niet daadwerkelijk verricht maar gemockt. Wanneer er daadwerkelijk gebruik gemaakt gaat worden van de contactloze betaling, dient er eerst verbinding gemaakt te worden met de server, zodat er ook een daadwerkelijke betaling plaats kan vinden. Daarnaast zal de beveiliging nog verbeterd moeten worden, aangezien we met transacties te maken hebben.
+
+In de appendix ([voeg verwijzing toe](contactless-payment-code.md)) is de code te zien die momenteel de contactloze betaling mogelijk maakt. Deze code kan als basis gebruikt worden om deze toepassing verder uit te breiden.
