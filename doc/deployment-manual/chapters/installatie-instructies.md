@@ -9,7 +9,7 @@ betalen.
 Dit hoofdstuk beschrijft op welke wijze deze twee softwarecomponenten geïnstalleerd dienen te
 worden.
 
-## Website
+## Webapplicatie
 
 De website kan alleen worden uitgerold op een Linux of iOS-systeem. Dit komt omdat voor de
 installatie gebruik wordt gemaakt van Docker. Dit is niet beschikbaar voor Windows. In de map met
@@ -44,6 +44,8 @@ commando:
 $ docker inspect --format '{{ .NetworkSettings.IPAddress }}' thema42_web_1
 ```
 
+---
+
 Voor Mac of Windows geldt een ander commando:
 
 ```bash
@@ -55,7 +57,7 @@ De webserver, HHVM en de applicatiecode schrijven logregels weg naar de map
 
 Voer `./project.sh stop` uit om de containers en daarmee de website te stoppen.
 
-## Applicatie
+## Mobiele applicatie
 
 Het installatiebestand van de applicatie is geschikt voor Android en is te vinden op '../app/build/wobbe\_2000.apk'.
 
