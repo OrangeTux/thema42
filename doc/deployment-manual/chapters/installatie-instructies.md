@@ -12,12 +12,12 @@ worden.
 ## Webapplicatie
 
 De website kan alleen worden uitgerold op een Linux of iOS-systeem. Dit komt omdat voor de
-installatie gebruik wordt gemaakt van Docker. Dit is niet beschikbaar voor Windows. In de map met
+installatie gebruik wordt gemaakt van [Docker][docker]. Dit is niet beschikbaar voor Windows. In de map met
 de broncode zit een map `src/init`. In deze map zitten diverse scripts en configuratiebestanden
 voor het opzetten van de website. Bij de verdere instructies in deze paragraaf wordt deze map als
 startpunt gebruikt voor nagivatie en andere acties.
 
-Installeer [Docker][docker].
+Installeer [Docker][docker-install].
 
 Voer het `project.sh` uit met parameter `start`. 
 
@@ -59,7 +59,7 @@ Voer `./project.sh stop` uit om de containers en daarmee de website te stoppen.
 
 ## Mobiele applicatie
 
-Het installatiebestand van de applicatie is geschikt voor Android en is te vinden op '../app/build/wobbe\_2000.apk'.
+Het installatiebestand van de applicatie is geschikt voor Android en is te vinden op `../app/build/wobbe_2000.apk`.
 
 De applicatie kan ook handmatig worden gebuild en geïstalleerd. Dit kan alleen met Linux. Op OSX is
 het erg lastig om de USB-poorten te benaderen vanuit de Docker container. Hierdoor kan de
@@ -82,6 +82,7 @@ root@411b4c5d7904:/data# abd logcat
 ```
 
 [docker]: https://www.docker.com/
+[docker-install]: https://docs.docker.com/installation/
 [fig]: http://www.fig.sh/
 [hhvm]: http://hhvm.com/
 
