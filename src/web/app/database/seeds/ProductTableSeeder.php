@@ -4,22 +4,18 @@ class ProductTableSeeder extends Seeder {
 	
 	public function run() {
 		$products = [
-			['Melk', 1.00],
-			['Brood', 1.90],
-			['Kaas', 3.45],
-			['Worst', 2.30],
-			['Appel', 0.35],
-			['Banaan', 0.65],
-			['Gehakt', 2.50],
-			['Hamlappen', 6.55],
-			['Toiletpapier', 3.55],
-			['Vuilniszakken', 2.25]
+			[8718770, 'Goudkuipje Naturel', 1.00],
+			[23065369, 'Geraspte Kaas', 1.90],
+            [23044012, 'Zilveruitjes', 3.45],
+            [87316278, 'Peterselie', 0.89],
+            [87316261, 'Oregano', 0.78]
 		];
 
 		foreach ($products as & $product) {
-			Product::create([
-				'name' => $product[0],
-				'price' => $product[1]				
+            Product::create([
+                'id' => $product[0],
+				'name' => $product[1],
+				'price' => $product[2]				
 			]);
 		}
 	}
