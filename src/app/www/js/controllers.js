@@ -44,8 +44,9 @@ angular.module('wobbe.controllers', ['ngCordova'])
 	// Scan barcode. This will open up the camera and start scanning for barcodes and QR codes.
     $scope.scan = function() { 
         return $q(function(resolve, reject) {
+            //resolve("8731627");
             $cordovaBarcodeScanner.scan().then(function(data) {
-                resolve(parseInt(data.text, 10));
+                resolve(data.text, 10);
             }, function(error) {
                 alert('Scan is misgegaan. Probeer het opnieuw.');
                 reject(undefined);
@@ -77,11 +78,11 @@ angular.module('wobbe.controllers', ['ngCordova'])
      */
     $scope.decrease_scanned_product = function (list, product_id) {
         for (i = 0; i < list.products.length; i++) {
-            if (list.products[i].id === product_id) {
-                list.products[i].scanned -= 1;
+            if (parseInt(list.products[i].id === product_id)) {
+                parseInt(list.products[i].scanned) -= 1;
             }
 
-            if (list.products[i].scanned <= 0) {
+            if (parseInt(list.products[i].scanned) <= 0) {
                 list.products.splice(i, 1);
                 break;
             }
@@ -96,11 +97,13 @@ angular.module('wobbe.controllers', ['ngCordova'])
      */
     $scope.increase_scanned_product = function (list, product_id) { 
         product_id.then( function (product_id) {
+            console.log('Scan id ' + product_id);
             var new_product = true;
             list.products.forEach(function (product) {
+                console.log('Product id ' + product.id);
                 if (product.id === product_id) {
-                    product.scanned += 1;
-					if (product.scanned > product.quantity) {
+                    product.scanned = parseInt(product.scanned) + 1;
+					if (parseInt(product.scanned) > parseInt(product.quantity)) {
 						product.quantity = product.scanned;
 					}
                     new_product = false;
@@ -192,7 +195,7 @@ angular.module('wobbe.controllers', ['ngCordova'])
 
         var total = 0;
         $scope.list.products.forEach(function (product) {
-            total += product.scanned * product.price
+            total += parseInt(product.scanned) * parseFloat(product.price)
         });
         return total;
     };
