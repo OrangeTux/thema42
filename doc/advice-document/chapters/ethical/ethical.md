@@ -1,12 +1,14 @@
-# Ethische Aspecten
-Dit hoofdstuk beschrijft de etische aspecten van het systeem.
+# Ethische aspecten
+Dit hoofdstuk beschrijft de ethische aspecten van het systeem.
 
 ## Locatie
-Omdat de gebruiker gepersonaliseerde advertenties krijgt voorgeschoteld op basis van de locatie van de klant in de winkel,
-Is het mogelijk om er achter te komen hoevaak een klant in de winkel komt en ook waar de klant zich het vaakst bevind in de winkel.
-Deze gevoelige informatie moet goed worden beveiligd omdat het hier gaat om prive gegevens van een klant.
+Omdat de gebruiker gepersonaliseerde advertenties krijgt getoond op basis van zijn locatie in de
+winkel, is het mogelijk om er achter te komen hoe vaak een klant in de winkel komt en ook waar de
+klant bevind in de winkel. Deze gevoelige informatie moet goed worden beveiligd omdat het hier
+gaat om privégegevens van een klant.
 
 ## Boodschappen
-De boodschappen die de klant wilt kopen worden opgeslagen in de centrale database van het systeem.
-Dat wil zeggen dat er van elke klant zou kunnen worden voorspelt na een bepaalde tijd wat hij of zij zou gaan kopen.
-Hier kunnen advertentiebedrijven goed op inspelen. Het is niet de bedoeling dat advertentiebedrijven deze data in handen krijgen.
+De boodschappen die de klant wilt kopen worden opgeslagen in de centrale database. Daardoor kan er
+van elke klant een profiel gemaakt worden wat helpt bij het voorspellen wat de klant wil kopen.
+Hier kunnen advertentiebedrijven goed op inspelen. Het is niet de bedoeling dat
+advertentiebedrijven deze data in handen krijgen.
