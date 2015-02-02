@@ -1,8 +1,8 @@
-## Gepersonaliseerde advertenties
-Deze sectie gaat dieper in op het tonen van gepersonaliseerde advertenties. Voor de supermarkt zou het fijn zijn wanneer de klanten persoonlijke advertenties aangeboden kunnen krijgen op hun smartphone. Daarmee krijgen klanten geen advertenties waar zij toch niet in geïnteresseerd zijn en zal de conversie van de supermarkt stijgen.
+# Gepersonaliseerde advertenties
+Deze sectie gaat dieper in op het tonen van gepersonaliseerde advertenties. Voor de supermarkt zou het fijn zijn wanneer de klanten gepersonaliseerde advertenties aangeboden kunnen krijgen op hun smartphone. Daarmee krijgen klanten geen advertenties waar zij toch niet in geïnteresseerd zijn en zal de conversie van de supermarkt stijgen.
 
 __Advies:__
-Tijdens het overleg is de wens uitgesproken dat aan de klant een gepersonaliseerde advertentie getoond moet worden wanneer deze verbinding maakt met de WiFi van de supermarkt. Ons advies is echter om dit te doen met gebruik van beacons. Door gebruik te maken van beacons kunnen advertenties getoond worden wanneer de klant zich in de buurt van een bepaald actieartikel bevind. Op die manier kan de klant direct het product pakken en wordt dus de kans vergroot dat de klant ook daadwerkelijk gbruik maakt van het actieartikel.
+Tijdens het overleg is de wens uitgesproken dat aan de klant een gepersonaliseerde advertentie getoond moet worden wanneer deze verbinding maakt met de Wi-Fi van de supermarkt. Ons advies is echter om dit te doen met gebruik van beacons. Door gebruik te maken van beacons kunnen advertenties getoond worden wanneer de klant zich in de buurt van een bepaald actieartikel bevind. Op die manier kan de klant direct het product pakken en wordt dus de kans vergroot dat de klant ook daadwerkelijk gbruik maakt van het actieartikel.
 
 __Prototype:__
 Het prototype toont aan dat het mogelijk is om de gegevens van de gebruiker op te vragen en aan de hand daarvan advertenties te tonen. Momenteel wordt dit gedaan door een dergelijke advertentie te _mocken_. In dit geval betekent dit, dat, wanneer de klant bij een bepaalde beacon in de buurt komt, een popup getoond wordt met een standaard tekst en de naam van de klant. Door het tonen van de naam van de klant wordt aangetoond dat de gegevens van de klant beschikbaar zijn voor de gepersonaliseerde advertentie.
@@ -16,5 +16,5 @@ Daarnaast adviseren wij om de marketingafdeling de mogelijkheid te bieden om inz
 
 Tot slot adviseren wij om de marketingafdeling de mogelijkheid te bieden om advertenties samen te stellen op basis van eerder koopgedrag van de klant. Op die manier kan het proces van het uitzoeken wat de behoefte is van een bepaalde klant en het samenstellen van de advertentie geautomatiseerd worden. Door dit te automatiseren kan de doorlooptijd van het samenstellen van een dergelijke advertentie aanzienlijk verkort worden.
 
-__Bijlage 2__ geeft de code voor het implementeren van gepersonaliseerde advertenties in de PoC.
+In __bijlage 2__ staat code voor het implementeren van gepersonaliseerde advertenties in de _PoC_.
 

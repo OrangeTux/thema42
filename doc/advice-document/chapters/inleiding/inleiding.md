@@ -4,7 +4,7 @@ Dit hoofdstuk beschrijft het doel van dit document.
 
 ## Doel van dit document
 
-Dit document is geschreven met als doel om aanbevelingen te doen over het Wobbe 2000 systeem. Hierbij is de kennis die, met behulp van de proof of concept (PoC) applicatie, is opgedaan meegenomen voor onderbouwing van de aanbevelingen.
+Dit document is geschreven met als doel om aanbevelingen te doen over het Wobbe 2000 systeem. Hierbij is de kennis die, met behulp van de _proof of concept_ (PoC) applicatie, is opgedaan meegenomen voor onderbouwing van de aanbevelingen.
 
 ## Referenties
 
