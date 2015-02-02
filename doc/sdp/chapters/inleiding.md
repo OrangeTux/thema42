@@ -18,6 +18,6 @@ Onderstaande tabel bevat referenties naar documenten die de basis vormen voor di
 
 | Titel                | Versie | Auteurs      | Vindplaats                                   |
 |----------------------|--------|--------------|----------------------------------------------|
-| Vision document      | 0.1    | Projectgroep | [http://goo.gl/olmxoM](goo.gl/olmxoM)        |
+| Vision document      | 1.0    | Projectgroep | [http://goo.gl/LvcVGw](http://goo.gl/LvcVGw) |
 | Documenttemplate SDP | 3.0    | Rup op Maat  | [http://goo.gl/sw6ItI](http://goo.gl/sw6ItI) |
 
