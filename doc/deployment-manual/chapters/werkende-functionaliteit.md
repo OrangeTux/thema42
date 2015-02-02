@@ -1,4 +1,4 @@
-# Werkende functionaleit
+# Werkende functionaliteit
 
 Dit hoofdstuk bevat een opsomming van de onderdelen die zijn geïmplementeerd in
 de __proof of concept__.

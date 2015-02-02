@@ -15,7 +15,7 @@ De website kan alleen worden uitgerold op een Linux of iOS-systeem. Dit komt omd
 installatie gebruik wordt gemaakt van [Docker][docker]. Dit is niet beschikbaar voor Windows. In de map met
 de broncode zit een map `src/init`. In deze map zitten diverse scripts en configuratiebestanden
 voor het opzetten van de website. Bij de verdere instructies in deze paragraaf wordt deze map als
-startpunt gebruikt voor nagivatie en andere acties.
+startpunt gebruikt voor navigatie en andere acties.
 
 Installeer [Docker][docker-install].
 
