@@ -16,5 +16,5 @@ Daarnaast adviseren wij om de marketingafdeling de mogelijkheid te bieden om inz
 
 Tot slot adviseren wij om de marketingafdeling de mogelijkheid te bieden om advertenties samen te stellen op basis van eerder koopgedrag van de klant. Op die manier kan het proces van het uitzoeken wat de behoefte is van een bepaalde klant en het samenstellen van de advertentie geautomatiseerd worden. Door dit te automatiseren kan de doorlooptijd van het samenstellen van een dergelijke advertentie aanzienlijk verkort worden.
 
-Bijlage 2 geeft de code voor het implementeren van gepersonaliseerde advertenties in de PoC.
+__Bijlage 2__ geeft de code voor het implementeren van gepersonaliseerde advertenties in de PoC.
 
