@@ -15,7 +15,7 @@ toch een zo goed mogelijk beeld van het werkelijke systeem te geven.
 
 ## Referenties
 
-Hieronder staan de referenties die gebruikt zijn voor deze software architecture document (SAD). Samen met de referentie is ook de
+Hieronder staan de referenties die gebruikt zijn voor dit software architecture document (SAD). Samen met de referentie is ook de
 vindplaats vermeldt.
 
 | Titel                          | Versie | Auteur(s)    | Vindplaats                                   |

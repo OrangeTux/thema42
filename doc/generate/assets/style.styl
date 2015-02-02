@@ -213,10 +213,13 @@ chapter
 		font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace
 		font-size: 85%
 		background-color: #f2f2f2
+		white-space: pre-wrap
 		&:before, &:after
 			letter-spacing: -0.2em
 			content: '\00a0'
 	pre > code
+		display: block
+		max-width: 100%
 		padding: 12px 15px
 		border-radius: 5px
 		&:before, &:after
