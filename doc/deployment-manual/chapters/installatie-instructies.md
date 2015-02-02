@@ -9,6 +9,14 @@ betalen.
 Dit hoofdstuk beschrijft op welke wijze deze twee softwarecomponenten geïnstalleerd dienen te
 worden.
 
+## Deploymentdiagram
+
+In onderstaande afbeelding is weergegeven hoe de diverse onderdelen met elkaar verband houden.
+
+![Deployment Diagram](assets/deployment_diagram.png)
+
+---
+
 ## Webapplicatie
 
 De website kan alleen worden uitgerold op een Linux of iOS-systeem. Dit komt omdat voor de
@@ -44,8 +52,6 @@ commando:
 $ docker inspect --format '{{ .NetworkSettings.IPAddress }}' thema42_web_1
 ```
 
----
-
 Voor Mac of Windows geldt een ander commando:
 
 ```bash
@@ -56,6 +62,8 @@ De webserver, HHVM en de applicatiecode schrijven logregels weg naar de map
 `../web/app/storage/logs/`. Deze logbestanden zijn nuttig tijdens het oplossen van problemen.
 
 Voer `./project.sh stop` uit om de containers en daarmee de website te stoppen.
+
+---
 
 ## Mobiele applicatie
 
