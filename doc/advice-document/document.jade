@@ -1,0 +1,38 @@
+---
+title: Adviesrapport
+project: Wobbe 2000
+employer: Winkel van de Toekomst
+authors: Malcolm Kindermans, Jeroen Kruis, Maurits van Mastrigt en Auke Willem Oosterhoff.
+version: 1.0 
+prepend: [chapters/prepend.jade]
+---
+
+chapter
+	include:markdown chapters/inleiding/inleiding.md
+
+chapter
+	include:markdown chapters/implementation/implementation.md
+
+chapter
+	include:markdown chapters/contactless-payment/contactless-payment.md
+
+chapter
+	include:markdown chapters/advertisement/advertisement.md
+
+chapter
+	include:markdown chapters/ethical/ethical.md
+
+chapter
+	style(type='text/css').
+		pre > code { font-size: 70%; line-height: 110%; }
+
+	h1 Bijlagen
+	p In dit hoofdstuk worden de bijlagen gegeven.
+
+	h2 Bijlage 1: Code voor contactloos betalen
+	include:markdown chapters/contactless-payment/contactless-payment-code.md
+
+	hr
+	h2 Bijlage 2: Code voor gepersonaliseerde advertenties
+	include:markdown chapters/advertisement/advertisement-code-appendix.md
+

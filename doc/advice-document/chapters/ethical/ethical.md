@@ -4,7 +4,7 @@ Dit hoofdstuk beschrijft de ethische aspecten van het systeem.
 ## Locatie
 Omdat de gebruiker gepersonaliseerde advertenties krijgt getoond op basis van zijn locatie in de
 winkel, is het mogelijk om er achter te komen hoe vaak een klant in de winkel komt en ook waar de
-klant bevind in de winkel. Deze gevoelige informatie moet goed worden beveiligd omdat het hier
+klant bevindt in de winkel. Deze gevoelige informatie moet goed worden beveiligd omdat het hier
 gaat om privégegevens van een klant.
 
 ## Boodschappen

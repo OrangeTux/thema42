@@ -1,4 +1,5 @@
-```
+
+```javascript
 // src/app/www/js/controllers.js
 
 // Show popup
@@ -24,10 +25,10 @@ Beacons.addCallback(function (beacons) {
 });
 ```
 
-Hieronder wordt het relevante gedeelte uit services.js getoond. Voor de hele file verwijzen wij u naar de [GitHub repository](https://github.com/OrangeTux/thema42/blob/master/src/app/www/js/services.js).
+Hieronder wordt het relevante gedeelte uit services.js getoond. Het hele bestand kan online worden gevonden op: [http://goo.gl/gYyziM](http://goo.gl/gYyziM).
 
 
-```
+```javascript
 // src/app/www/js/services.js:
 
 .factory('Beacons', function ($q) {
@@ -67,3 +68,4 @@ Hieronder wordt het relevante gedeelte uit services.js getoond. Voor de hele fil
 
 ;
 ```
+

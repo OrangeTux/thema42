@@ -1,4 +1,5 @@
-```
+
+```javascript
 // Show receipt for requested list, with the ability to start the payment.
 .controller('PaymentCtrl', function ($scope, $stateParams, Lists, $location) {
     var listId = $stateParams.listId;
@@ -43,3 +44,4 @@
 })
 ;
 ```
+
