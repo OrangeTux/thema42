@@ -27,7 +27,7 @@ startpunt gebruikt voor navigatie en andere acties.
 
 Installeer [Docker][docker-install].
 
-Voer het `project.sh` uit met parameter `start`. 
+Voer `project.sh` uit met parameter `start`:
 
 ```bash
 $ ./project.sh start

@@ -1,7 +1,7 @@
 # Werkende functionaliteit
 
 Dit hoofdstuk bevat een opsomming van de onderdelen die zijn geïmplementeerd in
-de __proof of concept__.
+de _proof of concept_.
 
 ## Functionele eisen
 In het SAD staan de functionele eisen beschreven. In de onderstaande tabel zijn deze eisen opgenomen met daarachter vermeld in hoeverre aan de eis is voldaan.
