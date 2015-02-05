@@ -12,3 +12,6 @@
 - Docenten zijn nieuw met het vak, wat niet wordt gecompenseerd
 - Fouten in slides (oa R&W Compared, 2e college SA, slide 37)
 
+- Eindproject out-dated en niet uitdagend genoeg
+- Veel theorie in leertaken, weinig/geen bouwwerk (programmeren)
+- Gastcolleges interresant ++
