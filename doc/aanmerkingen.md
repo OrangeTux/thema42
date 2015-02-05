@@ -14,4 +14,14 @@
 
 - Eindproject out-dated en niet uitdagend genoeg
 - Veel theorie in leertaken, weinig/geen bouwwerk (programmeren)
-- Gastcolleges interresant ++
+- Gastcolleges interessant ++
+
+## Feedback Malcolm
+Hieronder mijn feedback, en dan met name gericht op de gehele opleiding.
+
+### Feedback "opleiding"
+- Geen Git
+- Docenten in redelijk wat gevallen incompetent
+- Je wordt veel aan je lot overgelaten en moet extreem veel zelf uitzoeken. Ja klopt, dat moet later in het bedrijfsleven ook. Maar we zitten nu nog niet in het bedrijfsleven. We zitten nu op een opleiding waar ons dingen geleerd moeten worden en waar we niet doorverwezen moeten worden naar Google. Dat kan ik thuis ook met een internetaansluiting. Kleine rekensom, een internetaansluiting kost zo'n 40 euro per maand geloof ik. 40 x 12 = 480. De opleiding kost zo'n 1,500 per jaar. Dan is een internetaansluiting goedkoper en ik leer hetzelfde, aangezien je alles zelf op moet zoeken.
+- De hoorcolleges en de werkcolleges sluiten niet goed op elkaar aan. En laat ze niet met het argument komen van "Ja, het was een nieuw thema voor me, dus ik wilde er niet te veel aan veranderen.", want dat is bullshit. Ze snappen zelf ook wel dat wanneer er eerst een werkcollege gegeven wordt en een deadline gesteld, en je daarna pas het hoorcollege krijgt dat er dan waarschijnljik toch ergens iets mis gaat. Ja kan natuurlijk aan mij liggen, ik ben natuurlijk maar een student ;-)
+- Het is beschamend dat in het 4e jaar sommige studenten nog niet weten wat Git is. Dan kunnen ze met het argument komen "Ja, als die studenten in de vrije tijd bezig hadden geweest met programmeren, dan hadden ze dat vanzelf wel tegengekomen." (of zoiets). Die kun je heel simpel weerleggen door "als school had voorzien in de basis van in teams werken (want dat is wat we in het bedrijfsleven doen toch? Daar worden we toch constant op "voorbereid"?), dan hadden zij zich gekweten van hun plicht, namelijk ons voorbereiden op het bedrijfsleven.
